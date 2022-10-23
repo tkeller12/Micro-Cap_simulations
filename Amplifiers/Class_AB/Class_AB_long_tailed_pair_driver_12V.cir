@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1536,864
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=140
+NLCnt=152
 TXCnt=5
 
 [shapedef]
@@ -119,6 +119,12 @@ Line=7,5,7,9
 Root="Plus.root",41,7,0
 Current=32,16,16,16
 
+[shapedef]
+Name=Zener
+Root="Diode.root",0,0,0
+Rectangle=16,-9,20,-8
+Rectangle=18,8,22,9
+
 [compdef]
 Name=Sine Source
 Definition=Sine source
@@ -163,7 +169,7 @@ Name=1N4148
 Definition=Diode
 Shape=Diode
 Mask=4226
-Used=12
+Used=25
 memo=Switching Diode Vr=100V If=200mA
 Label Offset=18,10,12,12
 PinCnt=2
@@ -188,8 +194,8 @@ Power=0.625
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6913
-Used=177
+Mask=7681
+Used=183
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -201,7 +207,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=273
+Used=274
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -212,7 +218,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7681
-Used=25
+Used=26
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -244,6 +250,18 @@ Pin="Collector",3,3,5,0
 Pin="Base",0,0,-19,-4
 Pin="Emitter",3,-3,5,12
 Power=0.625
+
+[compdef]
+Name=ZPY5V1
+Definition=Subckt
+Shape=Zener
+Mask=4480
+Used=5
+memo=Zener Diode Vz=5.1V Izt=100mA
+Label Offset=18,9,12,9
+PinCnt=2
+Pin="1",a,6,0,-3,-4
+Pin="2",a,0,0,-2,-4
 
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 0,0,1203,464
@@ -480,7 +498,7 @@ V=R2
 Style=8192
 
 [Attr]
-ON=8,-39,RESISTANCE
+ON=7,-39,RESISTANCE
 V=33k
 Style=8192
 
@@ -505,7 +523,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=.5
+V=1
 Style=8192
 
 [Attr]
@@ -524,7 +542,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=.5
+V=1
 Style=8192
 
 [Attr]
@@ -533,7 +551,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=864,672
+Px=864,656
 Rot=5
 
 [Attr]
@@ -563,7 +581,7 @@ Style=8192
 
 [Attr]
 ON=-102,-41,VALUE
-V=DC 24 AC 0 0
+V=DC 12 AC 0 0 
 
 [Attr]
 ON=0,0,PACKAGE
@@ -596,7 +614,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_None
-V=DC 24 AC 0 0
+V=DC 12 AC 0 0 
 Style=256
 
 [Wire]
@@ -652,7 +670,7 @@ Px=1296,720
 Rot=7
 
 [Wire]
-Pxs=624,96,864,96
+Pxs=480,96,528,96
 
 [Wire]
 Pxs=432,96,480,96
@@ -786,7 +804,7 @@ Pxs=1008,624,1008,672
 Pxs=864,600,912,600
 
 [Wire]
-Pxs=864,600,864,624
+Pxs=864,600,864,608
 
 [Wire]
 Pxs=864,360,912,360
@@ -1026,12 +1044,6 @@ Pxs=528,240,528,288
 Pxs=624,240,624,264
 
 [Wire]
-Pxs=624,96,624,120
-
-[Wire]
-Pxs=480,96,528,96
-
-[Wire]
 Pxs=576,216,576,264
 
 [Wire]
@@ -1085,7 +1097,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=500
+V=220
 Style=8192
 
 [Attr]
@@ -1169,7 +1181,7 @@ Pxs=696,360,720,360
 Pxs=624,264,624,336
 
 [Wire]
-Pxs=664,288,768,288
+Pxs=664,288,696,288
 
 [Wire]
 Pxs=576,264,624,264
@@ -1182,7 +1194,7 @@ Pxs=528,288,528,336
 
 [Comp]
 Name=2N3906
-Px=840,240
+Px=840,288
 
 [Attr]
 ON=29,-11,PART
@@ -1202,85 +1214,7 @@ ON=29,45,PACKAGE
 V=TO-92
 
 [Wire]
-Pxs=768,240,840,240
-
-[Wire]
-Pxs=864,264,864,360
-
-[Wire]
-Pxs=768,240,768,288
-
-[Wire]
-Pxs=864,176,864,216
-
-[Comp]
-Name=Resistor
-Px=864,176
-Rot=5
-
-[Attr]
-ON=8,-25,PART
-V=R20
-Style=8192
-
-[Attr]
-ON=5,-43,RESISTANCE
-V=0
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=624,168,624,192
-
-[Comp]
-Name=Resistor
-Px=624,168
-Rot=5
-
-[Attr]
-ON=8,-25,PART
-V=R21
-Style=8192
-
-[Attr]
-ON=6,-45,RESISTANCE
-V=0
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Resistor
-Px=528,168
-Rot=5
-
-[Attr]
-ON=8,-25,PART
-V=R22
-Style=8192
-
-[Attr]
-ON=7,-45,RESISTANCE
-V=0
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=528,168,528,192
-
-[Wire]
-Pxs=528,96,528,120
-
-[Wire]
-Pxs=528,96,624,96
+Pxs=864,312,864,360
 
 [Comp]
 Name=Capacitor
@@ -1317,16 +1251,188 @@ Pxs=744,360,744,384
 Pxs=744,360,768,360
 
 [Wire]
-Pxs=864,672,864,720
+Pxs=864,656,864,720
 
 [Wire]
 Pxs=864,720,1008,720
 
 [Wire]
-Pxs=864,96,864,128
+Pxs=864,96,864,144
 
 [Wire]
-Pxs=864,96,1008,96
+Pxs=864,96,936,96
+
+[Wire]
+Pxs=696,288,840,288
+
+[Wire]
+Pxs=696,96,864,96
+
+[Comp]
+Name=Resistor
+Px=864,192
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R23
+Style=8192
+
+[Attr]
+ON=6,-45,RESISTANCE
+V=0
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=864,192,864,256
+
+[Wire]
+Pxs=936,192,936,256
+
+[Wire]
+Pxs=864,256,936,256
+
+[Wire]
+Pxs=864,256,864,264
+
+[Comp]
+Name=ZPY5V1
+Enable=FALSE
+Px=936,144
+Rot=1
+
+[Attr]
+ON=12,9,PART
+V=X1
+Style=8192
+
+[Attr]
+ON=12,23,NAME
+V=ZPY5V1
+
+[Attr]
+ON=12,51,PACKAGE
+V=DO-41
+
+[Wire]
+Pxs=936,96,936,144
+
+[Wire]
+Pxs=936,96,1008,96
+
+[Wire]
+Pxs=696,208,696,288
+
+[Wire]
+Pxs=696,96,696,160
+
+[Wire]
+Pxs=624,96,624,120
+
+[Wire]
+Pxs=624,96,696,96
+
+[Wire]
+Pxs=528,168,528,192
+
+[Wire]
+Pxs=528,96,528,120
+
+[Wire]
+Pxs=528,96,624,96
+
+[Comp]
+Name=Resistor
+Px=528,168
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R24
+Style=8192
+
+[Attr]
+ON=6,-45,RESISTANCE
+V=220
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=624,168
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R25
+Style=8192
+
+[Attr]
+ON=6,-45,RESISTANCE
+V=220
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=624,168,624,192
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=696,208
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R27
+Style=8192
+
+[Attr]
+ON=6,-45,RESISTANCE
+V=33k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=664,512
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R28
+Style=8192
+
+[Attr]
+ON=6,-45,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=664,512
+Rot=7
+
+[Wire]
+Pxs=664,288,664,464
 
 [Grid Text]
 Text="Vin"
@@ -1543,7 +1649,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="Class_AB_long_tailed_pair_driver"
+Name="Class_AB_long_tailed_pair_driver_12V"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -1565,9 +1671,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=461,0
+SB 3=393,96
 Scale 3=1
-Px=713,635
+Px=661,484
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2184,11 +2290,11 @@ AliasID=1
 XExp=T
 YExp=v(OUT2)
 XRng=0.002
-YRng=30,-7.5
+YRng=16,-4
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=7.5
-Enable=Hide
+Range Grid Y=4
+Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
 Rainbow=False
@@ -2210,10 +2316,10 @@ AliasID=2
 XExp=T
 YExp=v(VOUT)
 XRng=0.002
-YRng=3.6,-2.4
+YRng=16,-4
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=1.2
+Range Grid Y=4
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -2236,7 +2342,7 @@ AliasID=3
 XExp=T
 YExp=i(R7)
 XRng=0.002
-YRng=3.6,-2.4
+YRng=4.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
 Range Grid Y=1.2
