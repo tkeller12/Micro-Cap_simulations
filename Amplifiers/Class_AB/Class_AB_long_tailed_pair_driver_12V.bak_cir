@@ -265,8 +265,8 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
-Show Current=True
+Show Voltages=True
+Show Current=False
 Show Power=False
 Show Condition=False
 Show Pin Connections=False
@@ -508,7 +508,7 @@ Style=8192
 
 [Attr]
 ON=5,-43,RESISTANCE
-V=220
+V=22
 Style=8192
 
 [Attr]
@@ -1475,20 +1475,20 @@ Pxs=864,456,864,504
 
 [Comp]
 Name=1N4148
-Px=768,672
-Rot=7
+Px=768,720
+Rot=3
 
 [Attr]
-ON=-29,12,PART
+ON=-29,-26,PART
 V=D9
 Style=8192
 
 [Attr]
-ON=-61,26,MODEL
+ON=-61,-40,MODEL
 V=1N4148
 
 [Attr]
-ON=-52,54,PACKAGE
+ON=-52,-68,PACKAGE
 V=DO-35
 
 [Wire]
@@ -1496,20 +1496,20 @@ Pxs=768,720,864,720
 
 [Comp]
 Name=1N4148
-Px=768,624
-Rot=7
+Px=768,672
+Rot=3
 
 [Attr]
-ON=-29,12,PART
+ON=-37,-26,PART
 V=D10
 Style=8192
 
 [Attr]
-ON=-61,26,MODEL
+ON=-61,-40,MODEL
 V=1N4148
 
 [Attr]
-ON=-52,54,PACKAGE
+ON=-52,-68,PACKAGE
 V=DO-35
 
 [Comp]
@@ -1538,7 +1538,7 @@ Pxs=792,632,840,632
 Pxs=792,624,792,632
 
 [Wire]
-Pxs=768,624,792,624
+Pxs=744,624,768,624
 
 [Wire]
 Pxs=712,624,744,624
@@ -1701,9 +1701,6 @@ V
 Pxs=744,600,744,624
 
 [Wire]
-Pxs=744,624,768,624
-
-[Wire]
 Pxs=672,288,720,288
 
 [Wire]
@@ -1857,6 +1854,14 @@ V=0.625
 [Attr]
 ON=29,45,PACKAGE
 V=TO-92
+
+[Wire]
+Pxs=768,624,792,624
+
+[Node Offsets]
+Section=0
+;Node,Page,GridX,GridY,OffsetX,OffsetY
+Offset=15,0,864,664,1,1
 
 [Grid Text]
 Text="Vin"
@@ -2135,9 +2140,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=336,96
+SB 3=71,96
 Scale 3=1
-Px=1189,140
+Px=687,782
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2201,7 +2206,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=26,18
+SB 0=30,18
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -2252,7 +2257,7 @@ Text=* A .cir file is typically found in the data directory
 Text=*
 Text=*** From file C:\MC12\library\UTILITY.LBR
 Text=*** 10MHz Sinusoidal Source
-Text=.MODEL GENERAL SIN (F=10K)
+Text=.MODEL GENERAL SIN (A=2 F=10K)
 
 [InfoPage]
 InfoPage=True
@@ -2780,10 +2785,10 @@ AliasID=7
 XExp=T
 YExp=v(TP1)-v(TP1B)
 XRng=0.002
-YRng=10,-2.5
+YRng=12,-3
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=2.5
+Range Grid Y=3
 Enable=Enable
 Line Color=#800080
 Text Color=#800080
@@ -2806,10 +2811,10 @@ AliasID=8
 XExp=T
 YExp=v(TP2)-v(TP2B)
 XRng=0.002
-YRng=10,-2.5
+YRng=12,-3
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=2.5
+Range Grid Y=3
 Enable=Enable
 Line Color=#9B9BFF
 Text Color=#9B9BFF
@@ -2832,10 +2837,10 @@ AliasID=4
 XExp=T
 YExp=v(VOUTDC)
 XRng=0.002
-YRng=10,-2.5
+YRng=12,-3
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=2.5
+Range Grid Y=3
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -2858,10 +2863,10 @@ AliasID=5
 XExp=T
 YExp=i(R3)
 XRng=0.002
-YRng=0.75,-0.5
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=0.25
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#FCAD2A
 Text Color=#FCAD2A
@@ -2884,10 +2889,10 @@ AliasID=6
 XExp=T
 YExp=i(R4)
 XRng=0.002
-YRng=0.75,-0.5
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=0.25
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -2910,10 +2915,10 @@ AliasID=2
 XExp=T
 YExp=v(VOUT)
 XRng=0.002
-YRng=10,-2.5
+YRng=12,-3
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=2.5
+Range Grid Y=3
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -2936,10 +2941,10 @@ AliasID=3
 XExp=T
 YExp=i(R7)
 XRng=0.002
-YRng=0.75,-0.5
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=0.0004
-Range Grid Y=0.25
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
@@ -3006,10 +3011,10 @@ AliasID=2
 XExp=F
 YExp=ph(v(Vout))
 XRng=1e+8,10
-YRng=200,-300
+YRng=240,-360
 Options=LINEARY
 Range Grid X=2e+7
-Range Grid Y=100
+Range Grid Y=120
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -3032,10 +3037,10 @@ AliasID=3
 XExp=F
 YExp=i(R7)
 XRng=1e+8,10
-YRng=1.25
+YRng=0.6
 Options=LINEARY
 Range Grid X=2e+7
-Range Grid Y=0.25
+Range Grid Y=0.12
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
@@ -3135,6 +3140,22 @@ MRUDockID=59421
 Floating=False
 LocalOffset=True
 Rect=-2,156,51,316
+
+[Slider]
+Analysis=Transient
+Link="V2"
+Min="6"
+Max="24"
+Default="12"
+Format=3
+Method=Linear
+Show=False
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+StepSize="10%"
+MRUDockID=59421
+Floating=False
+LocalOffset=True
+Rect=-2,-2,44,158
 
 [Slider]
 Analysis=AC
