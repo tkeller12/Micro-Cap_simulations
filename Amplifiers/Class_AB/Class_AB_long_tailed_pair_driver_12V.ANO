@@ -2,26 +2,23 @@
 ***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***        Transient Analysis of Class_AB_long_tailed_pair_driver_12V        ***
-***                          10/23/2022 8:31:06 PM                           ***
+***           AC Analysis of Class_AB_long_tailed_pair_driver_12V            ***
+***                          10/23/2022 8:51:36 PM                           ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           2000u
-Output Start Time (tstart) 0
-Maximum Time Step          500ns
-Number of Points           200
-Temperature                Linear 27
-Retrace Runs               1
-Run Options                Normal
-State Variables            Zero
-Operating Point            On
-Operating Point Only       Off
-Auto Scale Ranges          On
-Accumulate Plots           Off
-Fixed Time Step            Off
-Periodic Steady State      Off
-Ignore Expression Errors   Off
+Frequency Range          Log 100E6,10
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
 
 
 *****************************************************
