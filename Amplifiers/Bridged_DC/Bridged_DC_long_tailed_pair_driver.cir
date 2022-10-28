@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=324
-TXCnt=10
+NLCnt=329
+TXCnt=11
 
 [shapedef]
 Name=Bjt.root
@@ -201,7 +201,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=44
+Used=46
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -239,7 +239,7 @@ Name=1N4148
 Definition=Diode
 Shape=Diode
 Mask=4994
-Used=15
+Used=19
 memo=Switching Diode Vr=100V If=200mA
 Label Offset=18,10,12,12
 PinCnt=2
@@ -293,7 +293,7 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=True
+Show Voltages=False
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -467,7 +467,6 @@ Pxs=288,360,304,360
 
 [Comp]
 Name=Resistor
-Enable=FALSE
 Px=432,432
 Rot=5
 
@@ -478,7 +477,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=20k
+V=100k
 Style=8192
 
 [Attr]
@@ -520,7 +519,7 @@ V=R4
 Style=8192
 
 [Attr]
-ON=7,-39,RESISTANCE
+ON=6,-39,RESISTANCE
 V=1
 Style=8192
 
@@ -618,7 +617,7 @@ Style=8192
 
 [Attr]
 ON=-30,20,RESISTANCE
-V=16
+V=10
 Style=8192
 
 [Attr]
@@ -646,7 +645,7 @@ Style=8192
 
 [Attr]
 ON=5,-46,RESISTANCE
-V=200k
+V=20k
 Style=8192
 
 [Attr]
@@ -665,7 +664,7 @@ Style=8192
 
 [Attr]
 ON=-50,-34,RESISTANCE
-V=10k
+V=1k
 Style=8192
 
 [Attr]
@@ -801,7 +800,7 @@ Style=8192
 
 [Attr]
 ON=12,-40,CAPACITANCE
-V=100pF
+V=10uF
 Style=8192
 
 [Attr]
@@ -826,7 +825,7 @@ Style=8192
 
 [Attr]
 ON=17,-40,CAPACITANCE
-V=100pF
+V=1nF
 Style=8192
 
 [Attr]
@@ -860,7 +859,7 @@ Style=8192
 
 [Attr]
 ON=17,-40,CAPACITANCE
-V=100pF
+V=1nF
 Style=8192
 
 [Attr]
@@ -884,7 +883,6 @@ Pxs=912,600,984,600
 
 [Comp]
 Name=Resistor
-Enable=FALSE
 Px=432,336
 Rot=5
 
@@ -895,7 +893,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=20k
+V=100k
 Style=8192
 
 [Attr]
@@ -1350,9 +1348,6 @@ Pxs=792,584,792,600
 [Wire]
 Pxs=792,600,864,600
 
-[Wire]
-Pxs=864,528,864,600
-
 [Comp]
 Name=1N4148
 Px=768,720
@@ -1634,9 +1629,6 @@ V=DO-35
 [Wire]
 Pxs=888,432,888,456
 
-[Wire]
-Pxs=888,504,888,528
-
 [Comp]
 Name=2N3904
 Px=840,632
@@ -1807,7 +1799,7 @@ V=DO-35
 Pxs=1104,720,1344,720
 
 [Wire]
-Pxs=1440,624,1440,720
+Pxs=1440,624,1440,648
 
 [Wire]
 Pxs=1440,552,1440,576
@@ -1837,7 +1829,7 @@ Pxs=1344,96,1344,264
 Pxs=1344,96,1440,96
 
 [Wire]
-Pxs=1440,96,1440,336
+Pxs=1440,96,1440,320
 
 [Wire]
 Pxs=1344,600,1344,720
@@ -1888,9 +1880,6 @@ V=0.625
 [Attr]
 ON=-67,45,PACKAGE
 V=TO-92
-
-[Wire]
-Pxs=864,528,888,528
 
 [Comp]
 Name=1N4148
@@ -1977,7 +1966,7 @@ Pxs=1488,576,1608,576
 
 [Comp]
 Name=1N4148
-Px=1608,456
+Px=1608,408
 Rot=3
 
 [Attr]
@@ -1995,7 +1984,7 @@ V=DO-35
 
 [Comp]
 Name=1N4148
-Px=1608,552
+Px=1608,456
 Rot=3
 
 [Attr]
@@ -2012,16 +2001,7 @@ ON=-52,-68,PACKAGE
 V=DO-35
 
 [Wire]
-Pxs=1608,552,1608,576
-
-[Wire]
-Pxs=1608,456,1608,504
-
-[Wire]
-Pxs=1464,360,1608,360
-
-[Wire]
-Pxs=1608,360,1608,408
+Pxs=1464,360,1488,360
 
 [Comp]
 Name=2N3906
@@ -2129,8 +2109,8 @@ V=R41
 Style=8192
 
 [Attr]
-ON=8,-39,RESISTANCE
-V=2k
+ON=9,-40,RESISTANCE
+V=2.5k
 Style=8192
 
 [Attr]
@@ -2625,7 +2605,7 @@ Style=8192
 
 [Attr]
 ON=-26,20,RESISTANCE
-V=.2
+V=.1
 Style=8192
 
 [Attr]
@@ -2668,7 +2648,7 @@ Style=8192
 
 [Attr]
 ON=5,-45,RESISTANCE
-V=200k
+V=20k
 Style=8192
 
 [Attr]
@@ -2738,6 +2718,7 @@ Pxs=360,448,360,760
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=360,448
 Rot=5
 
@@ -2760,6 +2741,79 @@ Pxs=360,360,360,400
 
 [Wire]
 Pxs=360,360,432,360
+
+[Wire]
+Pxs=864,552,888,552
+
+[Comp]
+Name=Capacitor
+Px=1440,648
+Rot=4
+
+[Attr]
+ON=16,-26,PART
+V=C10
+Style=8192
+
+[Attr]
+ON=17,-40,CAPACITANCE
+V=1nF
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1440,648,1440,720
+
+[Wire]
+Pxs=1488,600,1488,648
+
+[Comp]
+Name=Capacitor
+Px=1440,320
+Rot=4
+
+[Attr]
+ON=16,-26,PART
+V=C11
+Style=8192
+
+[Attr]
+ON=17,-40,CAPACITANCE
+V=1nF
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1440,320,1440,336
+
+[Wire]
+Pxs=1488,320,1488,360
+
+[Wire]
+Pxs=1488,360,1608,360
+
+[Wire]
+Pxs=1608,456,1608,576
+
+[Wire]
+Pxs=864,552,864,600
+
+[Wire]
+Pxs=888,504,888,552
+
+[Grid Text]
+Text="Offset Adjust"
+Px=2256,384
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
 
 [Grid Text]
 Text="Vin"
@@ -3038,9 +3092,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=921,0
+SB 3=369,48
 Scale 3=1
-Px=317,582
+Px=1237,506
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -3104,7 +3158,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=36,18
+SB 0=35,18
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -3155,7 +3209,7 @@ Text=* A .cir file is typically found in the data directory
 Text=*
 Text=*** From file C:\MC12\library\UTILITY.LBR
 Text=*** 10MHz Sinusoidal Source
-Text=.MODEL GENERAL SIN (A=12 DC=12 F=10)
+Text=.MODEL GENERAL SIN (A=12 DC=12 F=2)
 
 [InfoPage]
 InfoPage=True
@@ -3638,7 +3692,7 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TMax=200m
+TMax=500m
 TStart=0
 TStep=20us
 NPts=200
@@ -3656,7 +3710,7 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(OUT2)
-XRng=0.2
+XRng=0.5
 YRng=16,-4
 Options=LINEARX,LINEARY
 Range Grid X=0.04
@@ -3682,10 +3736,10 @@ Plt=1
 AliasID=9
 XExp=T
 YExp=v(INPUT)
-XRng=0.2
+XRng=0.5
 YRng=36,-24
 Options=LINEARX,LINEARY
-Range Grid X=0.04
+Range Grid X=0.1
 Range Grid Y=12
 Enable=Enable
 Line Color=#006200
@@ -3708,10 +3762,10 @@ Plt=1
 AliasID=7
 XExp=T
 YExp=v(TP1)-v(TP1B)
-XRng=0.2
+XRng=0.5
 YRng=32,-8
 Options=LINEARX,LINEARY
-Range Grid X=0.004
+Range Grid X=0.1
 Range Grid Y=8
 Enable=Hide
 Line Color=#800080
@@ -3734,10 +3788,10 @@ Plt=1
 AliasID=8
 XExp=T
 YExp=v(TP2)-v(TP2B)
-XRng=0.2
+XRng=0.5
 YRng=32,-8
 Options=LINEARX,LINEARY
-Range Grid X=0.004
+Range Grid X=0.1
 Range Grid Y=8
 Enable=Hide
 Line Color=#9B9BFF
@@ -3760,11 +3814,11 @@ Plt=2
 AliasID=5
 XExp=T
 YExp=i(R3)
-XRng=0.2
-YRng=1.8,-1.2
+XRng=0.5
+YRng=3,-2
 Options=LINEARX,LINEARY
-Range Grid X=0.04
-Range Grid Y=0.6
+Range Grid X=0.1
+Range Grid Y=1
 Enable=Enable
 Line Color=#FCAD2A
 Text Color=#FCAD2A
@@ -3786,11 +3840,11 @@ Plt=2
 AliasID=6
 XExp=T
 YExp=i(R4)
-XRng=0.2
-YRng=1.8,-1.2
+XRng=0.5
+YRng=3,-2
 Options=LINEARX,LINEARY
-Range Grid X=0.04
-Range Grid Y=0.6
+Range Grid X=0.1
+Range Grid Y=1
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -3812,10 +3866,10 @@ Plt=1
 AliasID=2
 XExp=T
 YExp=v(VOUT1) - v(VOUT2)
-XRng=0.2
+XRng=0.5
 YRng=36,-24
 Options=LINEARX,LINEARY
-Range Grid X=0.04
+Range Grid X=0.1
 Range Grid Y=12
 Enable=Enable
 Line Color=#FF0000
@@ -3838,11 +3892,11 @@ Plt=2
 AliasID=3
 XExp=T
 YExp=i(R7)
-XRng=0.2
-YRng=1.8,-1.2
+XRng=0.5
+YRng=3,-2
 Options=LINEARX,LINEARY
-Range Grid X=0.04
-Range Grid Y=0.6
+Range Grid X=0.1
+Range Grid Y=1
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
