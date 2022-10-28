@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=311
+NLCnt=324
 TXCnt=10
 
 [shapedef]
@@ -178,7 +178,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=7681
-Used=213
+Used=217
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -201,7 +201,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=43
+Used=44
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -246,6 +246,34 @@ PinCnt=2
 Pin="Anode",6,0,-13,-8
 Pin="Cathode",0,0,-27,-8
 
+[compdef]
+Name=TIP122
+Definition=Subckt
+Shape=NPN
+Mask=5760
+Used=3
+memo=NPN Medium Power Darlington Transistor Vceo=100V Ic=5A Pd=65W
+Label Offset=29,-14,-6,25
+PinCnt=3
+Pin="2",a,0,0,-2,-3
+Pin="3",a,3,3,6,7
+Pin="1",a,3,-3,5,6
+Power=65
+
+[compdef]
+Name=TIP127
+Definition=Subckt
+Shape=PNP
+Mask=5760
+Used=3
+memo=PNP Medium Power Darlington Transistor Vceo=-100V Ic=-5A Pd=65W
+Label Offset=29,-14,-6,25
+PinCnt=3
+Pin="2",a,0,0,-2,-3
+Pin="3",a,3,-3,6,7
+Pin="1",a,3,3,5,6
+Power=65
+
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 0,0,1203,464
 Default Object=Color=#000080
@@ -259,13 +287,13 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=0,1, -1,-1, -8,-31, 0,0,953,832
+Window Placement in Transient Analysis=0,1, -1,-1, -8,-31, 0,0,953,831
 Window Placement in AC Analysis=0,1, -1,-1, -8,-31, 953,0,1906,832
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
+Show Voltages=True
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -295,7 +323,8 @@ V
 
 [Comp]
 Name=TIP41C
-Px=984,360
+Enable=FALSE
+Px=1096,280
 
 [Attr]
 ON=26,-8,PART
@@ -316,7 +345,8 @@ V=TO-220AB
 
 [Comp]
 Name=TIP42C
-Px=984,600
+Enable=FALSE
+Px=1072,656
 
 [Attr]
 ON=23,3,PART
@@ -448,7 +478,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=33k
+V=20k
 Style=8192
 
 [Attr]
@@ -472,7 +502,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=0.1
+V=1
 Style=8192
 
 [Attr]
@@ -491,7 +521,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=0.1
+V=1
 Style=8192
 
 [Attr]
@@ -510,7 +540,7 @@ Style=8192
 
 [Attr]
 ON=5,-43,RESISTANCE
-V=22
+V=220
 Style=8192
 
 [Attr]
@@ -587,8 +617,8 @@ V=R7
 Style=8192
 
 [Attr]
-ON=-26,20,RESISTANCE
-V=2
+ON=-30,20,RESISTANCE
+V=16
 Style=8192
 
 [Attr]
@@ -602,7 +632,7 @@ Pxs=480,96,528,96
 Pxs=432,96,480,96
 
 [Wire]
-Pxs=648,360,696,360
+Pxs=648,360,680,360
 
 [Comp]
 Name=Resistor
@@ -615,8 +645,8 @@ V=R8
 Style=8192
 
 [Attr]
-ON=7,-45,RESISTANCE
-V=10k
+ON=5,-46,RESISTANCE
+V=200k
 Style=8192
 
 [Attr]
@@ -635,27 +665,7 @@ Style=8192
 
 [Attr]
 ON=-50,-34,RESISTANCE
-V=220
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Capacitor
-Enable=FALSE
-Px=720,496
-Rot=5
-
-[Attr]
-ON=12,-26,PART
-V=C3
-Style=8192
-
-[Attr]
-ON=12,-40,CAPACITANCE
-V=1000uF
+V=10k
 Style=8192
 
 [Attr]
@@ -679,11 +689,8 @@ Pxs=432,360,504,360
 
 [Comp]
 Name=Ground
-Px=720,576
+Px=720,448
 Rot=7
-
-[Wire]
-Pxs=720,496,720,528
 
 [Wire]
 Pxs=720,432,720,448
@@ -701,19 +708,13 @@ Pxs=816,360,832,360
 Pxs=832,360,832,384
 
 [Wire]
-Pxs=832,480,1008,480
-
-[Wire]
 Pxs=1008,456,1008,480
 
 [Wire]
 Pxs=1008,480,1008,504
 
 [Wire]
-Pxs=1008,480,1056,480
-
-[Wire]
-Pxs=1248,480,1280,480
+Pxs=1008,480,1040,480
 
 [Wire]
 Pxs=1008,624,1008,672
@@ -811,7 +812,7 @@ V
 Pxs=1128,480,1128,488
 
 [Wire]
-Pxs=1128,480,1200,480
+Pxs=1128,480,1168,480
 
 [Comp]
 Name=Capacitor
@@ -894,7 +895,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=33k
+V=20k
 Style=8192
 
 [Attr]
@@ -1085,7 +1086,7 @@ V=TO-92
 Pxs=576,456,576,504
 
 [Wire]
-Pxs=304,360,432,360
+Pxs=304,360,360,360
 
 [Wire]
 Pxs=696,360,720,360
@@ -1094,7 +1095,7 @@ Pxs=696,360,720,360
 Pxs=624,264,624,336
 
 [Wire]
-Pxs=528,288,672,288
+Pxs=528,288,704,288
 
 [Wire]
 Pxs=576,264,624,264
@@ -1114,7 +1115,7 @@ Style=8192
 
 [Attr]
 ON=-38,26,CAPACITANCE
-V=1pF
+V=1nF
 Style=8192
 
 [Attr]
@@ -1301,40 +1302,6 @@ Pxs=528,288,528,336
 
 [Comp]
 Name=Resistor
-Px=664,504
-Rot=5
-
-[Attr]
-ON=8,-25,PART
-V=R29
-Style=8192
-
-[Attr]
-ON=7,-45,RESISTANCE
-V=4MEG
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=664,448,720,448
-
-[Wire]
-Pxs=664,448,664,456
-
-[Wire]
-Pxs=664,504,664,528
-
-[Wire]
-Pxs=664,528,720,528
-
-[Wire]
-Pxs=720,528,720,576
-
-[Comp]
-Name=Resistor
 Px=528,448
 Rot=5
 
@@ -1463,7 +1430,7 @@ Pxs=656,624,664,624
 Pxs=656,96,656,624
 
 [Wire]
-Pxs=656,96,864,96
+Pxs=656,96,680,96
 
 [Wire]
 Pxs=864,656,864,664
@@ -1550,13 +1517,10 @@ ON=-52,54,PACKAGE
 V=DO-35
 
 [Wire]
-Pxs=1104,480,1128,480
+Pxs=1104,480,1120,480
 
 [Wire]
 Pxs=1056,304,1056,480
-
-[Wire]
-Pxs=1056,480,1104,480
 
 [Wire]
 Pxs=1056,96,1056,256
@@ -1612,9 +1576,6 @@ V
 
 [Wire]
 Pxs=744,600,744,624
-
-[Wire]
-Pxs=672,288,720,288
 
 [Wire]
 Pxs=880,360,888,360
@@ -1724,7 +1685,8 @@ Pxs=768,624,792,624
 
 [Comp]
 Name=TIP42C
-Px=1464,600
+Enable=FALSE
+Px=1320,624
 Rot=6
 
 [Attr]
@@ -1746,7 +1708,8 @@ V=TO-220AB
 
 [Comp]
 Name=TIP41C
-Px=1464,360
+Enable=FALSE
+Px=1312,352
 Rot=6
 
 [Attr]
@@ -1766,9 +1729,6 @@ V=65
 ON=-99,39,PACKAGE
 V=TO-220AB
 
-[Wire]
-Pxs=1280,480,1344,480
-
 [Comp]
 Name=Resistor
 Px=1440,456
@@ -1781,7 +1741,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=0.1
+V=1
 Style=8192
 
 [Attr]
@@ -1800,7 +1760,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=0.1
+V=1
 Style=8192
 
 [Attr]
@@ -1853,7 +1813,7 @@ Pxs=1440,624,1440,720
 Pxs=1440,552,1440,576
 
 [Wire]
-Pxs=1440,480,1440,488
+Pxs=1440,480,1440,504
 
 [Wire]
 Pxs=1440,456,1440,480
@@ -1990,7 +1950,7 @@ Style=8192
 
 [Attr]
 ON=5,-43,RESISTANCE
-V=22
+V=220
 Style=8192
 
 [Attr]
@@ -2170,7 +2130,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=33k
+V=2k
 Style=8192
 
 [Attr]
@@ -2189,7 +2149,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=33k
+V=2k
 Style=8192
 
 [Attr]
@@ -2207,9 +2167,6 @@ Pxs=2112,384,2256,384
 
 [Wire]
 Pxs=1608,96,1800,96
-
-[Wire]
-Pxs=2256,96,2256,288
 
 [Wire]
 Pxs=2256,336,2256,384
@@ -2336,9 +2293,6 @@ Pxs=2208,528,2208,600
 
 [Wire]
 Pxs=2208,96,2208,480
-
-[Wire]
-Pxs=2208,96,2256,96
 
 [Comp]
 Name=Resistor
@@ -2487,21 +2441,9 @@ Pxs=1800,96,1800,600
 [Wire]
 Pxs=1800,96,1992,96
 
-[Wire]
-Pxs=1440,488,1872,488
-
-[Wire]
-Pxs=1872,384,1872,488
-
-[Wire]
-Pxs=1440,488,1440,504
-
-[Wire]
-Pxs=1872,384,1880,384
-
 [Comp]
 Name=Resistor
-Px=1928,384
+Px=1904,480
 Rot=2
 
 [Attr]
@@ -2510,8 +2452,8 @@ V=R47
 Style=8192
 
 [Attr]
-ON=-50,-34,RESISTANCE
-V=220
+ON=-52,-37,RESISTANCE
+V=2k
 Style=8192
 
 [Attr]
@@ -2519,10 +2461,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1928,384,1944,384
+Pxs=1872,384,1880,384
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=1944,592
 Rot=5
 
@@ -2533,7 +2476,7 @@ Style=8192
 
 [Attr]
 ON=7,-45,RESISTANCE
-V=10k
+V=1k
 Style=8192
 
 [Attr]
@@ -2541,7 +2484,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1944,384,1944,544
+Pxs=1944,384,1944,480
 
 [Wire]
 Pxs=1944,384,1968,384
@@ -2583,6 +2526,241 @@ V=DC 24 AC 0 0
 ON=0,0,PACKAGE
 V
 
+[Comp]
+Name=TIP122
+Px=984,360
+
+[Attr]
+ON=29,-14,PART
+V=X1
+Style=8192
+
+[Attr]
+ON=29,0,NAME
+V=TIP122
+
+[Attr]
+ON=29,14,POWER
+V=65
+
+[Attr]
+ON=29,42,PACKAGE
+V=TO-220AB
+
+[Comp]
+Name=TIP127
+Px=984,600
+
+[Attr]
+ON=29,-14,PART
+V=X2
+Style=8192
+
+[Attr]
+ON=29,0,NAME
+V=TIP127
+
+[Attr]
+ON=29,14,POWER
+V=65
+
+[Attr]
+ON=29,42,PACKAGE
+V=TO-220AB
+
+[Comp]
+Name=TIP122
+Px=1464,360
+Rot=6
+
+[Attr]
+ON=-45,-14,PART
+V=X3
+Style=8192
+
+[Attr]
+ON=-73,0,NAME
+V=TIP122
+
+[Attr]
+ON=-45,14,POWER
+V=65
+
+[Attr]
+ON=-91,42,PACKAGE
+V=TO-220AB
+
+[Comp]
+Name=TIP127
+Px=1464,600
+Rot=6
+
+[Attr]
+ON=-45,-14,PART
+V=X4
+Style=8192
+
+[Attr]
+ON=-73,0,NAME
+V=TIP127
+
+[Attr]
+ON=-45,14,POWER
+V=65
+
+[Attr]
+ON=-91,42,PACKAGE
+V=TO-220AB
+
+[Comp]
+Name=Resistor
+Px=1104,480
+Rot=6
+COff=8,1070,486,-9,-29
+
+[Attr]
+ON=-34,6,PART
+V=R49
+Style=8192
+
+[Attr]
+ON=-26,20,RESISTANCE
+V=.2
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1248,480,1344,480
+
+[Wire]
+Pxs=832,480,1008,480
+
+[Wire]
+Pxs=1040,32,1040,480
+
+[Wire]
+Pxs=1040,32,1872,32
+
+[Wire]
+Pxs=1040,480,1056,480
+
+[Wire]
+Pxs=1440,480,1856,480
+
+[Wire]
+Pxs=1944,480,1944,544
+
+[Wire]
+Pxs=1904,480,1944,480
+
+[Comp]
+Name=Resistor
+Px=680,240
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R50
+Style=8192
+
+[Attr]
+ON=5,-45,RESISTANCE
+V=200k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=704,288,720,288
+
+[Wire]
+Pxs=680,240,680,360
+
+[Wire]
+Pxs=680,360,696,360
+
+[Wire]
+Pxs=680,96,680,192
+
+[Wire]
+Pxs=680,96,864,96
+
+[Wire]
+Pxs=1872,32,1872,384
+
+[Wire]
+Pxs=2208,96,2256,96
+
+[Wire]
+Pxs=2256,96,2256,288
+
+[Comp]
+Name=Resistor
+Px=1928,384
+Rot=2
+
+[Attr]
+ON=-34,-20,PART
+V=R51
+Style=8192
+
+[Attr]
+ON=-52,-37,RESISTANCE
+V=2k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1928,384,1944,384
+
+[Wire]
+Pxs=1168,480,1200,480
+
+[Wire]
+Pxs=1120,480,1120,760
+
+[Wire]
+Pxs=360,760,1120,760
+
+[Wire]
+Pxs=1120,480,1128,480
+
+[Wire]
+Pxs=360,448,360,760
+
+[Comp]
+Name=Resistor
+Px=360,448
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R52
+Style=8192
+
+[Attr]
+ON=7,-39,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=360,360,360,400
+
+[Wire]
+Pxs=360,360,432,360
+
 [Grid Text]
 Text="Vin"
 Px=200,360
@@ -2592,8 +2770,8 @@ JustifyV=Bottom
 CBorder=None
 
 [Grid Text]
-Text="Vout"
-Px=1280,480
+Text="Vout2"
+Px=1248,480
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2617,15 +2795,15 @@ CBorder=None
 
 [Grid Text]
 Text="OUT2"
-Px=672,288
+Px=704,288
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
 [Grid Text]
-Text="VoutDC"
-Px=1104,480
+Text="Vout1"
+Px=1168,480
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2860,9 +3038,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=263,48
+SB 3=921,0
 Scale 3=1
-Px=1174,413
+Px=317,582
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2926,7 +3104,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=37,18
+SB 0=36,18
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -2977,7 +3155,7 @@ Text=* A .cir file is typically found in the data directory
 Text=*
 Text=*** From file C:\MC12\library\UTILITY.LBR
 Text=*** 10MHz Sinusoidal Source
-Text=.MODEL GENERAL SIN (A=12 DC=12 F=100)
+Text=.MODEL GENERAL SIN (A=12 DC=12 F=10)
 
 [InfoPage]
 InfoPage=True
@@ -3061,7 +3239,7 @@ FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=9
+MonMaxShow=8
 MonPageWidth=66
 MonPlotWidth=21
 MonExprXWidth=142
@@ -3460,9 +3638,9 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TMax=20m
+TMax=200m
 TStart=0
-TStep=10us
+TStep=20us
 NPts=200
 Temp=27
 RetraceRuns=1
@@ -3478,10 +3656,10 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(OUT2)
-XRng=0.02
+XRng=0.2
 YRng=16,-4
 Options=LINEARX,LINEARY
-Range Grid X=0.0004
+Range Grid X=0.04
 Range Grid Y=4
 Enable=Hide
 Line Color=#0000FF
@@ -3504,11 +3682,11 @@ Plt=1
 AliasID=9
 XExp=T
 YExp=v(INPUT)
-XRng=0.02
-YRng=30
+XRng=0.2
+YRng=36,-24
 Options=LINEARX,LINEARY
-Range Grid X=0.004
-Range Grid Y=6
+Range Grid X=0.04
+Range Grid Y=12
 Enable=Enable
 Line Color=#006200
 Text Color=#006200
@@ -3530,7 +3708,7 @@ Plt=1
 AliasID=7
 XExp=T
 YExp=v(TP1)-v(TP1B)
-XRng=0.02
+XRng=0.2
 YRng=32,-8
 Options=LINEARX,LINEARY
 Range Grid X=0.004
@@ -3556,7 +3734,7 @@ Plt=1
 AliasID=8
 XExp=T
 YExp=v(TP2)-v(TP2B)
-XRng=0.02
+XRng=0.2
 YRng=32,-8
 Options=LINEARX,LINEARY
 Range Grid X=0.004
@@ -3578,41 +3756,15 @@ NOFmtY=3E
 
 [WaveForm]
 Analysis=Transient
-Plt=1
-AliasID=4
-XExp=T
-YExp=v(VOUTDC)
-XRng=0.02
-YRng=30
-Options=LINEARX,LINEARY
-Range Grid X=0.004
-Range Grid Y=6
-Enable=Enable
-Line Color=#FF0000
-Text Color=#FF0000
-Rainbow=False
-VFmtX=3
-VFmtY=3
-ScaleFactorX="None"
-ScaleFactorY="None"
-ScaleUnitsX="Auto"
-ScaleUnitsY="Auto"
-SFmtX=2
-SFmtY=2
-NOFmtX=3E
-NOFmtY=3E
-
-[WaveForm]
-Analysis=Transient
 Plt=2
 AliasID=5
 XExp=T
 YExp=i(R3)
-XRng=0.02
-YRng=3,-2
+XRng=0.2
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
-Range Grid X=0.004
-Range Grid Y=1
+Range Grid X=0.04
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#FCAD2A
 Text Color=#FCAD2A
@@ -3634,11 +3786,11 @@ Plt=2
 AliasID=6
 XExp=T
 YExp=i(R4)
-XRng=0.02
-YRng=3,-2
+XRng=0.2
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
-Range Grid X=0.004
-Range Grid Y=1
+Range Grid X=0.04
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -3659,12 +3811,12 @@ Analysis=Transient
 Plt=1
 AliasID=2
 XExp=T
-YExp=v(VOUT)
-XRng=0.02
-YRng=30
+YExp=v(VOUT1) - v(VOUT2)
+XRng=0.2
+YRng=36,-24
 Options=LINEARX,LINEARY
-Range Grid X=0.004
-Range Grid Y=6
+Range Grid X=0.04
+Range Grid Y=12
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -3686,11 +3838,11 @@ Plt=2
 AliasID=3
 XExp=T
 YExp=i(R7)
-XRng=0.02
-YRng=3,-2
+XRng=0.2
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
-Range Grid X=0.004
-Range Grid Y=1
+Range Grid X=0.04
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
