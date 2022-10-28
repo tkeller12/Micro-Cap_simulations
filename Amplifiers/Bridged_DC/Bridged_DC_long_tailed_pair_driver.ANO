@@ -2,26 +2,23 @@
 ***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***         Transient Analysis of Bridged_DC_long_tailed_pair_driver         ***
-***                          10/28/2022 4:50:37 PM                           ***
+***            AC Analysis of Bridged_DC_long_tailed_pair_driver             ***
+***                          10/28/2022 4:43:37 PM                           ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           500m
-Output Start Time (tstart) 0
-Maximum Time Step          20us
-Number of Points           200
-Temperature                Linear 27
-Retrace Runs               1
-Run Options                Normal
-State Variables            Zero
-Operating Point            On
-Operating Point Only       Off
-Auto Scale Ranges          On
-Accumulate Plots           Off
-Fixed Time Step            Off
-Periodic Steady State      Off
-Ignore Expression Errors   Off
+Frequency Range          Log 100E6,10
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
 
 
 *****************************************************
