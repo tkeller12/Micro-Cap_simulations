@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1536,864
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=273
+NLCnt=280
 TXCnt=15
 
 [shapedef]
@@ -240,7 +240,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=7681
-Used=204
+Used=206
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -252,7 +252,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=279
+Used=280
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -366,7 +366,7 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
+Show Voltages=True
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -687,7 +687,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=2
+V=1
 Style=8192
 
 [Attr]
@@ -1940,7 +1940,6 @@ Pxs=736,360,768,360
 
 [Comp]
 Name=Resistor
-Enable=FALSE
 Px=1176,600
 Rot=3
 
@@ -2060,6 +2059,7 @@ Pxs=1176,480,1192,480
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=1392,624
 Rot=3
 
@@ -2279,7 +2279,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=10k
+V=100k
 Style=8192
 
 [Attr]
@@ -2304,7 +2304,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=1k
+V=10k
 Style=8192
 
 [Attr]
@@ -2315,9 +2315,6 @@ V
 Name=Ground
 Px=1392,216
 Rot=7
-
-[Wire]
-Pxs=1248,384,1248,480
 
 [Comp]
 Name=Resistor
@@ -2331,15 +2328,12 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=1k
+V=10k
 Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
-
-[Wire]
-Pxs=1192,384,1192,480
 
 [Comp]
 Name=Ground
@@ -2358,7 +2352,7 @@ Style=8192
 
 [Attr]
 ON=19,-40,CAPACITANCE
-V=10uF
+V=100000uF
 Style=8192
 
 [Attr]
@@ -2367,9 +2361,6 @@ V
 
 [Wire]
 Pxs=1560,304,1568,304
-
-[Wire]
-Pxs=1192,480,1200,480
 
 [Comp]
 Name=Resistor
@@ -2383,7 +2374,7 @@ Style=8192
 
 [Attr]
 ON=-49,20,RESISTANCE
-V=10k
+V=100k
 Style=8192
 
 [Attr]
@@ -2394,7 +2385,7 @@ V
 Pxs=1472,360,1512,360
 
 [Wire]
-Pxs=1248,328,1392,328
+Pxs=1248,328,1320,328
 
 [Wire]
 Pxs=1248,328,1248,336
@@ -2436,16 +2427,17 @@ Pxs=1616,240,1616,304
 
 [Comp]
 Name=Resistor
-Px=1104,240
-Rot=5
+Enable=FALSE
+Px=1176,280
+Rot=6
 
 [Attr]
-ON=8,-25,PART
+ON=-42,6,PART
 V=R49
 Style=8192
 
 [Attr]
-ON=8,-39,RESISTANCE
+ON=-41,20,RESISTANCE
 V=10k
 Style=8192
 
@@ -2454,16 +2446,82 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1104,240,1104,280
-
-[Wire]
-Pxs=1104,280,1192,280
-
-[Wire]
-Pxs=1104,96,1104,192
+Pxs=1104,96,1104,280
 
 [Wire]
 Pxs=1104,96,1200,96
+
+[Wire]
+Pxs=1192,384,1192,480
+
+[Wire]
+Pxs=1248,384,1248,480
+
+[Wire]
+Pxs=1192,480,1200,480
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=1248,240
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R50
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=50k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1248,240,1248,328
+
+[Wire]
+Pxs=1200,96,1248,96
+
+[Wire]
+Pxs=1248,96,1248,192
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=1320,376
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R51
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=50k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1320,328,1392,328
+
+[Comp]
+Name=Ground
+Px=1320,376
+Rot=7
+
+[Wire]
+Pxs=1176,280,1192,280
+
+[Wire]
+Pxs=1104,280,1128,280
 
 [Grid Text]
 Text="Vin"
@@ -2475,7 +2533,7 @@ CBorder=None
 
 [Grid Text]
 Text="Vout"
-Px=1248,480
+Px=1296,480
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2784,9 +2842,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=960,144
+SB 3=1048,48
 Scale 3=1
-Px=1346,577
+Px=1156,277
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2851,7 +2909,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=30,18
+SB 0=54,22
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -2959,7 +3017,7 @@ Text=.MODEL GENERAL SIN (A=2 F=10K)
 Text=*** From file C:\MC12\library\UTILITY.LBR
 Text=*** Generic Opamp Model
 Text=.MODEL $GENERIC OPA (LEVEL=3 GBW=2.5MEG IBIAS=30p IOFF=3p ROUTAC=50 ROUTDC=75
-Text=+ SRN=5MEG SRP=5MEG VEE=0 VNS=0 VOFF=2m)
+Text=+ SRN=5MEG SRP=5MEG VCC=12 VEE=0 VNS=0 VOFF=2m VPS=10)
 
 [InfoPage]
 InfoPage=True
@@ -3487,10 +3545,10 @@ AliasID=9
 XExp=T
 YExp=v(VSAMPLE)
 XRng=0.0002
-YRng=1.2,-0.8
+YRng=2.4,-0.6
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.4
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#C8C8C8
 Text Color=#C8C8C8
@@ -3591,10 +3649,10 @@ AliasID=5
 XExp=T
 YExp=i(R3)
 XRng=0.0002
-YRng=1.5,-1
+YRng=3,-2
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.5
+Range Grid Y=1
 Enable=Enable
 Line Color=#FCAD2A
 Text Color=#FCAD2A
@@ -3617,10 +3675,10 @@ AliasID=6
 XExp=T
 YExp=i(R4)
 XRng=0.0002
-YRng=1.5,-1
+YRng=3,-2
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.5
+Range Grid Y=1
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -3669,10 +3727,10 @@ AliasID=3
 XExp=T
 YExp=i(R7)
 XRng=0.0002
-YRng=1.5,-1
+YRng=3,-2
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.5
+Range Grid Y=1
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
