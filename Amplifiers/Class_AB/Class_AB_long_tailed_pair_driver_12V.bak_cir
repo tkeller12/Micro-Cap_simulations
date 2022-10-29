@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1536,864
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=260
+NLCnt=265
 TXCnt=15
 
 [shapedef]
@@ -239,8 +239,8 @@ Power=0.625
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7425
-Used=201
+Mask=7681
+Used=202
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -2025,7 +2025,7 @@ Style=8192
 
 [Attr]
 ON=18,20,RESISTANCE
-V=0
+V=.1
 Style=8192
 
 [Attr]
@@ -2055,7 +2055,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1176,480,1200,480
+Pxs=1176,480,1192,480
 
 [Comp]
 Name=Resistor
@@ -2202,10 +2202,10 @@ Rot=7
 Page=3
 
 [Wire]
-Pxs=1248,280,1248,336
+Pxs=1192,280,1192,336
 
 [Wire]
-Pxs=1248,280,1296,280
+Pxs=1192,280,1296,280
 
 [Wire]
 Pxs=1392,328,1408,328
@@ -2214,7 +2214,7 @@ Pxs=1392,328,1408,328
 Pxs=1392,328,1392,360
 
 [Wire]
-Pxs=1392,360,1512,360
+Pxs=1392,360,1424,360
 
 [Wire]
 Pxs=1512,304,1512,360
@@ -2278,18 +2278,12 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=100k
+V=50k
 Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
-
-[Wire]
-Pxs=1200,96,1296,96
-
-[Wire]
-Pxs=1296,96,1296,208
 
 [Wire]
 Pxs=1296,256,1296,280
@@ -2299,7 +2293,7 @@ Pxs=1296,280,1408,280
 
 [Comp]
 Name=Resistor
-Px=1296,360
+Px=1248,384
 Rot=5
 
 [Attr]
@@ -2309,7 +2303,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=100k
+V=1k
 Style=8192
 
 [Attr]
@@ -2318,18 +2312,15 @@ V
 
 [Comp]
 Name=Ground
-Px=1296,384
+Px=1392,216
 Rot=7
 
 [Wire]
-Pxs=1296,360,1296,384
-
-[Wire]
-Pxs=1296,280,1296,312
+Pxs=1248,384,1248,480
 
 [Comp]
 Name=Resistor
-Px=1248,384
+Px=1192,384
 Rot=5
 
 [Attr]
@@ -2339,7 +2330,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=100
+V=1k
 Style=8192
 
 [Attr]
@@ -2347,7 +2338,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1248,384,1248,480
+Pxs=1192,384,1192,480
 
 [Comp]
 Name=Ground
@@ -2375,6 +2366,46 @@ V
 
 [Wire]
 Pxs=1560,304,1568,304
+
+[Wire]
+Pxs=1192,480,1200,480
+
+[Comp]
+Name=Resistor
+Px=1472,360
+Rot=6
+
+[Attr]
+ON=-42,6,PART
+V=R47
+Style=8192
+
+[Attr]
+ON=-49,20,RESISTANCE
+V=50k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1472,360,1512,360
+
+[Wire]
+Pxs=1248,328,1392,328
+
+[Wire]
+Pxs=1248,328,1248,336
+
+[Wire]
+Pxs=1296,192,1296,208
+
+[Wire]
+Pxs=1296,192,1392,192
+
+[Wire]
+Pxs=1392,192,1392,216
 
 [Grid Text]
 Text="Vin"
@@ -2695,9 +2726,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=1012,157
+SB 3=711,61
 Scale 3=1
-Px=1532,430
+Px=1393,215
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
