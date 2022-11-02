@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=223
-TXCnt=15
+NLCnt=218
+TXCnt=13
 
 [shapedef]
 Name=Battery
@@ -227,7 +227,7 @@ Name=2N3904
 Definition=NPN
 Shape=NPN
 Mask=5760
-Used=10
+Used=11
 memo=NPN General Purpose Transistor Vceo=40V Ic=.2A Pd=625mW
 Label Offset=29,-11,-6,26
 PinCnt=3
@@ -240,8 +240,8 @@ Power=0.625
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7681
-Used=260
+Mask=7937
+Used=263
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -252,8 +252,8 @@ Pin="Minus",0,0,-14,-4
 Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
-Mask=7425
-Used=55
+Mask=7937
+Used=56
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -277,7 +277,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=316
+Used=317
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -288,7 +288,7 @@ Name=2N3906
 Definition=PNP
 Shape=PNP
 Mask=5762
-Used=11
+Used=12
 memo=PNP General Purpose Transistor Vceo=-40V Ic=-.2A Pd=625mW
 Label Offset=29,-11,-6,26
 PinCnt=3
@@ -301,8 +301,8 @@ Power=0.625
 Name=1N4148
 Definition=Diode
 Shape=Diode
-Mask=4994
-Used=30
+Mask=5506
+Used=40
 memo=Switching Diode Vr=100V If=200mA
 Label Offset=18,10,12,12
 PinCnt=2
@@ -326,7 +326,7 @@ Name=Opamp
 Definition=Opamp
 Shape=Opamp5
 Mask=5633
-Used=7
+Used=8
 memo=Opamp
 Label Offset=44,29,-14,39
 PinCnt=5
@@ -379,7 +379,7 @@ Show Grid Text=True
 
 [Comp]
 Name=Sine Source
-Px=192,528
+Px=192,552
 Rot=3
 
 [Attr]
@@ -397,7 +397,7 @@ V
 
 [Comp]
 Name=TIP41C
-Px=984,264
+Px=984,288
 
 [Attr]
 ON=26,-8,PART
@@ -418,8 +418,8 @@ V=TO-220AB
 
 [Comp]
 Name=TIP42C
-Px=984,552
-COff=23,984,563,19,-12
+Px=984,576
+COff=23,984,587,19,-12
 
 [Attr]
 ON=23,3,PART
@@ -440,8 +440,8 @@ V=TO-220AB
 
 [Comp]
 Name=2N3904
-Px=600,648
-COff=8,600,648,30,-7
+Px=600,672
+COff=8,600,672,30,-7
 
 [Attr]
 ON=29,-11,PART
@@ -462,7 +462,7 @@ V=TO-92
 
 [Comp]
 Name=2N3904
-Px=552,648
+Px=552,672
 Rot=6
 
 [Attr]
@@ -484,7 +484,7 @@ V=TO-92
 
 [Comp]
 Name=Resistor
-Px=240,408
+Px=240,432
 Rot=4
 
 [Attr]
@@ -502,17 +502,17 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=192,528,192,720
+Pxs=192,552,192,744
 
 [Wire]
-Pxs=192,408,192,480
+Pxs=192,432,192,504
 
 [Wire]
-Pxs=192,408,200,408
+Pxs=192,432,200,432
 
 [Comp]
 Name=Capacitor
-Px=336,408
+Px=336,432
 Rot=4
 
 [Attr]
@@ -530,11 +530,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=288,408,304,408
+Pxs=288,432,304,432
 
 [Comp]
 Name=Resistor
-Px=432,480
+Px=432,504
 Rot=5
 
 [Attr]
@@ -553,7 +553,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=1008,384
+Px=1008,408
 Rot=5
 
 [Attr]
@@ -572,7 +572,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=1008,480
+Px=1008,504
 Rot=5
 
 [Attr]
@@ -591,7 +591,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=816,192
+Px=816,216
 Rot=5
 
 [Attr]
@@ -601,7 +601,7 @@ Style=8192
 
 [Attr]
 ON=5,-44,RESISTANCE
-V=33
+V=22
 Style=8192
 
 [Attr]
@@ -610,9 +610,9 @@ V
 
 [Comp]
 Name=Voltage Source
-Px=1200,168
+Px=1200,192
 Rot=3
-COff=8,1169,141,53,-4
+COff=8,1169,165,53,-4
 
 [Attr]
 ON=-31,-27,PART
@@ -658,14 +658,14 @@ V=DC 12 AC 0 0
 Style=256
 
 [Wire]
-Pxs=1008,96,1056,96
+Pxs=1008,120,1056,120
 
 [Wire]
-Pxs=1200,96,1200,120
+Pxs=1200,120,1200,144
 
 [Comp]
 Name=Resistor
-Px=1344,552
+Px=1344,576
 Rot=5
 
 [Attr]
@@ -684,7 +684,7 @@ V
 
 [Comp]
 Name=Capacitor
-Px=1248,408
+Px=1248,432
 Rot=4
 
 [Attr]
@@ -694,7 +694,7 @@ Style=8192
 
 [Attr]
 ON=5,9,CAPACITANCE
-V=10000uF
+V=1000uF
 Style=8192
 
 [Attr]
@@ -702,11 +702,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=432,96,504,96
+Pxs=432,120,504,120
 
 [Comp]
 Name=Resistor
-Px=768,408
+Px=768,432
 Rot=6
 
 [Attr]
@@ -725,7 +725,7 @@ V
 
 [Comp]
 Name=Capacitor
-Px=672,504
+Px=672,528
 Rot=5
 
 [Attr]
@@ -734,8 +734,8 @@ V=C3
 Style=8192
 
 [Attr]
-ON=12,-40,CAPACITANCE
-V=1uF
+ON=3,-41,CAPACITANCE
+V=100nF
 Style=8192
 
 [Attr]
@@ -743,55 +743,55 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=384,408,432,408
+Pxs=384,432,432,432
 
 [Wire]
-Pxs=432,480,432,720
+Pxs=432,504,432,744
 
 [Wire]
-Pxs=432,408,432,432
+Pxs=432,432,432,456
 
 [Wire]
-Pxs=432,408,504,408
+Pxs=432,432,504,432
 
 [Comp]
 Name=Ground
-Px=720,528
+Px=720,552
 Rot=7
 
 [Wire]
-Pxs=648,408,672,408
+Pxs=648,432,672,432
+
+[Wire]
+Pxs=1008,432,1008,456
+
+[Wire]
+Pxs=1008,432,1056,432
+
+[Wire]
+Pxs=1344,432,1344,480
+
+[Wire]
+Pxs=1008,600,1008,744
 
 [Wire]
 Pxs=1008,408,1008,432
 
 [Wire]
-Pxs=1008,408,1056,408
+Pxs=1008,504,1008,528
 
 [Wire]
-Pxs=1344,408,1344,456
+Pxs=200,432,240,432
 
 [Wire]
-Pxs=1008,576,1008,720
+Pxs=1008,744,1056,744
 
 [Wire]
-Pxs=1008,384,1008,408
-
-[Wire]
-Pxs=1008,480,1008,504
-
-[Wire]
-Pxs=200,408,240,408
-
-[Wire]
-Pxs=1008,720,1056,720
-
-[Wire]
-Pxs=1104,536,1104,720
+Pxs=1104,560,1104,744
 
 [Comp]
 Name=Resistor
-Px=1104,536
+Px=1104,560
 Rot=5
 
 [Attr]
@@ -809,27 +809,27 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1104,464,1104,488
+Pxs=1104,488,1104,512
 
 [Wire]
-Pxs=528,432,528,576
+Pxs=528,456,528,600
 
 [Wire]
-Pxs=624,432,624,600
+Pxs=624,456,624,624
 
 [Comp]
 Name=Ground
-Px=816,720
+Px=816,744
 Rot=7
 
 [Comp]
 Name=Ground
-Px=1200,168
+Px=1200,192
 Rot=7
 
 [Comp]
 Name=Capacitor
-Px=1104,464
+Px=1104,488
 Rot=5
 
 [Attr]
@@ -847,14 +847,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1104,408,1104,416
+Pxs=1104,432,1104,440
 
 [Wire]
-Pxs=1056,408,1080,408
+Pxs=1056,432,1080,432
 
 [Comp]
 Name=Capacitor
-Px=960,240
+Px=960,264
 Rot=4
 
 [Attr]
@@ -872,14 +872,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1008,96,1008,240
+Pxs=1008,120,1008,264
 
 [Wire]
-Pxs=816,264,912,264
+Pxs=816,288,912,288
 
 [Comp]
 Name=Capacitor
-Px=960,576
+Px=960,600
 Rot=4
 
 [Attr]
@@ -897,11 +897,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=816,552,864,552
+Pxs=816,576,912,576
 
 [Comp]
 Name=Resistor
-Px=432,384
+Px=432,408
 Rot=5
 
 [Attr]
@@ -919,11 +919,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=432,384,432,408
+Pxs=432,408,432,432
 
 [Comp]
 Name=2N3906
-Px=552,240
+Px=552,264
 
 [Attr]
 ON=29,-11,PART
@@ -943,23 +943,23 @@ ON=29,45,PACKAGE
 V=TO-92
 
 [Wire]
-Pxs=304,408,336,408
+Pxs=304,432,336,432
 
 [Wire]
-Pxs=528,336,576,336
+Pxs=528,360,576,360
 
 [Wire]
-Pxs=720,96,816,96
+Pxs=720,120,816,120
 
 [Wire]
-Pxs=504,96,576,96
+Pxs=504,120,576,120
 
 [Wire]
-Pxs=504,96,504,120
+Pxs=504,120,504,144
 
 [Comp]
 Name=Resistor
-Px=576,192
+Px=576,216
 Rot=5
 
 [Attr]
@@ -978,7 +978,7 @@ V
 
 [Comp]
 Name=1N4148
-Px=720,144
+Px=720,168
 Rot=3
 
 [Attr]
@@ -996,7 +996,7 @@ V=DO-35
 
 [Comp]
 Name=1N4148
-Px=720,192
+Px=720,216
 Rot=3
 
 [Attr]
@@ -1014,7 +1014,7 @@ V=DO-35
 
 [Comp]
 Name=Resistor
-Px=720,480
+Px=720,504
 Rot=5
 
 [Attr]
@@ -1033,7 +1033,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=528,384
+Px=528,408
 Rot=5
 
 [Attr]
@@ -1052,7 +1052,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=624,384
+Px=624,408
 Rot=5
 
 [Attr]
@@ -1071,7 +1071,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=768,576
+Px=768,600
 Rot=6
 
 [Attr]
@@ -1089,11 +1089,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=576,96,720,96
+Pxs=576,120,720,120
 
 [Comp]
 Name=Capacitor
-Px=768,240
+Px=768,264
 Rot=4
 
 [Attr]
@@ -1112,7 +1112,7 @@ V
 
 [Comp]
 Name=1N4148
-Px=1056,240
+Px=1056,264
 Rot=7
 
 [Attr]
@@ -1129,17 +1129,17 @@ ON=-52,54,PACKAGE
 V=DO-35
 
 [Wire]
-Pxs=1056,288,1056,408
+Pxs=1056,312,1056,432
 
 [Wire]
-Pxs=1056,96,1056,240
+Pxs=1056,120,1056,264
 
 [Wire]
-Pxs=1056,96,1200,96
+Pxs=1056,120,1200,120
 
 [Comp]
 Name=1N4148
-Px=1056,552
+Px=1056,576
 Rot=7
 
 [Attr]
@@ -1156,14 +1156,14 @@ ON=-52,54,PACKAGE
 V=DO-35
 
 [Wire]
-Pxs=1056,408,1056,552
+Pxs=1056,432,1056,576
 
 [Wire]
-Pxs=1056,600,1056,720
+Pxs=1056,624,1056,744
 
 [Comp]
 Name=Capacitor
-Px=768,552
+Px=768,576
 Rot=4
 
 [Attr]
@@ -1182,7 +1182,7 @@ V
 
 [Comp]
 Name=1N4148
-Px=816,528
+Px=816,552
 Rot=3
 
 [Attr]
@@ -1200,7 +1200,7 @@ V=DO-35
 
 [Comp]
 Name=1N4148
-Px=816,432
+Px=816,456
 Rot=3
 
 [Attr]
@@ -1218,9 +1218,9 @@ V=DO-35
 
 [Comp]
 Name=2N3904
-Px=792,576
-COff=8,792,576,30,-7
-COff=23,792,587,-27,-9
+Px=792,600
+COff=8,792,600,30,-7
+COff=23,792,611,-27,-9
 
 [Attr]
 ON=29,-11,PART
@@ -1241,7 +1241,7 @@ V=TO-92
 
 [Comp]
 Name=2N3906
-Px=792,216
+Px=792,240
 
 [Attr]
 ON=29,-11,PART
@@ -1263,7 +1263,7 @@ V=TO-92
 [Comp]
 Name=Resistor
 Enable=FALSE
-Px=1152,528
+Px=1152,552
 Rot=3
 
 [Attr]
@@ -1281,14 +1281,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1152,528,1152,720
+Pxs=1152,552,1152,744
 
 [Wire]
-Pxs=1152,408,1152,480
+Pxs=1152,432,1152,504
 
 [Comp]
 Name=1N4148
-Px=816,480
+Px=816,504
 Rot=3
 
 [Attr]
@@ -1306,7 +1306,7 @@ V=DO-35
 
 [Comp]
 Name=Inductor
-Px=1344,600
+Px=1344,624
 Rot=3
 
 [Attr]
@@ -1324,11 +1324,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1344,600,1344,624
+Pxs=1344,624,1344,648
 
 [Comp]
 Name=Resistor
-Px=1200,408
+Px=1200,432
 
 [Attr]
 ON=18,6,PART
@@ -1346,7 +1346,7 @@ V
 
 [Comp]
 Name=Capacitor
-Px=1344,504
+Px=1344,528
 Rot=5
 
 [Attr]
@@ -1356,7 +1356,7 @@ Style=8192
 
 [Attr]
 ON=11,-40,CAPACITANCE
-V=100nF
+V=1nF
 Style=8192
 
 [Attr]
@@ -1364,11 +1364,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1080,408,1104,408
+Pxs=1080,432,1104,432
 
 [Comp]
 Name=Resistor
-Px=1392,576
+Px=1392,600
 Rot=3
 
 [Attr]
@@ -1386,15 +1386,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1392,408,1392,528
+Pxs=1392,432,1392,552
 
 [Wire]
-Pxs=1296,408,1344,408
+Pxs=1296,432,1344,432
 
 [Comp]
 Name=Resistor
-Enable=FALSE
-Px=1296,504
+Px=1296,528
 Rot=3
 
 [Attr]
@@ -1412,15 +1411,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1296,456,1344,456
+Pxs=1296,480,1344,480
 
 [Wire]
-Pxs=1296,504,1344,504
+Pxs=1296,528,1344,528
 
 [Comp]
 Name=Resistor
-Enable=FALSE
-Px=1296,600
+Px=1296,624
 Rot=3
 
 [Attr]
@@ -1438,14 +1436,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1296,552,1344,552
+Pxs=1296,576,1344,576
 
 [Wire]
-Pxs=1296,600,1344,600
+Pxs=1296,624,1344,624
 
 [Comp]
 Name=Opamp
-Px=1408,280
+Px=1408,304
 
 [Attr]
 ON=44,29,PART
@@ -1454,11 +1452,11 @@ Style=8192
 
 [Attr]
 ON=44,43,MODEL
-V=$GENERIC
+V=LM358
 
 [Attr]
 ON=0,0,PACKAGE
-V
+V=TO-5C_8
 
 [Comp]
 Name=Battery
@@ -1505,26 +1503,26 @@ Rot=7
 Page=3
 
 [Wire]
-Pxs=1200,280,1200,336
+Pxs=1200,304,1200,360
 
 [Wire]
-Pxs=1392,328,1408,328
+Pxs=1392,352,1408,352
 
 [Wire]
-Pxs=1392,328,1392,360
+Pxs=1392,352,1392,384
 
 [Wire]
-Pxs=1392,360,1424,360
+Pxs=1392,384,1424,384
 
 [Wire]
-Pxs=1512,304,1512,360
+Pxs=1512,328,1512,384
 
 [Wire]
-Pxs=1480,304,1512,304
+Pxs=1480,328,1512,328
 
 [Comp]
 Name=Resistor
-Px=1632,384
+Px=1632,408
 Rot=3
 
 [Attr]
@@ -1543,7 +1541,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=1512,304
+Px=1512,328
 Rot=4
 
 [Attr]
@@ -1561,14 +1559,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1616,304,1632,304
+Pxs=1616,328,1632,328
 
 [Wire]
-Pxs=1632,304,1632,336
+Pxs=1632,328,1632,360
 
 [Comp]
 Name=Resistor
-Px=1296,256
+Px=1296,280
 Rot=5
 
 [Attr]
@@ -1586,14 +1584,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1296,256,1296,280
+Pxs=1296,280,1296,304
 
 [Wire]
-Pxs=1296,280,1408,280
+Pxs=1296,304,1408,304
 
 [Comp]
 Name=Resistor
-Px=1248,384
+Px=1248,408
 Rot=5
 
 [Attr]
@@ -1612,12 +1610,12 @@ V
 
 [Comp]
 Name=Ground
-Px=1392,216
+Px=1392,240
 Rot=7
 
 [Comp]
 Name=Resistor
-Px=1200,384
+Px=1200,408
 Rot=5
 
 [Attr]
@@ -1636,12 +1634,12 @@ V
 
 [Comp]
 Name=Ground
-Px=1632,384
+Px=1632,408
 Rot=7
 
 [Comp]
 Name=Capacitor
-Px=1568,304
+Px=1568,328
 Rot=4
 
 [Attr]
@@ -1659,11 +1657,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1560,304,1568,304
+Pxs=1560,328,1568,328
 
 [Comp]
 Name=Resistor
-Px=1472,360
+Px=1472,384
 Rot=6
 
 [Attr]
@@ -1681,27 +1679,27 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1472,360,1512,360
+Pxs=1472,384,1512,384
 
 [Wire]
-Pxs=1248,328,1392,328
+Pxs=1248,352,1392,352
 
 [Wire]
-Pxs=1248,328,1248,336
+Pxs=1248,352,1248,360
 
 [Wire]
-Pxs=1296,192,1296,208
+Pxs=1296,216,1296,232
 
 [Wire]
-Pxs=1296,192,1320,192
+Pxs=1296,216,1320,216
 
 [Wire]
-Pxs=1392,192,1392,216
+Pxs=1392,216,1392,240
 
 [Comp]
 Name=Resistor
 Enable=FALSE
-Px=1568,240
+Px=1568,264
 Rot=4
 
 [Attr]
@@ -1719,14 +1717,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1568,240,1568,304
+Pxs=1568,264,1568,328
 
 [Wire]
-Pxs=1616,240,1616,304
+Pxs=1616,264,1616,328
 
 [Comp]
 Name=Resistor
-Px=1296,96
+Px=1296,120
 Rot=7
 
 [Attr]
@@ -1744,17 +1742,17 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1200,384,1200,408
+Pxs=1200,408,1200,432
 
 [Wire]
-Pxs=1248,384,1248,408
+Pxs=1248,408,1248,432
 
 [Wire]
-Pxs=1200,96,1296,96
+Pxs=1200,120,1296,120
 
 [Comp]
 Name=Resistor
-Px=1320,192
+Px=1320,216
 
 [Attr]
 ON=18,6,PART
@@ -1771,14 +1769,14 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1368,192,1392,192
+Pxs=1368,216,1392,216
 
 [Wire]
-Pxs=1296,144,1296,192
+Pxs=1296,168,1296,216
 
 [Comp]
 Name=1N4148
-Px=504,168
+Px=504,192
 Rot=3
 
 [Attr]
@@ -1796,7 +1794,7 @@ V=DO-35
 
 [Comp]
 Name=1N4148
-Px=504,216
+Px=504,240
 Rot=3
 
 [Attr]
@@ -1813,26 +1811,26 @@ ON=-52,-68,PACKAGE
 V=DO-35
 
 [Wire]
-Pxs=504,240,552,240
+Pxs=504,264,552,264
 
 [Wire]
-Pxs=504,216,504,240
+Pxs=504,240,504,264
 
 [Wire]
-Pxs=576,264,576,336
+Pxs=576,288,576,360
 
 [Wire]
-Pxs=576,336,624,336
+Pxs=576,360,624,360
 
 [Wire]
-Pxs=576,192,576,216
+Pxs=576,216,576,240
 
 [Wire]
-Pxs=576,96,576,144
+Pxs=576,120,576,168
 
 [Comp]
 Name=2N3906
-Px=504,408
+Px=504,432
 
 [Attr]
 ON=29,-11,PART
@@ -1853,7 +1851,7 @@ V=TO-92
 
 [Comp]
 Name=2N3906
-Px=648,408
+Px=648,432
 Rot=6
 
 [Attr]
@@ -1874,35 +1872,35 @@ ON=-67,45,PACKAGE
 V=TO-92
 
 [Wire]
-Pxs=624,720,768,720
+Pxs=624,744,816,744
 
 [Wire]
-Pxs=552,648,576,648
+Pxs=552,672,576,672
 
 [Wire]
-Pxs=576,600,576,648
+Pxs=576,624,576,672
 
 [Wire]
-Pxs=576,600,624,600
+Pxs=576,624,624,624
 
 [Wire]
-Pxs=576,648,600,648
+Pxs=576,672,600,672
 
 [Wire]
-Pxs=624,600,624,624
+Pxs=624,624,624,648
 
 [Wire]
-Pxs=768,576,792,576
+Pxs=768,600,792,600
 
 [Wire]
-Pxs=768,552,768,576
+Pxs=768,576,768,600
 
 [Wire]
-Pxs=528,720,624,720
+Pxs=528,744,624,744
 
 [Comp]
 Name=Resistor
-Px=624,720
+Px=624,744
 Rot=5
 
 [Attr]
@@ -1921,7 +1919,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=528,720
+Px=528,744
 Rot=5
 
 [Attr]
@@ -1939,107 +1937,107 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=432,96,432,336
+Pxs=432,120,432,360
 
 [Wire]
-Pxs=432,720,528,720
+Pxs=432,744,528,744
 
 [Wire]
-Pxs=192,720,432,720
+Pxs=192,744,432,744
 
 [Wire]
-Pxs=816,720,864,720
+Pxs=816,744,1008,744
 
 [Wire]
-Pxs=912,264,960,264
+Pxs=912,288,960,288
 
 [Wire]
-Pxs=816,96,816,144
+Pxs=816,120,816,168
 
 [Wire]
-Pxs=816,96,1008,96
+Pxs=816,120,1008,120
 
 [Wire]
-Pxs=816,600,816,720
+Pxs=816,624,816,744
 
 [Wire]
-Pxs=528,576,672,576
+Pxs=528,600,672,600
 
 [Wire]
-Pxs=528,576,528,624
+Pxs=528,600,528,648
 
 [Wire]
-Pxs=672,576,720,576
+Pxs=672,600,720,600
 
 [Wire]
-Pxs=816,528,816,552
+Pxs=816,552,816,576
 
 [Wire]
-Pxs=816,240,816,264
+Pxs=816,264,816,288
 
 [Wire]
-Pxs=816,264,816,384
+Pxs=816,288,816,408
 
 [Wire]
-Pxs=672,408,720,408
+Pxs=672,432,720,432
 
 [Wire]
-Pxs=912,552,960,552
+Pxs=912,576,960,576
 
 [Wire]
-Pxs=1008,504,1008,528
+Pxs=1008,528,1008,552
 
 [Wire]
-Pxs=1008,288,1008,320
+Pxs=1008,312,1008,344
 
 [Wire]
-Pxs=1008,320,1008,336
+Pxs=1008,344,1008,360
 
 [Wire]
-Pxs=960,240,960,264
+Pxs=960,264,960,288
 
 [Wire]
-Pxs=960,264,984,264
+Pxs=960,288,984,288
 
 [Wire]
-Pxs=1200,280,1296,280
+Pxs=1200,304,1296,304
 
 [Wire]
-Pxs=1344,408,1392,408
+Pxs=1344,432,1392,432
 
 [Wire]
-Pxs=1104,408,1152,408
+Pxs=1104,432,1152,432
 
 [Wire]
-Pxs=1152,408,1200,408
+Pxs=1152,432,1200,432
 
 [Wire]
-Pxs=1056,720,1104,720
+Pxs=1056,744,1104,744
 
 [Wire]
-Pxs=1104,720,1152,720
+Pxs=1104,744,1152,744
 
 [Wire]
-Pxs=1344,720,1392,720
+Pxs=1344,744,1392,744
 
 [Wire]
-Pxs=1392,576,1392,720
+Pxs=1392,600,1392,744
 
 [Wire]
-Pxs=1152,720,1344,720
+Pxs=1152,744,1344,744
 
 [Wire]
-Pxs=720,408,720,432
+Pxs=720,432,720,456
 
 [Wire]
-Pxs=672,504,720,504
+Pxs=672,528,720,528
 
 [Wire]
-Pxs=720,504,720,528
+Pxs=720,528,720,552
 
 [Comp]
 Name=Resistor
-Px=672,456
+Px=672,480
 Rot=5
 
 [Attr]
@@ -2057,16 +2055,16 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=768,408,1008,408
+Pxs=768,432,1008,432
 
 [Comp]
 Name=Ground
-Px=720,288
+Px=720,312
 Rot=7
 
 [Comp]
 Name=Resistor
-Px=720,288
+Px=720,312
 Rot=5
 
 [Attr]
@@ -2076,7 +2074,7 @@ Style=8192
 
 [Attr]
 ON=8,-46,RESISTANCE
-V=33k
+V=10k
 Style=8192
 
 [Attr]
@@ -2084,23 +2082,23 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=768,216,768,240
+Pxs=768,240,768,264
 
 [Wire]
-Pxs=768,216,792,216
+Pxs=768,240,792,240
 
 [Wire]
-Pxs=720,216,768,216
-
-[Wire]
-Pxs=720,192,720,216
+Pxs=720,240,768,240
 
 [Wire]
 Pxs=720,216,720,240
 
+[Wire]
+Pxs=720,240,720,264
+
 [Comp]
 Name=Resistor
-Px=504,288
+Px=504,312
 Rot=5
 
 [Attr]
@@ -2110,7 +2108,7 @@ Style=8192
 
 [Attr]
 ON=7,-39,RESISTANCE
-V=33k
+V=10k
 Style=8192
 
 [Attr]
@@ -2119,18 +2117,18 @@ V
 
 [Comp]
 Name=Ground
-Px=504,288
+Px=504,312
 Rot=7
 
 [Wire]
-Pxs=960,552,960,576
+Pxs=960,576,960,600
 
 [Wire]
-Pxs=960,552,984,552
+Pxs=960,576,984,576
 
 [Comp]
 Name=Capacitor
-Px=1248,576
+Px=1248,600
 Rot=5
 
 [Attr]
@@ -2148,103 +2146,55 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1248,504,1296,504
+Pxs=1248,528,1296,528
 
 [Wire]
-Pxs=1248,504,1248,528
+Pxs=1248,528,1248,552
 
 [Wire]
-Pxs=1248,576,1248,624
+Pxs=1248,600,1248,648
 
 [Wire]
-Pxs=1248,624,1344,624
+Pxs=1248,648,1344,648
 
 [Wire]
-Pxs=1344,624,1344,720
+Pxs=1344,648,1344,744
 
 [Wire]
-Pxs=720,480,720,504
+Pxs=720,504,720,528
 
 [Comp]
-Name=Resistor
-Px=864,648
-Rot=5
+Name=Ground
+Px=1440,360
+Rot=7
 
-[Attr]
-ON=8,-25,PART
-V=R58
-Style=8192
+[Wire]
+Pxs=1296,120,1440,120
 
-[Attr]
-ON=8,-39,RESISTANCE
-V=0
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
+[Wire]
+Pxs=1440,120,1440,296
 
 [Comp]
-Name=Capacitor
+Name=Opamp
 Enable=FALSE
-Px=864,600
-Rot=5
+Px=1096,24
 
 [Attr]
-ON=12,-26,PART
-V=C13
+ON=44,29,PART
+V=X2
 Style=8192
 
 [Attr]
-ON=12,-40,CAPACITANCE
-V=1nF
-Style=8192
+ON=44,43,MODEL
+V=LM358
 
 [Attr]
 ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=864,552,912,552
-
-[Wire]
-Pxs=864,648,864,720
-
-[Wire]
-Pxs=864,720,1008,720
-
-[Comp]
-Name=Capacitor
-Enable=FALSE
-Px=768,672
-Rot=5
-
-[Attr]
-ON=12,-26,PART
-V=C14
-Style=8192
-
-[Attr]
-ON=12,-40,CAPACITANCE
-V=100pF
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=768,672,768,720
-
-[Wire]
-Pxs=768,720,816,720
-
-[Wire]
-Pxs=768,576,768,624
+V=TO-5C_8
 
 [Grid Text]
 Text="Vin"
-Px=200,408
+Px=200,432
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2252,7 +2202,7 @@ CBorder=None
 
 [Grid Text]
 Text="Vout"
-Px=1296,408
+Px=1296,432
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2260,7 +2210,7 @@ CBorder=None
 
 [Grid Text]
 Text="INPUT"
-Px=304,408
+Px=304,432
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2268,7 +2218,7 @@ CBorder=None
 
 [Grid Text]
 Text="OUTPUT"
-Px=672,408
+Px=672,432
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2276,7 +2226,7 @@ CBorder=None
 
 [Grid Text]
 Text="OUT2"
-Px=672,576
+Px=672,600
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2284,7 +2234,7 @@ CBorder=None
 
 [Grid Text]
 Text="VoutDC"
-Px=1080,408
+Px=1080,432
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2292,7 +2242,7 @@ CBorder=None
 
 [Grid Text]
 Text="TP1"
-Px=912,264
+Px=912,288
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2300,7 +2250,7 @@ CBorder=None
 
 [Grid Text]
 Text="TP2"
-Px=912,552
+Px=912,576
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2308,7 +2258,7 @@ CBorder=None
 
 [Grid Text]
 Text="TP1B"
-Px=1008,320
+Px=1008,344
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2316,7 +2266,7 @@ CBorder=None
 
 [Grid Text]
 Text="TP2B"
-Px=1008,504
+Px=1008,528
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2332,14 +2282,6 @@ Page=3
 CBorder=None
 
 [Grid Text]
-Text="VC"
-Px=1440,272
-GridSnap=True
-JustifyH=Left
-JustifyV=Bottom
-CBorder=None
-
-[Grid Text]
 Text="VE"
 Px=112,32
 GridSnap=True
@@ -2349,16 +2291,8 @@ Page=3
 CBorder=None
 
 [Grid Text]
-Text="VE"
-Px=1440,336
-GridSnap=True
-JustifyH=Left
-JustifyV=Bottom
-CBorder=None
-
-[Grid Text]
 Text="Vsample"
-Px=1632,304
+Px=1632,328
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2561,9 +2495,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=321,48
+SB 3=704,0
 Scale 3=1
-Px=756,335
+Px=1124,280
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2627,7 +2561,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=27,18
+SB 0=49,26
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -2731,11 +2665,15 @@ Text=* A .cir file is typically found in the data directory
 Text=*
 Text=*** From file C:\MC12\library\UTILITY.LBR
 Text=*** 10MHz Sinusoidal Source
-Text=.MODEL GENERAL SIN (F=100K)
+Text=.MODEL GENERAL SIN (A=4 F=10K)
 Text=*** From file C:\MC12\library\UTILITY.LBR
 Text=*** Generic Opamp Model
 Text=.MODEL $GENERIC OPA (LEVEL=3 GBW=2.5MEG IBIAS=30p IOFF=3p ROUTAC=50 ROUTDC=75
 Text=+ SRN=5MEG SRP=5MEG VCC=12 VEE=0 VNS=0 VOFF=2m VPS=10)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power dual operational amplifier
+Text=.MODEL LM358 OPA (LEVEL=3 A=100K CMRR=3.16228K IBIAS=45n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 VCC=12 VEE=0 VNS=650m VOFF=2m VPS=10)
 
 [InfoPage]
 InfoPage=True
@@ -2819,7 +2757,7 @@ FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=9
+MonMaxShow=10
 MonPageWidth=66
 MonPlotWidth=21
 MonExprXWidth=142
@@ -3038,7 +2976,7 @@ FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=4
+MonMaxShow=5
 MonPageWidth=66
 MonPlotWidth=21
 MonExprXWidth=142
@@ -3263,10 +3201,10 @@ AliasID=9
 XExp=T
 YExp=v(VSAMPLE)
 XRng=0.0002
-YRng=0.12,-0.08
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.04
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#C8C8C8
 Text Color=#C8C8C8
@@ -3289,13 +3227,39 @@ AliasID=7
 XExp=T
 YExp=v(TP1)-v(TP1B)
 XRng=0.0002
-YRng=10,-2.5
+YRng=16,-4
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=2.5
+Range Grid Y=4
 Enable=Enable
 Line Color=#800080
 Text Color=#800080
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=10
+XExp=T
+YExp=v(TP1B)
+XRng=0.0002
+YRng=16,-4
+Options=LINEARX,LINEARY
+Range Grid X=4e-5
+Range Grid Y=4
+Enable=Enable
+Line Color=#FF00FF
+Text Color=#FF00FF
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -3315,10 +3279,10 @@ AliasID=8
 XExp=T
 YExp=v(TP2)-v(TP2B)
 XRng=0.0002
-YRng=10,-2.5
+YRng=16,-4
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=2.5
+Range Grid Y=4
 Enable=Enable
 Line Color=#9B9BFF
 Text Color=#9B9BFF
@@ -3341,10 +3305,10 @@ AliasID=4
 XExp=T
 YExp=v(VOUTDC)
 XRng=0.0002
-YRng=10,-2.5
+YRng=16,-4
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=2.5
+Range Grid Y=4
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -3367,10 +3331,10 @@ AliasID=5
 XExp=T
 YExp=i(R3)
 XRng=0.0002
-YRng=0.4,-0.1
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.1
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#FCAD2A
 Text Color=#FCAD2A
@@ -3393,10 +3357,10 @@ AliasID=6
 XExp=T
 YExp=i(R4)
 XRng=0.0002
-YRng=0.4,-0.1
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.1
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -3419,10 +3383,10 @@ AliasID=2
 XExp=T
 YExp=v(VOUT)
 XRng=0.0002
-YRng=10,-2.5
+YRng=16,-4
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=2.5
+Range Grid Y=4
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -3445,10 +3409,10 @@ AliasID=3
 XExp=T
 YExp=i(R7)
 XRng=0.0002
-YRng=0.4,-0.1
+YRng=1.8,-1.2
 Options=LINEARX,LINEARY
 Range Grid X=4e-5
-Range Grid Y=0.1
+Range Grid Y=0.6
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
@@ -3574,6 +3538,32 @@ Range Grid Y=0.075
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=AC
+Plt=3
+AliasID=5
+XExp=F
+YExp=i(R15)
+XRng=1e+8,10
+YRng=0.375
+Options=LINEARY
+Range Grid X=2e+7
+Range Grid Y=0.075
+Enable=Enable
+Line Color=#000000
+Text Color=#000000
 Rainbow=False
 VFmtX=3
 VFmtY=3
