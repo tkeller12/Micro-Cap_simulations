@@ -3,13 +3,13 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                DC Analysis of PNP_load_returned_to_ground                ***
-***                          7/16/2023 12:44:05 PM                           ***
+***                           8/13/2023 3:38:01 PM                           ***
 ********************************************************************************
 Limits
 ======
 Variable 1 Method        Auto
 Variable 1 Name          V3
-Variable 1 Range         10,0,.5
+Variable 1 Range         10,0,.1
 Variable 2 Method        None
 Variable 2 Name          
 Variable 2 Range         
