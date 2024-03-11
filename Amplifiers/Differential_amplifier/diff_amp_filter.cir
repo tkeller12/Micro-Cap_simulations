@@ -163,7 +163,7 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in AC Analysis=0,1, -1,-1, -8,-31, 760,0,1522,649
+Window Placement in AC Analysis=0,1, -1,-1, -8,-31, 953,0,1906,865
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -297,7 +297,6 @@ V
 
 [Comp]
 Name=Capacitor
-Enable=FALSE
 Px=528,240
 Rot=7
 
@@ -384,7 +383,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=50
+V=300
 Style=8192
 
 [Attr]
@@ -632,9 +631,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=189,48
+SB 3=189,0
 Scale 3=1
-Px=442,165
+Px=509,678
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -762,7 +761,7 @@ SimulationLog=True
 
 [AC]
 WinID=2
-Window Placement=0,1, -1,-1, -8,-31, 0,0,761,649
+Window Placement=0,1, -1,-1, -8,-31, 0,0,953,865
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000

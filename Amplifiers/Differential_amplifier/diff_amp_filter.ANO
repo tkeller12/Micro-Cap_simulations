@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                      AC Analysis of diff_amp_filter                      ***
-***                           3/9/2024 10:08:21 PM                           ***
+***                          3/10/2024 11:09:55 AM                           ***
 ********************************************************************************
 Limits
 ======
@@ -69,6 +69,21 @@ Il                   0.000         0.000         0.000         0.000
 
 Device Variables:
 ic                   0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Ic                   0.000 
+
+Device Variables:
+ic                   0.000 
 
 
 
