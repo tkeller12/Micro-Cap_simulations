@@ -1,0 +1,1610 @@
+[Main]
+FileType=CIR
+Version=12.00
+Program=Micro-Cap
+Component Version=10.00
+Shape Version=11.00
+Screen=1920,1080
+MCAPVersion=12.2.0.5
+Key ID=Demo
+NLCnt=38
+TXCnt=4
+
+[shapedef]
+Name=Battery
+Line=0,0,22,0
+Line=22,-3,22,3
+Line=26,-7,26,7
+Line=26,0,48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=Ground
+Line=0,0,12,0
+Line=12,-8,12,8
+Line=18,-4,18,4
+Line=24,0,24,0
+
+[shapedef]
+Name=Minus.root
+Line=-2,0,2,0
+
+[shapedef]
+Name=Opamp5
+Root="Opamp.root",0,0,0
+Root="Plus.root",25,-4,0
+Root="Minus.root",25,52,0
+Line=32,56,32,34
+Line=32,-8,32,13
+
+[shapedef]
+Name=Opamp.root
+Line=0,48,6,48
+Line=0,0,5,0
+Line=6,-4,6,52
+Line=6,-4,48,24
+Line=6,52,48,24
+Line=48,24,72,24
+Line=10,12,14,12
+Line=12,10,12,14
+Line=10,36,14,36
+Line=4,0,6,0
+
+[shapedef]
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
+Name=Resistor
+PolyOpen=12
+PolyLine=0,0
+PolyLine=0,0
+PolyLine=12,0
+PolyLine=14,-4
+PolyLine=18,4
+PolyLine=22,-4
+PolyLine=26,4
+PolyLine=30,-4
+PolyLine=34,4
+PolyLine=36,0
+PolyLine=48,0
+PolyLine=48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=SPICE_V
+Root="Vsource.root",0,0,0
+
+[shapedef]
+Name=Vsource.root
+Line=0,0,12,0
+Line=36,0,48,0
+Ellipse=12,-12,36,12
+FColor=None
+Line=7,5,7,9
+Root="Plus.root",41,7,0
+Current=32,16,16,16
+
+[compdef]
+Name=Opamp
+Definition=Opamp
+Shape=Opamp5
+Mask=5121
+Used=17
+memo=Opamp
+Label Offset=44,29,-14,39
+PinCnt=5
+Pin="Plus input",0,0,-31,-7
+Pin="Minus input",0,6,-33,20
+Pin="VEE",4,7,3,-5
+Pin="Output",9,3,-13,-4
+Pin="VCC",4,-1,5,14
+
+[compdef]
+Name=Battery
+Definition=Battery
+Shape=Battery
+Mask=6913
+Used=58
+memo=Battery
+Label Offset=19,7,10,13
+PinCnt=2
+Pin="Plus",6,0,-4,-5
+Pin="Minus",0,0,-10,-5
+
+[compdef]
+Name=Ground
+Definition=Ground
+Shape=Ground
+Mask=1793
+Used=365
+memo=Ground
+Label Offset=0,0,0,0
+PinCnt=1
+Pin="PinA",0,0,-3,-7
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=7169
+Used=340
+memo=Resistor
+Label Offset=18,6,8,11
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
+[compdef]
+Name=Voltage Source
+Definition=VSpice
+Shape=SPICE_V
+Mask=5377
+Used=84
+memo=Voltage Source
+Label Offset=19,13,15,13
+PinCnt=2
+Pin="Plus",6,0,-5,-6
+Pin="Minus",0,0,-20,-6
+
+[Circuit]
+Window Placement=2,3, -1,-1, -8,-31, 208,208,1579,784
+Default Object=Color=#000080
+Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
+Default Object Apply Border To Text=No
+Default Object Apply Fill To Text=No
+Default Object GridSnap=No
+NodeVoltageFormat=3
+CurrentFormat=3
+PowerFormat=3
+PathDelayFormat=3
+WarningFormat=3
+GridTextFormulaFormat=3
+Window Placement in Transient Analysis=0,1, -1,-1, -8,-31, 953,0,1906,832
+SpiceType=AMBIGUOUS
+Title_Block_Border=None
+Title_Block=False
+Show Nodes=False
+Show Voltages=False
+Show Current=False
+Show Power=False
+Show Condition=False
+Show Pin Connections=False
+Show Connection Warnings=False
+Show Cross=False
+Show Attribute Text=True
+Show Grid Text=True
+
+[Comp]
+Name=Opamp
+Px=624,336
+Rot=4
+
+[Attr]
+ON=44,-43,PART
+V=X1
+Style=8192
+
+[Attr]
+ON=44,-57,MODEL
+V=LH4106
+
+[Attr]
+ON=44,-85,PACKAGE
+V=TO-5F_10
+
+[Comp]
+Name=Battery
+Px=48,80
+Rot=3
+Page=3
+
+[Attr]
+ON=-18,-27,VALUE
+V=10
+Style=8192
+
+[Attr]
+ON=-26,-41,PART
+V=V1
+Style=8192
+
+[Comp]
+Name=Ground
+Px=48,80
+Rot=7
+Page=3
+
+[Comp]
+Name=Battery
+Px=112,80
+Rot=3
+Page=3
+
+[Attr]
+ON=-23,-27,VALUE
+V=-10
+Style=8192
+
+[Attr]
+ON=-26,-41,PART
+V=V2
+Style=8192
+
+[Comp]
+Name=Ground
+Px=112,80
+Rot=7
+Page=3
+
+[Comp]
+Name=Ground
+Px=600,408
+Rot=7
+
+[Comp]
+Name=Resistor
+Px=600,384
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R1
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=50k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=552,336
+Rot=6
+
+[Attr]
+ON=-34,6,PART
+V=R2
+Style=8192
+
+[Attr]
+ON=-33,20,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=528,288
+Rot=2
+
+[Attr]
+ON=-34,-20,PART
+V=R3
+Style=8192
+
+[Attr]
+ON=-33,-34,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=672,240
+Rot=2
+
+[Attr]
+ON=-34,-20,PART
+V=R4
+Style=8192
+
+[Attr]
+ON=-33,-35,RESISTANCE
+V=50k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=600,288,624,288
+
+[Wire]
+Pxs=600,240,600,288
+
+[Wire]
+Pxs=600,240,624,240
+
+[Wire]
+Pxs=672,240,720,240
+
+[Wire]
+Pxs=720,240,720,312
+
+[Wire]
+Pxs=696,312,720,312
+
+[Wire]
+Pxs=552,336,600,336
+
+[Wire]
+Pxs=600,336,624,336
+
+[Wire]
+Pxs=600,384,600,408
+
+[Wire]
+Pxs=528,288,600,288
+
+[Comp]
+Name=Ground
+Px=432,408
+Rot=7
+
+[Comp]
+Name=Voltage Source
+Px=336,336
+Rot=5
+
+[Attr]
+ON=15,-27,PART
+V=V3
+Style=8192
+
+[Attr]
+ON=15,-41,VALUE
+V=DC 0 AC 1 0 Sin 0 .01 100k 0 0 0
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Attr]
+ON=0,0,SMOOTHING
+V=N
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseS
+V=N
+Style=256
+
+[Attr]
+ON=0,0,FRACTION
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseF
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_Pulse
+V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
+Style=256
+
+[Attr]
+ON=0,0,Saved_Sin
+V=DC 0 AC 1 0 Sin 0 .01 100k 0 0 0
+Style=256
+
+[Comp]
+Name=Ground
+Px=336,408
+Rot=7
+
+[Wire]
+Pxs=336,336,336,408
+
+[Wire]
+Pxs=336,288,384,288
+
+[Comp]
+Name=Resistor
+Px=816,384
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R5
+Style=8192
+
+[Attr]
+ON=-31,-39,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=816,408
+Rot=7
+
+[Wire]
+Pxs=816,384,816,408
+
+[Wire]
+Pxs=816,312,816,336
+
+[Wire]
+Pxs=720,312,744,312
+
+[Comp]
+Name=Resistor
+Px=744,312
+Rot=4
+
+[Attr]
+ON=18,-20,PART
+V=R6
+Style=8192
+
+[Attr]
+ON=18,-34,RESISTANCE
+V=50
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=792,312,816,312
+
+[Comp]
+Name=Resistor
+Px=384,288
+Rot=4
+
+[Attr]
+ON=18,-20,PART
+V=R7
+Style=8192
+
+[Attr]
+ON=18,-34,RESISTANCE
+V=50
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=432,288,480,288
+
+[Comp]
+Name=Voltage Source
+Px=432,384
+Rot=5
+
+[Attr]
+ON=15,-27,PART
+V=V4
+Style=8192
+
+[Attr]
+ON=15,-41,VALUE
+V=DC 0 AC 1 0 Sin -.01 0 100k 0 0 180
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Attr]
+ON=0,0,SMOOTHING
+V=N
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseS
+V=N
+Style=256
+
+[Attr]
+ON=0,0,FRACTION
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseF
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_Pulse
+V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
+Style=256
+
+[Attr]
+ON=0,0,Saved_Sin
+V=DC 0 AC 1 0 Sin -.01 0 100k 0 0 180
+Style=256
+
+[Wire]
+Pxs=432,384,432,408
+
+[Comp]
+Name=Resistor
+Px=432,336
+Rot=4
+
+[Attr]
+ON=18,-20,PART
+V=R8
+Style=8192
+
+[Attr]
+ON=18,-34,RESISTANCE
+V=50
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=480,336,504,336
+
+[Grid Text]
+Text="VC"
+Px=48,32
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Page=3
+CBorder=None
+
+[Grid Text]
+Text="VC"
+Px=656,344
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VE"
+Px=112,32
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Page=3
+CBorder=None
+
+[Grid Text]
+Text="VE"
+Px=656,280
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Schematic]
+CurrentSection 0=0
+CurrentSection 1=0
+CurrentSection 2=0
+CurrentSection 3=0
+Splitter.xs=0
+Splitter.ys=0
+TextQuad=4099
+Scale=1
+GridType=GraphPaper
+GridUser=10
+ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
+CalcRMS=False
+CalcAVG=False
+CalcPeak=False
+CalcVoltage=True
+DisplayMeasure=Last
+ShareScales=True
+
+[Tools]
+Pos=Top
+FILESAVEASOLD=No
+BOM=No
+FILEPCB=No
+PROBE=Yes
+SELECT=Yes
+PAN=Yes
+COMP=Yes
+TEXT=Yes
+WIRE=Yes
+WIRED=Yes
+BUS=Yes
+GRAPHIC=Yes
+FLOWCHART=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=Yes
+PARALLELOGRAM=No
+FC_PROCESS=No
+FC_ALT_PROCESS=No
+FC_DECISION=No
+FC_DATA=No
+FC_PREDEFPROCESS=No
+FC_INTERNALSTORAGE=No
+FC_DOCUMENT=No
+FC_MULTIDOCUMENT=No
+FC_TERMINATOR=No
+FC_PREPARATION=No
+FC_MANUALINPUT=No
+FC_MANUALOPERATION=No
+FC_CONNECTOR=No
+FC_OFFPAGECONNECTOR=No
+FC_PUNCHCARD=No
+FC_PUNCHEDTAPE=No
+FC_SUMMING_JUNCTION=No
+FC_OR=No
+FC_COLLATE=No
+FC_SORT=No
+FC_EXTRACT=No
+FC_MERGE=No
+FC_STORED_DATA=No
+FC_DELAY=No
+FC_SAS=No
+FC_MAGNETIC_DISK=No
+FC_DAS=No
+FC_DISPLAY=No
+SPREAD_SHEET=Yes
+POLYCLOS=No
+POLYOPEN=No
+FLAG=Yes
+INFO=Yes
+HELP=Yes
+HELP_SPICE=No
+LINK=Yes
+CHECK=Yes
+REGION_ENABLE=Yes
+TITLE_BLOCK=Yes
+DIGTRC=No
+DIGTRC2=No
+BUILD_COMMAND=Yes
+DIGALL=No
+GRIDTEXT=Yes
+COMPTEXT=Yes
+NODE=Yes
+MEASURED=Yes
+NODEV=Yes
+CURRENT=Yes
+POWER=Yes
+CONDITIN=Yes
+PIN=Yes
+CONNWARN=Yes
+CROSS=Yes
+GRID=Yes
+BORDER=Yes
+BORDERONE=Yes
+TITLE=Yes
+RUBBER=Yes
+PROPERTY=Yes
+STEP=Yes
+MIRROR=Yes
+ROTATE=Yes
+FLIPY=Yes
+FLIPX=Yes
+CIR_MAKEMACRO=No
+CLEARCUTWIRE=No
+CLIPBOARDCIRPAGE2BMM=No
+FINDCOMP=Yes
+FIND=Yes
+REPEAT=No
+REPLACE=No
+MODEL=Yes
+CIR2CKT=Yes
+ATTDISP=Yes
+ENABLE=Yes
+DISABLE=Yes
+ENABLE_WITH=Yes
+TOFRONT=Yes
+TOBACK=Yes
+SELNEXT=Yes
+PAGEADD=Yes
+PAGEADDTEXT=No
+ADDSECTION=No
+PAGEDEL=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALECIR=Yes
+GOTOFLAG=Yes
+UPLEVEL=Yes
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+DM_LAST=No
+DM_RMS=No
+DM_AVG=No
+DM_PEAK=No
+GRID_NONE=No
+GRID_NORMAL=No
+GRID_BOLD_5=No
+GRID_BOLD_6=No
+GRID_BOLD_USER=No
+GRAPH_PAPER=No
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+RENAMEDEFINE=No
+RENAMECMP=No
+ATTALIGN=No
+RESETNODEPOS=No
+FIT2STANDARD=No
+NODESNAP=No
+MOVETEXT=No
+TEXTINC=No
+TOGGLETEXT=No
+TOGGLEMODE=No
+TOLERANCE=No
+ALIGNAB=No
+ALIGNLEFT=Yes
+ALIGNCENTER=Yes
+ALIGNRIGHT=Yes
+ALIGNTOP=Yes
+ALIGNMIDDLES=Yes
+ALIGNBOTTOM=Yes
+
+[Section]
+Index=0
+Name="circuit1"
+Type=Main
+Enable=True
+CurrentPage 0=0
+CurrentPage 1=0
+CurrentPage 2=0
+CurrentPage 3=0
+TabSize 0=425
+TabSize 1=425
+TabSize 2=425
+TabSize 3=425
+
+[Page]
+Index=0
+Section=0
+Print=True
+Enable=True
+Name=Main
+PrinterScale=1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+SB 3=134,96
+Scale 3=1
+Px=252,290
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text RTF=False
+Grid Text Angle=0
+Grid Text GridSnap=True
+Grid Text PinIt=False
+Grid Text JustifyH=Left
+Grid Text JustifyV=Bottom
+Grid GradientColor2=None
+Grid OutlineThickness=1
+Grid OutlineColor=None
+Component Color=#0000FF
+Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
+Wire Color=#008000
+Bus Color=#008000
+Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
+Pin Marker Color=#008000
+Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
+Dynamic AC Voltage Color=#E4E4E4
+Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
+Title Block Background=#C0C0C0
+Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
+Digital Path Color=#FF0000
+Title Block Border=#000000
+Disabled	Color=#C0C0C0
+Search Color=#FFFF00
+Grid Color=#000000
+Graph Paper=#E4E4E4
+Digital 0 Color=#000000
+Digital R Color=#FFFF00
+Digital F Color=#FFFF00
+Digital 1 Color=#FF0000
+Digital X Color=#C0C0C0
+Digital Z Color=#808080
+Block Select Color=#51F998
+
+[Page]
+Index=1
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Text
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=2
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Models
+SB 0=10,236
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=3
+Section=0
+Print=True
+Enable=True
+Name=Power Supplies
+PrinterScale=1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+Scale 3=1
+Px=98,60
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text RTF=False
+Grid Text Angle=0
+Grid Text GridSnap=True
+Grid Text PinIt=False
+Grid Text JustifyH=Left
+Grid Text JustifyV=Bottom
+Grid GradientColor2=None
+Grid OutlineThickness=1
+Grid OutlineColor=None
+Component Color=#0000FF
+Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
+Wire Color=#008000
+Bus Color=#008000
+Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
+Pin Marker Color=#008000
+Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
+Dynamic AC Voltage Color=#E4E4E4
+Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
+Title Block Background=#C0C0C0
+Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
+Digital Path Color=#FF0000
+Title Block Border=#000000
+Disabled	Color=#C0C0C0
+Search Color=#FFFF00
+Grid Color=#000000
+Graph Paper=#E4E4E4
+Digital 0 Color=#000000
+Digital R Color=#FFFF00
+Digital F Color=#FFFF00
+Digital 1 Color=#FF0000
+Digital X Color=#C0C0C0
+Digital Z Color=#808080
+Block Select Color=#51F998
+
+[Page]
+Index=4
+Section=0
+Type=Info
+Print=False
+Enable=True
+Name=Info
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Text Area]
+Section=0
+Page=1
+
+[Text Area]
+Section=0
+Page=2
+Text=* Schematic File
+Text=*
+Text=* Syntax:
+Text=* .MODEL <model name> [AKO:<reference model name>] <ModelType>
+Text=* +([<parameter name>=<value>][LOT[/#][/GAUSS|/UNIFORM|/WCASE]=[<tol>[%]] |[-<low>%,<high>%]][DEV[/#][/GAUSS|/UNIFORM|/WCASE]=[<tol>[%]]...)
+Text=* ModelType must be one of OPA,D,NPN,NMOS,NJF,PUL,SIN,TRN,CORE,GASFET,VSWITCH,ISWITCH,CAP,IND,RES,PNP,PMOS,PJF,DOUTPUT,DINPUT,UADC,UDAC,UGATE,UTGATE,UEFF,UGFF,UDLY,UPLD,UROM,URAM,UBGT,UIO,LPNP,NIGBT,I,V
+Text=*
+Text=*Examples:
+Text=* .MODEL 2N2222A NPN(BF=150 IS=1E-14)
+Text=* .model M1 NMOS(KP=2.5E-5 VTO=1.345 CGDO=14.67p CGBO=4.566p)
+Text=* .MODEL DK D(IS=1E-18)
+Text=* .model 2N2222A AKO:2N2222 NPN (BF=55 ISE=10F)
+Text=* .Model BJT1 NPN (RE=12 LOT/1/GAUSS=30% DEV/2/UNIFORM=2%)
+Text=*
+Text=* A .cir file is typically found in the data directory
+Text=*
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power dual operational amplifier
+Text=.MODEL LM358 OPA (LEVEL=3 A=100K CMRR=3.16228K IBIAS=45n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power dual operational amplifier
+Text=.MODEL LM358A OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=45n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power opamp/voltage comparator
+Text=.MODEL LM392 OPA (LEVEL=3 A=100K CMRR=3.16228K IBIAS=50n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 VCC=16 VEE=-16 VNS=-13.9 VOFF=2m VPS=13.9)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Series quad 741 opamp
+Text=.MODEL LM349 OPA (LEVEL=3 A=160K C=5p CMRR=31.6228K IBIAS=30n IOFF=4n ROUTAC=50
+Text=+ ROUTDC=75 SRN=2MEG SRP=2MEG VNS=-12.4 VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Series quad 741 opamp
+Text=.MODEL LM348 OPA (LEVEL=3 A=160K C=5p CMRR=31.6228K IBIAS=30n IOFF=4n ROUTAC=50
+Text=+ ROUTDC=75 VNS=-12.4 VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** High voltage, high slew rate opamp
+Text=.MODEL LM344 OPA (LEVEL=3 A=180K C=10p CMRR=31.6228K IBIAS=8n ROUTAC=50
+Text=+ ROUTDC=75 SRN=2.5MEG SRP=2.5MEG VCC=28 VEE=-28 VNS=-25.4 VOFF=2m VPS=25.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** High voltage operational amplifier
+Text=.MODEL LM343 OPA (LEVEL=3 A=180K C=27p CMRR=31.6228K IBIAS=8n ROUTAC=50
+Text=+ ROUTDC=75 SRN=2.5MEG SRP=2.5MEG VCC=28 VEE=-28 VNS=-25.4 VOFF=2m VPS=25.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power quad opamp
+Text=.MODEL LM324A OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=45n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 TYPE=2 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power quad opamp
+Text=.MODEL LM324 OPA (LEVEL=3 A=100K CMRR=3.16228K IBIAS=45n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 TYPE=2 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM318 OPA (LEVEL=3 GBW=10MEG IBIAS=150n IOFF=30n PD=75m ROUTAC=50
+Text=+ ROUTDC=75 SRN=70MEG SRP=70MEG VNS=-12.4 VOFF=4m VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational Amplifier
+Text=.MODEL LM316A OPA (LEVEL=3 A=100K C=1n CMRR=10K GBW=100K IBIAS=50p IOFF=15p
+Text=+ ROUTAC=50 ROUTDC=75 SRN=200K SRP=200K VCC=20 VEE=-20 VNS=-18 VOFF=3m VPS=18)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational Amplifier
+Text=.MODEL LM316 OPA (LEVEL=3 A=100K C=1n CMRR=10K GBW=100K IBIAS=150p IOFF=50p
+Text=+ ROUTAC=50 ROUTDC=75 SRN=200K SRP=200K VCC=20 VEE=-20 VNS=-18 VOFF=10m VPS=18)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM312 OPA (LEVEL=3 A=300K C=1n GBW=400K IBIAS=1.5n IOFF=200p ROUTAC=50
+Text=+ ROUTDC=75 SRN=133.333K SRP=133.333K VNS=-13.4 VOFF=2m VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM308A_2 OPA (LEVEL=3 A=100K IBIAS=1.5n IOFF=200p ROUTAC=50 ROUTDC=75
+Text=+ TYPE=3 VNS=-13.4 VOFF=300u VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM308A_1 OPA (LEVEL=3 A=100K IBIAS=1.5n IOFF=200p ROUTAC=50 ROUTDC=75
+Text=+ TYPE=3 VNS=-13.4 VOFF=300u VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM308A OPA (LEVEL=3 A=300K CMRR=316.228K IBIAS=1.5n IOFF=200p ROUTAC=50
+Text=+ ROUTDC=75 SRN=330K SRP=330K VNS=-13.4 VOFF=300u VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM308 OPA (LEVEL=3 A=300K IBIAS=1.5n IOFF=200p ROUTAC=50 ROUTDC=75
+Text=+ SRN=330K SRP=330K VNS=-13.4 VOFF=2m VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM307 OPA (LEVEL=3 A=160K CMRR=31.6228K IBIAS=70n IOFF=3n ROUTAC=50
+Text=+ ROUTDC=75 VNS=-13.4 VOFF=2m VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM301A OPA (LEVEL=3 A=160K CMRR=31.6228K IBIAS=70n IOFF=3n ROUTAC=50
+Text=+ ROUTDC=75 VNS=-13.4 VOFF=2m VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power opamp/voltage comparator
+Text=.MODEL LM292 OPA (LEVEL=3 A=100K CMRR=3.16228K IBIAS=50n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 VCC=16 VEE=-16 VNS=-13.9 VOFF=2m VPS=13.9)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power dual operational amplifier
+Text=.MODEL LM258A OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=40n IOFF=2n ROUTAC=50
+Text=+ ROUTDC=75 VCC=30 VEE=0 VNS=650m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power dual operational amplifier
+Text=.MODEL LM258 OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=45n IOFF=3n ROUTAC=50
+Text=+ ROUTDC=75 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Series quad 741 opamp
+Text=.MODEL LM249 OPA (LEVEL=3 A=160K C=5p CMRR=31.6228K IBIAS=30n IOFF=4n ROUTAC=50
+Text=+ ROUTDC=75 SRN=2MEG SRP=2MEG VNS=-12.4 VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Series quad 741 opamp
+Text=.MODEL LM248 OPA (LEVEL=3 A=160K C=5p CMRR=31.6228K IBIAS=30n IOFF=4n ROUTAC=50
+Text=+ ROUTDC=75 VNS=-12.4 VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power quad opamp
+Text=.MODEL LM224A OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=40n IOFF=2n ROUTAC=50
+Text=+ ROUTDC=75 TYPE=2 VCC=30 VEE=0 VNS=650m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power quad opamp
+Text=.MODEL LM224 OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=45n IOFF=3n ROUTAC=50
+Text=+ ROUTDC=75 TYPE=2 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM218 OPA (LEVEL=3 GBW=10MEG IBIAS=120n IOFF=6n PD=75m ROUTAC=50
+Text=+ ROUTDC=75 SRN=70MEG SRP=70MEG VNS=-12.4 VOFF=2m VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational Amplifier
+Text=.MODEL LM216A OPA (LEVEL=3 A=100K C=1n CMRR=10K GBW=100K IBIAS=50p IOFF=15p
+Text=+ ROUTAC=50 ROUTDC=75 SRN=200K SRP=200K VCC=20 VEE=-20 VNS=-18 VOFF=3m VPS=18)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational Amplifier
+Text=.MODEL LM216 OPA (LEVEL=3 A=100K C=1n CMRR=10K GBW=100K IBIAS=150p IOFF=50p
+Text=+ ROUTAC=50 ROUTDC=75 SRN=200K SRP=200K VCC=20 VEE=-20 VNS=-18 VOFF=10m VPS=18)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM212 OPA (LEVEL=3 A=300K C=1n GBW=400K IBIAS=800p IOFF=50p ROUTAC=50
+Text=+ ROUTDC=75 SRN=133.333K SRP=200K VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM208A OPA (LEVEL=3 A=100K IBIAS=800p IOFF=50p ROUTAC=50 ROUTDC=75
+Text=+ TYPE=3 VNS=-13.4 VOFF=300u VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM208 OPA (LEVEL=3 A=100K IBIAS=800p IOFF=50p ROUTAC=50 ROUTDC=75 TYPE=3
+Text=+ VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM207 OPA (LEVEL=3 A=100K IBIAS=30n IOFF=1.5n ROUTAC=50 ROUTDC=75 TYPE=3
+Text=+ VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM201A OPA (LEVEL=3 A=160K IBIAS=30n IOFF=1.5n ROUTAC=50 ROUTDC=75
+Text=+ TYPE=3 VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power opamp/voltage comparator
+Text=.MODEL LM192 OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=50n IOFF=5n ROUTAC=50
+Text=+ ROUTDC=75 VCC=16 VEE=-16 VNS=-13.9 VOFF=2m VPS=13.9)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power dual operational amplifier
+Text=.MODEL LM158A OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=20n IOFF=2n ROUTAC=50
+Text=+ ROUTDC=75 VCC=30 VEE=0 VNS=650m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power dual operational amplifier
+Text=.MODEL LM158 OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=45n IOFF=3n ROUTAC=50
+Text=+ ROUTDC=75 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Series quad 741 opamp
+Text=.MODEL LM149 OPA (LEVEL=3 A=160K C=5p CMRR=31.6228K IBIAS=30n IOFF=4n ROUTAC=50
+Text=+ ROUTDC=75 SRN=2MEG SRP=2MEG VNS=-12.4 VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Series quad 741 opamp
+Text=.MODEL LM148 OPA (LEVEL=3 A=160K C=5p CMRR=31.6228K IBIAS=30n IOFF=4n ROUTAC=50
+Text=+ ROUTDC=75 VNS=-12.4 VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** High voltage, high slew rate opamp
+Text=.MODEL LM144 OPA (LEVEL=3 A=180K C=10p CMRR=31.6228K IBIAS=8n ROUTAC=50
+Text=+ ROUTDC=75 SRN=2.5MEG SRP=2.5MEG VCC=28 VEE=-28 VNS=-25.4 VOFF=2m VPS=25.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** High voltage operational amplifier
+Text=.MODEL LM143 OPA (LEVEL=3 A=180K C=27p CMRR=31.6228K IBIAS=8n ROUTAC=50
+Text=+ ROUTDC=75 SRN=2.5MEG SRP=2.5MEG VCC=28 VEE=-28 VNS=-25.4 VOFF=2m VPS=25.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power quad opamp
+Text=.MODEL LM124A OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=20n IOFF=2n ROUTAC=50
+Text=+ ROUTDC=75 TYPE=2 VCC=30 VEE=0 VNS=650m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Low power quad opamp
+Text=.MODEL LM124 OPA (LEVEL=3 A=100K CMRR=17.7828K IBIAS=45n IOFF=3n ROUTAC=50
+Text=+ ROUTDC=75 TYPE=2 VCC=30 VEE=0 VNS=650m VOFF=2m VPS=27.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM118 OPA (LEVEL=3 GBW=10MEG IBIAS=120n IOFF=6n PD=75m ROUTAC=50
+Text=+ ROUTDC=75 SRN=70MEG SRP=70MEG VNS=-12.4 VOFF=2m VPS=12.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM112 OPA (LEVEL=3 A=300K C=1n GBW=400K IBIAS=800p IOFF=50p ROUTAC=50
+Text=+ ROUTDC=75 SRN=133.333K SRP=133.333K VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM108A OPA (LEVEL=3 A=300K CMRR=316.228K IBIAS=500p IOFF=50p ROUTAC=50
+Text=+ ROUTDC=75 SRN=330K SRP=330K VNS=-13.4 VOFF=300u VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM108 OPA (LEVEL=3 A=300K IBIAS=500p IOFF=50p ROUTAC=50 ROUTDC=75
+Text=+ SRN=330K SRP=330K VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM107 OPA (LEVEL=3 A=160K CMRR=63.0957K IBIAS=30n IOFF=1.5n ROUTAC=50
+Text=+ ROUTDC=75 VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Operational Amplifiers
+Text=.MODEL LM101A OPA (LEVEL=3 A=160K CMRR=63.0957K IBIAS=30n IOFF=1.5n ROUTAC=50
+Text=+ ROUTDC=75 VNS=-13.4 VOFF=700u VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM11CL OPA (LEVEL=3 A=100K C=10p IBIAS=70p IOFF=4p ROUTAC=50 ROUTDC=75
+Text=+ SRN=300K SRP=300K TYPE=3 VNS=-11.4 VOFF=500u VPS=11.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM11C OPA (LEVEL=3 A=100K C=10p IBIAS=40p IOFF=1p ROUTAC=50 ROUTDC=75
+Text=+ SRN=300K SRP=300K TYPE=3 VNS=-11.4 VOFF=200u VPS=11.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** Operational amplifier
+Text=.MODEL LM11 OPA (LEVEL=3 A=100K C=10p IBIAS=25p IOFF=500f ROUTAC=50 ROUTDC=75
+Text=+ SRN=300K SRP=300K TYPE=3 VNS=-11.4 VOFF=100u VPS=11.4)
+Text=*** From file C:\MC12\library\LTOPAMP.LBR
+Text=*** Low power opamp and reference
+Text=.MODEL LM10 OPA (LEVEL=3 A=400K CMRR=125.893K IBIAS=10n IOFF=250p ROUTAC=50
+Text=+ ROUTDC=75 TYPE=2 VCC=20 VEE=-20 VNS=-18.8 VOFF=300u VPS=18.8)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** 0.2 amp power operational amplifier
+Text=.MODEL LH4141C OPA (LEVEL=3 CMRR=31.6228K IBIAS=200n IOFF=50n IOSC=200m PD=90m
+Text=+ ROUTAC=50 ROUTDC=75 SRN=3MEG SRP=3MEG VNS=-13.4 VOFF=3m VPS=13.4)
+Text=*** From file C:\MC12\library\NSOPAMP.LBR
+Text=*** +/- 5V High speed opamp
+Text=.MODEL LH4106 OPA (LEVEL=3 A=1K CMRR=3.16228K GBW=34MEG IBIAS=6u IOFF=1.2u
+Text=+ PD=60m ROUTAC=50 ROUTDC=75 SRN=120MEG SRP=120MEG VCC=5 VEE=-5 VNS=-2 VOFF=15m
+Text=+ VPS=2.4)
+
+[InfoPage]
+InfoPage=True
+Warnings=True
+System=True
+Defines=True
+Array=True
+Model=True
+Measure=True
+MacroSubckt=True
+NotUsed=True
+ComponentCounts=True
+VariablizePaths=False
+DontShowPaths=False
+SimulationLog=True
+
+[Transient]
+WinID=1
+Window Placement=0,1, -1,-1, -8,-31, 0,0,953,832
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title
+AutoTitle=Yes
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+Cursor Select Color Primary=#C0C0C0
+Cursor Select Color Secondary=#FF0000
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Back=#FFFF00
+OperPoint=True
+OperPointOnly=False
+AutoScaleRanges=True
+FixedTimeStep=False
+DoPSS=False
+PSS_Periods="1"
+PSS_Iterations="5"
+PSS_Error="1u"
+PSS_ShowPlots=True
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
+PrinterAutoTile=No
+PrinterBlackBorder=No
+MonMaxShow=2
+MonPageWidth=66
+MonPlotWidth=21
+MonExprXWidth=142
+MonExprYWidth=367
+MonRangeXWidth=90
+MonRangeYWidth=90
+AnimateWait=None
+AnimateWaitTime=500
+AnimatePressAfter=0
+Save_For_Future=No
+Reduce_Display=1
+Reduce_Save=1
+Reduce_ThrowDataOut=0
+Num Out Header Left
+Num Out Header Center="$MC\n$user\n$company\n$Analysis of $name\n$date $time"
+Num Out Header Right
+Num Out Delimiter=32
+Num Out Write=True
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Models=False
+Num Out Write Zero Models=True
+Num Out Write Undefined Models=True
+Num Out Write Operating Point=True
+Num Out Write Measurement Values=True
+Num Out Write Tolerance Detail=True
+Num Out Write Values=True
+Num Out Write Waveform Header=True
+Num Out Allow Dup Y Expr=False
+Num Out Low="TSTART"
+Num Out High="TMAX"
+Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Format=3
+Num Out HideNonSelected=False
+Num Out UseActualDataPoints=False
+AutoSaveWave=False
+Wave Format=16E
+State Variables Format=5E
+Print Individual Pages=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=Yes
+PARALLELOGRAM=No
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+START=Yes
+STOP=Yes
+PAUSE=Yes
+RESUME=No
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+CLEAR_ACCUMULATED=Yes
+PDELETE_ALL_PLOTS=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+BOTTOM=Yes
+TOP=Yes
+WAVEFORMBUFFER=Yes
+AOUTPUT=Yes
+PKEY=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+SELNEXT=Yes
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+WFB_ADD_TO_LIMITS=No
+ENVELOPE=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+SHOWWATCH=No
+BP=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=Yes
+ALIGNCENTER=Yes
+ALIGNRIGHT=Yes
+ALIGNTOP=Yes
+ALIGNMIDDLES=Yes
+ALIGNBOTTOM=Yes
+
+[APage]
+Analysis=Transient
+Name="MAIN"
+
+[Monte Carlo Options]
+Analysis=Transient
+Status=Off
+Zero Tolerance=False
+Eliminate Outliers=False
+Distribution=Normal
+Number of Runs=10
+Seed=0
+
+[Limits]
+Analysis=Transient
+TMax=100u
+TStart=0
+TStep=0
+NPts=101
+Temp=27
+RetraceRuns=1
+StateVar=Zero
+RunOption=Normal
+Temperature Type=Linear
+Accumulate Plots=False
+IgnoreExprErrors=False
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=1
+XExp=T
+YExp=v(V3)
+XRng=0.0001
+YRng=0.2,-0.05
+Options=LINEARX,LINEARY
+Range Grid X=2e-5
+Range Grid Y=0.05
+Enable=Enable
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=2
+XExp=T
+YExp=v(R5)
+XRng=0.0001
+YRng=0.2,-0.05
+Options=LINEARX,LINEARY
+Range Grid X=2e-5
+Range Grid Y=0.05
+Enable=Enable
+Line Color=#008000
+Text Color=#008000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[Limits]
+Analysis=DynamicAC
+FirstValueDisplay=Mag
+SecondValueDisplay=PhaseDeg
+PlaceText=True
+
+[Limits]
+Analysis=DynamicDC
+PlaceText=True
+
+[Pane]
+Analysis=Transient
+CurrentPage 0="MAIN"
+
+[Pane]
+Analysis=AC
+
+[Pane]
+Analysis=DC
+
+[Pane]
+Analysis=HmDistortion
+
+[Pane]
+Analysis=ImDistortion
+
+[Pane]
+Analysis=Stability
+
+[Watch]
+Analysis=Transient
+Format=3
+ExprPercentWidth=80
+
+[WCTolerance]
+Var Width=100
+Nominal Width=72
+Tol Width=152
+Tol Name=Drift
+Col Width Neq=50
+Col Width Pos=50
+Col Width Rnd=50
+
+[WCFiles]
+UseFile=<Library>Standard.tlib
+AVAILABLE_FILE=<Library>Standard.tlib
+
+[OPMethods]
+Analysis=Transient
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=AC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=HmDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=ImDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=Stability
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicAC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicDC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
