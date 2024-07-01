@@ -1,0 +1,199 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***              Transient Analysis of simple_boost_converter2               ***
+***                           6/28/2024 5:18:25 PM                           ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           1000u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            11.988   2             0.000   3             2.997u 
+4           182.602m  5            12.000   6            11.988  
+7            11.508  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1           11.538m 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1            D2
+Using model:        1N486B        1N486B
+
+Capacitance Terms:
+CAP                 2.225u       12.569f
+
+Current Terms:
+ID                 11.508m     -425.518p
+
+Resistance Terms:
+REQ                 2.247        36.829G
+
+Voltage Terms:
+VD                480.093m      -11.988 
+
+Power DC Terms:
+PD                  5.525m        5.101n
+PS                  0.000         0.000 
+
+DC Pin Currents:
+Id                 11.508m     -425.518p
+
+Condition:
+State                  OFF           OFF
+
+Device Variables:
+area                1.000         1.000 
+ic                  0.000         0.000 
+
+
+
+Operating Point for Devices of Type Mosfet NMOS
+===============================================
+Instance:               M1
+Using model:        IRF540
+
+Capacitance Terms:
+CBD               586.553p
+CBS                 0.000 
+CGSOVL             10.272p
+CGDOVL            942.215p
+CGBOVL              0.000 
+CGS                 0.000 
+CGD                 0.000 
+CGB                 0.000 
+
+Conductance Terms:
+GM                  0.000 
+GDS                 0.000 
+GMBS                0.000 
+
+Current Terms:
+ID                 29.971u
+
+Voltage Terms:
+VGS                -2.997u
+VDS                11.988 
+VBS               182.599m
+VGB              -182.602m
+VGD               -11.988 
+VDB                11.806 
+VTH                 3.168 
+VDSAT               0.000 
+
+Power DC Terms:
+PD                359.308u
+PS                  0.000 
+
+DC Pin Currents:
+Ig                  0.000 
+Id                 29.971u
+Is                -29.971u
+Ib                  0.013f
+
+Condition:
+State                  OFF
+
+Device Variables:
+m                   1.000 
+l                   0.000 
+w                   0.000 
+ad                  0.000 
+as                  0.000 
+pd                  0.000 
+ps                  0.000 
+nrd                 0.000 
+nrs                 0.000 
+nrb                 0.000 
+nrg                 0.000 
+vds                 0.000 
+vgs                 0.000 
+vbs                 0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            R2            R3
+V                    2.997u      -11.538m       11.508 
+Power DC Terms:
+PD                  89.830p      133.133u      132.443m
+
+DC Pin Currents:
+Ir                  29.972u      -11.538m       11.508m
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                  11.538m
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1
+V                   11.508 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Ic                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            V2
+V                   0.000        12.000 
+Power DC Terms:
+PG                  0.000       138.460m
+
+DC Pin Currents:
+ISource             0.000       -11.538m
+
+
