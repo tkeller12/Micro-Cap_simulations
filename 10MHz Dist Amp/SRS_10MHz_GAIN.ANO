@@ -1,0 +1,101 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                      AC Analysis of SRS_10MHz_GAIN                       ***
+***                           7/3/2024 12:10:23 PM                           ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 1E8,1Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            22.000   VOFFSET      11.000   3            11.000  
+VOUT         11.000   VIN           0.000   6             0.000  
+7            11.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               X1.R             R1             R2             R3
+V                    11.000         11.000         11.000        334.458p
+Power DC Terms:
+PD                  604.994m        12.100m        12.100m     1.119E-022
+
+DC Pin Currents:
+Ir                   55.000m         1.100m         1.100m       334.458f
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R4             R5             R7
+V                     0.000         11.000          0.000 
+Power DC Terms:
+PD                    0.000         12.100m         0.000 
+
+DC Pin Currents:
+Ir                    0.000          1.100m         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2
+V                    11.000        -11.000 
+Power DC Terms:
+PS                    0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000 
+
+
+
+Operating Point for Devices of Type Opamp
+=========================================
+Instance:                X1
+Using model:        THS3001
+Condition:
+State                   LIN
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             V2
+V                   22.000          0.000 
+Power DC Terms:
+PG                  24.200m         0.000 
+
+DC Pin Currents:
+ISource             -1.100m         0.000 
+
+
