@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                      AC Analysis of SRS_10MHz_GAIN                       ***
-***                           7/3/2024 12:10:23 PM                           ***
+***                           7/4/2024 12:09:22 PM                           ***
 ********************************************************************************
 Limits
 ======
@@ -32,31 +32,79 @@ DC Operating Point Voltages
 Node         Voltage  Node         Voltage  Node         Voltage 
 1            22.000   VOFFSET      11.000   3            11.000  
 VOUT         11.000   VIN           0.000   6             0.000  
-7            11.000  
+7            11.000   8            11.000   9            11.000  
+10           11.000   11           -0.068f  12           -0.068f 
+VDET         -0.137f 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D1             D2
+Using model:         1N5711         1N5711
+
+Capacitance Terms:
+CAP                  1.476p         1.476p
+
+Current Terms:
+ID               5.260E-024     5.275E-024
+
+Resistance Terms:
+REQ               13.216MEG      13.216MEG
+
+Voltage Terms:
+VD                   0.068f         0.069f
+
+Power DC Terms:
+PD               3.599E-040     3.626E-040
+PS                   0.000          0.000 
+
+DC Pin Currents:
+Id               5.260E-024     5.275E-024
+
+Condition:
+State                   OFF            OFF
+
+Device Variables:
+area                 1.000          1.000 
+ic                   0.000          0.000 
+
 
 
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:               X1.R             R1             R2             R3
-V                    11.000         11.000         11.000        334.458p
+V                    11.000         11.000         11.000       -235.392n
 Power DC Terms:
-PD                  604.994m        12.100m        12.100m     1.119E-022
+PD                  604.994m        12.100m        12.100m         0.055f
 
 DC Pin Currents:
-Ir                   55.000m         1.100m         1.100m       334.458f
+Ir                   55.000m         1.100m         1.100m      -235.392p
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
 tc2                   0.000          0.000          0.000          0.000 
 
 
-Instance:                 R4             R5             R7
-V                     0.000         11.000          0.000 
+Instance:                 R4             R5             R7             R8
+V                     0.000          0.000          0.000          0.000 
 Power DC Terms:
-PD                    0.000         12.100m         0.000 
+PD                    0.000          0.000          0.000          0.000 
 
 DC Pin Currents:
-Ir                    0.000          1.100m         0.000 
+Ir                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R9            R10            R11
+V                    -0.137f      -117.810n         0.000 
+Power DC Terms:
+PD                1.880E-037         0.028f         0.000 
+
+DC Pin Currents:
+Ir               -1.371E-021      -235.619p         0.000 
 
 Device Variables:
 tc1                   0.000          0.000          0.000 
@@ -66,16 +114,28 @@ tc2                   0.000          0.000          0.000
 
 Operating Point for Devices of Type Capacitor
 =============================================
-Instance:                 C1             C2
-V                    11.000        -11.000 
+Instance:                 C1             C2             C3             C4
+V                    11.000        -11.000        -11.000          0.137f
 Power DC Terms:
-PS                    0.000          0.000 
+PS                    0.000          0.000          0.000          0.000 
 
 DC Pin Currents:
-Ic                    0.000          0.000 
+Ic                    0.000          0.000          0.000          0.000 
 
 Device Variables:
-ic                    0.000          0.000 
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                 C5
+V                    11.000 
+Power DC Terms:
+PS                    0.000 
+
+DC Pin Currents:
+Ic                    0.000 
+
+Device Variables:
+ic                    0.000 
 
 
 
