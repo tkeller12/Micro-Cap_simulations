@@ -1,0 +1,222 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                   AC Analysis of SRS_10MHz_GAIN_MATCH                    ***
+***                           7/6/2024 2:11:07 PM                            ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 1E8,1Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            22.000   VOFFSET      11.000   3            11.000  
+VOUT         11.000   5             0.000   6             0.000  
+7            11.000   8            11.000   9            11.000  
+10           11.000   VIN           0.000   12           -0.068f 
+13           -0.068f  VDET         -0.137f  15            0.000  
+16            0.000   17            0.000   18            0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current  Inductor     Current 
+L1            0.000   X2.LP         0.000   X2.LS1        0.000  
+X2.LS2        0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D1             D2
+Using model:         1N5711         1N5711
+
+Capacitance Terms:
+CAP                  1.476p         1.476p
+
+Current Terms:
+ID               5.260E-024     5.275E-024
+
+Resistance Terms:
+REQ               13.216MEG      13.216MEG
+
+Voltage Terms:
+VD                   0.068f         0.069f
+
+Power DC Terms:
+PD               3.599E-040     3.626E-040
+PS                   0.000          0.000 
+
+DC Pin Currents:
+Id               5.260E-024     5.275E-024
+
+Condition:
+State                   OFF            OFF
+
+Device Variables:
+area                 1.000          1.000 
+ic                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               X1.R             R1             R2             R3
+V                    11.000         11.000         11.000        -47.032n
+Power DC Terms:
+PD                  604.994m        12.100m        12.100m         0.011f
+
+DC Pin Currents:
+Ir                   55.000m         1.100m         1.100m      -235.159p
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R4             R5             R7             R8
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PD                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R9            R10            R11            R12
+V                    -0.137f      -117.809n         0.000          0.000 
+Power DC Terms:
+PD                1.880E-037         0.028f         0.000          0.000 
+
+DC Pin Currents:
+Ir               -1.371E-021      -235.617p         0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:          X2.K0.RPM       X2.K0.RP       X2.K0.RM      X2.K0.RPM
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PD                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:           X2.K0.RP       X2.K0.RM      X2.K0.RPM       X2.K0.RP
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PD                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:           X2.K0.RM
+V                     0.000 
+Power DC Terms:
+PD                    0.000 
+
+DC Pin Currents:
+Ir                    0.000 
+
+Device Variables:
+tc1                   0.000 
+tc2                   0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                 L1          X2.LP         X2.LS1         X2.LS2
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Il                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2             C3             C4
+V                    11.000        -11.000        -11.000          0.137f
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                 C5             C6             C7
+V                    11.000          0.000          0.000 
+Power DC Terms:
+PS                    0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Opamp
+=========================================
+Instance:                X1
+Using model:        THS3001
+Condition:
+State                   LIN
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             V2
+V                   22.000          0.000 
+Power DC Terms:
+PG                  24.200m         0.000 
+
+DC Pin Currents:
+ISource             -1.100m         0.000 
+
+

@@ -1,0 +1,248 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                   AC Analysis of SRS_10MHz_INPUT_CMOS                    ***
+***                           7/5/2024 5:06:49 PM                            ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 1E8,1Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            21.774   VA            3.666   3             2.978  
+4            21.774   VB            3.666   6             2.978  
+7             2.891   8             3.381   9             2.891  
+10            4.846   11            4.096   +22          22.000  
+13            2.978   VA2          21.784   VB2          21.784  
+16           21.784   17           11.000   VOUT         11.000  
+VIN           0.000   20            0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current  Inductor     Current 
+X2.LP         0.000   X2.LS1     -432.847u  X2.LS2      432.847u 
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1             Q2             Q3             Q4
+Using model:         2N5089         2N5089         2N5089         2N5089
+
+Beta Terms:
+BETADC             945.925        945.925         -1.001        769.481 
+BETAAC             909.334        909.334         -2.860K       768.482 
+
+Capacitance Terms:
+CPI                 49.442p        49.442p        27.746p       142.909p
+CMU                  2.021p         2.021p        24.677p        13.328p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.000          0.000          0.000          0.000 
+
+Conductance Terms:
+GM                  15.331m        15.331m       -44.397u        99.034m
+
+Current Terms:
+IB                 457.591n       457.591n         1.465m         3.637u
+IC                 432.847u       432.847u        -1.466m         2.799m
+
+Resistance Terms:
+RPI                 59.313K        59.313K      64.414MEG         7.760K
+RX                   0.000          0.000          0.000          0.000 
+RO                 272.872K       272.872K        17.763K        35.731K
+
+Voltage Terms:
+VBE                687.566m       687.566m       489.420m       749.704m
+VBC                -18.108        -18.108        489.420m         0.000 
+VCE                 18.795         18.795          2.333n       749.704m
+
+Frequency Terms:
+FT                47.413MEG      47.413MEG      -134.789K     100.884MEG
+
+Power DC Terms:
+PD                   8.136m         8.136m       717.020u         2.101m
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 457.591n       457.591n         1.465m         3.637u
+Ic                 432.847u       432.847u        -1.466m         2.799m
+Ie                -433.304u      -433.304u         1.120u        -2.802m
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   LIN            LIN            OFF            LIN
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3             R4
+V                   433.304u       433.304u        10.778m        10.778m
+Power DC Terms:
+PD                  187.752n       187.752n         4.665u         4.665u
+
+DC Pin Currents:
+Ir                  433.304u       433.304u       432.847u       432.847u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R5             R6             R7             R9
+V                    86.661m       215.558m         2.891        -17.154 
+Power DC Terms:
+PD                   75.101u       186.607u         6.741m        73.201m
+
+DC Pin Currents:
+Ir                  866.608u       865.693u         2.332m        -4.267m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R10            R11            R12            R13
+V                    -1.465         11.000         11.000          0.000 
+Power DC Terms:
+PD                    2.146m        12.100m        12.100m         0.000 
+
+DC Pin Currents:
+Ir                   -1.465m         1.100m         1.100m         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R16            R17            R18            R19
+V                     0.000         18.334          3.666         18.334 
+Power DC Terms:
+PD                    0.000         33.614m         6.719m        33.614m
+
+DC Pin Currents:
+Ir                    0.000          1.833m         1.833m         1.833m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R20            R21      X2.K0.RPM       X2.K0.RP
+V                     3.666          2.333n       -10.784          0.000 
+Power DC Terms:
+PD                    6.719m         5.442p       116.304p         0.000 
+
+DC Pin Currents:
+Ir                    1.833m         2.333m       -10.784p         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:           X2.K0.RM      X2.K0.RPM       X2.K0.RP       X2.K0.RM
+V                     0.000        -10.784          0.000          0.000 
+Power DC Terms:
+PD                    0.000        116.304p         0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000        -10.784p         0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:          X2.K0.RPM       X2.K0.RP       X2.K0.RM
+V                     0.000          0.000          0.000 
+Power DC Terms:
+PD                    0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X2.LP         X2.LS1         X2.LS2
+V                     0.000          0.000          0.000 
+Power DC Terms:
+PS                    0.000          0.000          0.000 
+
+DC Pin Currents:
+Il                    0.000       -432.847u       432.847u
+
+Device Variables:
+ic                    0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2             C3             C4
+V                   -21.784          0.000          0.000         -3.381 
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                 C6             C8             C9            C10
+V                   -11.000          0.000         -3.666         -3.666 
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             V2             V3
+V                   22.000          4.096          0.000 
+Power DC Terms:
+PG                 217.795m       -11.478m         0.000 
+
+DC Pin Currents:
+ISource             -9.900m         2.802m         0.000 
+
+
