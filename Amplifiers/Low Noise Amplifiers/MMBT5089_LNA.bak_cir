@@ -708,7 +708,7 @@ Style=8192
 
 [Attr]
 ON=18,59,VALUE
-V=1000uH,20000uH,0.98
+V=100uH,2000uH,0.98
 
 [Attr]
 ON=0,0,PACKAGE
@@ -816,7 +816,7 @@ Style=8192
 
 [Attr]
 ON=18,-34,RESISTANCE
-V=200
+V=50
 Style=8192
 
 [Attr]
@@ -1064,9 +1064,8 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=648,0
 Scale 3=1
-Px=1110,336
+Px=454,538
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000

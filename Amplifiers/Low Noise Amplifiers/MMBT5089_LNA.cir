@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1536,864
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=69
+NLCnt=65
 TXCnt=2
 
 [shapedef]
@@ -560,7 +560,7 @@ Pxs=240,312,240,336
 
 [Comp]
 Name=Resistor
-Px=1248,384
+Px=1128,384
 Rot=3
 
 [Attr]
@@ -579,7 +579,7 @@ V
 
 [Comp]
 Name=Ground
-Px=1248,480
+Px=1128,480
 Rot=7
 
 [Wire]
@@ -608,10 +608,10 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1248,312,1248,336
+Pxs=1128,312,1128,336
 
 [Wire]
-Pxs=1224,312,1248,312
+Pxs=1080,312,1128,312
 
 [Wire]
 Pxs=384,312,408,312
@@ -695,7 +695,7 @@ Pxs=888,288,888,312
 Pxs=888,312,888,336
 
 [Wire]
-Pxs=1248,384,1248,480
+Pxs=1128,384,1128,480
 
 [Comp]
 Name=Transformer
@@ -708,7 +708,7 @@ Style=8192
 
 [Attr]
 ON=18,59,VALUE
-V=1000uH,20000uH,0.98
+V=100uH,2000uH,0.98
 
 [Attr]
 ON=0,0,PACKAGE
@@ -774,36 +774,6 @@ Style=8192
 ON=0,0,PACKAGE
 V
 
-[Wire]
-Pxs=1152,312,1224,312
-
-[Comp]
-Name=Transformer
-Px=1104,312
-
-[Attr]
-ON=18,45,PART
-V=K2
-Style=8192
-
-[Attr]
-ON=18,59,VALUE
-V=10000uH,2500uH,0.98
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Ground
-Px=1104,360
-Rot=7
-
-[Comp]
-Name=Ground
-Px=1152,360
-Rot=7
-
 [Comp]
 Name=Resistor
 Px=912,312
@@ -816,7 +786,7 @@ Style=8192
 
 [Attr]
 ON=18,-34,RESISTANCE
-V=200
+V=50
 Style=8192
 
 [Attr]
@@ -825,9 +795,6 @@ V
 
 [Wire]
 Pxs=960,312,1008,312
-
-[Wire]
-Pxs=1056,312,1104,312
 
 [Comp]
 Name=Inductor
@@ -841,7 +808,7 @@ Style=8192
 
 [Attr]
 ON=-52,-40,INDUCTANCE
-V=10000uH
+V=100uH
 Style=8192
 
 [Attr]
@@ -851,9 +818,12 @@ V
 [Wire]
 Pxs=888,432,888,480
 
+[Wire]
+Pxs=1056,312,1080,312
+
 [Grid Text]
 Text="Vout"
-Px=1224,312
+Px=1080,312
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1065,7 +1035,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=1
-Px=959,402
+Px=861,400
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
