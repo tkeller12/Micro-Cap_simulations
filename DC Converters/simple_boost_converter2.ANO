@@ -2,26 +2,23 @@
 ***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***              Transient Analysis of simple_boost_converter2               ***
-***                           7/7/2024 7:20:27 PM                            ***
+***                  AC Analysis of simple_boost_converter2                  ***
+***                           7/7/2024 5:54:59 PM                            ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           2000u
-Output Start Time (tstart) 0
-Maximum Time Step          0
-Number of Points           51
-Temperature                Linear 27
-Retrace Runs               1
-Run Options                Normal
-State Variables            Zero
-Operating Point            On
-Operating Point Only       Off
-Auto Scale Ranges          On
-Accumulate Plots           Off
-Fixed Time Step            Off
-Periodic Steady State      Off
-Ignore Expression Errors   Off
+Frequency Range          Log 1E8,1Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
 
 
 *****************************************************
@@ -33,14 +30,14 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
-1             9.000   2             0.000   3             1.125u 
-4           174.974m  5             9.000   6             9.000  
-7             8.706  
+1            11.999   2             0.000   3             1.500u 
+4           182.623m  5            12.000   6            11.999  
+7            11.519  
 
 DC Operating Point Inductor Current
 ===================================
 Inductor     Current 
-L1           31.206u 
+L1           11.549m 
 
 
 Operating Point for Devices of Type Diode
@@ -49,23 +46,23 @@ Instance:                D1
 Using model:         1N486B
 
 Capacitance Terms:
-CAP                  1.693n
+CAP                  2.227u
 
 Current Terms:
-ID                   8.706u
+ID                  11.519m
 
 Resistance Terms:
-REQ                  2.971K
+REQ                  2.245 
 
 Voltage Terms:
-VD                 294.171m
+VD                 480.116m
 
 Power DC Terms:
-PD                   2.561u
+PD                   5.530m
 PS                   0.000 
 
 DC Pin Currents:
-Id                   8.706u
+Id                  11.519m
 
 Condition:
 State                   OFF
@@ -82,7 +79,7 @@ Instance:                M1
 Using model:         IRF540
 
 Capacitance Terms:
-CBD                671.262p
+CBD                586.312p
 CBS                  0.000 
 CGSOVL              10.272p
 CGDOVL             942.215p
@@ -97,27 +94,27 @@ GDS                  0.000
 GMBS                 0.000 
 
 Current Terms:
-ID                  22.500u
+ID                  29.997u
 
 Voltage Terms:
-VGS                 -1.125u
-VDS                  9.000 
-VBS                174.972m
-VGB               -174.974m
-VGD                 -9.000 
-VDB                  8.825 
+VGS                 -1.500u
+VDS                 11.999 
+VBS                182.621m
+VGB               -182.623m
+VGD                -11.999 
+VDB                 11.816 
 VTH                  3.168 
 VDSAT                0.000 
 
 Power DC Terms:
-PD                 202.500u
+PD                 359.931u
 PS                   0.000 
 
 DC Pin Currents:
 Ig                   0.000 
-Id                  22.500u
-Is                 -22.500u
-Ib               3.506E-020
+Id                  29.997u
+Is                 -29.997u
+Ib               1.003E-019
 
 Condition:
 State                   OFF
@@ -143,12 +140,12 @@ vbs                  0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:                 R1             R2             R3
-V                     1.125u        -3.121u         8.706 
+V                     1.500u        -1.155m        11.519 
 Power DC Terms:
-PD                   25.312p        97.380p        75.791u
+PD                   44.991p        13.337u       132.681m
 
 DC Pin Currents:
-Ir                   22.500u       -31.206u         8.706u
+Ir                   29.997u       -11.549m        11.519m
 
 Device Variables:
 tc1                   0.000          0.000          0.000 
@@ -164,7 +161,7 @@ Power DC Terms:
 PS                    0.000 
 
 DC Pin Currents:
-Il                   31.206u
+Il                   11.549m
 
 Device Variables:
 ic                    0.000 
@@ -174,7 +171,7 @@ ic                    0.000
 Operating Point for Devices of Type Capacitor
 =============================================
 Instance:                 C1
-V                     8.706 
+V                    11.519 
 Power DC Terms:
 PS                    0.000 
 
@@ -189,11 +186,11 @@ ic                    0.000
 Operating Point for Devices of Type SPICE Source
 ================================================
 Instance:                V1             V2
-V                    0.000          9.000 
+V                    0.000         12.000 
 Power DC Terms:
-PG                   0.000        280.852u
+PG                   0.000        138.585m
 
 DC Pin Currents:
-ISource              0.000        -31.206u
+ISource              0.000        -11.549m
 
 
