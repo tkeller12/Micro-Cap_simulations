@@ -1,0 +1,207 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                    AC Analysis of IRF510_RF_Amplifier                    ***
+***                           7/20/2024 6:43:29 PM                           ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 1E8,10k
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             4.200   2            23.557   3           220.195m 
+4             4.200   5            23.557   6           220.195m 
+7            23.557   8            23.557   9            24.000  
+VOUT          0.000   11            0.000   12            0.000  
+13            0.000   VIN           0.000   15            4.200  
+16            4.200   17            4.200   18            4.200  
+19            4.200   20            4.200   21           23.926  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current  Inductor     Current 
+L1          369.521m  L2          369.521m  K1.LP       -11.780p 
+K1.LS        23.557p  K2.LP         0.000   K2.LS         0.000  
+L3           -0.029f  L4           -0.029f 
+
+
+Operating Point for Devices of Type Mosfet NMOS
+===============================================
+Instance:                M1             M2
+Using model:         IRF510         IRF510
+
+Capacitance Terms:
+CBD                439.488p       439.488p
+CBS                  0.000          0.000 
+CGSOVL             150.883p       150.883p
+CGDOVL              53.533p        53.533p
+CGBOVL               0.000          0.000 
+CGS                  0.000          0.000 
+CGD                  0.000          0.000 
+CGB                  0.000          0.000 
+
+Conductance Terms:
+GM                 704.134m       704.134m
+GDS                862.402u       862.402u
+GMBS                 0.000          0.000 
+
+Current Terms:
+ID                -369.521m      -369.521m
+
+Voltage Terms:
+VGS                -19.357        -19.357 
+VDS                -23.557        -23.557 
+VBS                -23.336        -23.336 
+VGB                  3.980          3.980 
+VGD                  4.200          4.200 
+VDB               -220.195m      -220.195m
+VTH                  3.131          3.131 
+VDSAT                1.049          1.049 
+
+Power DC Terms:
+PD                   8.705          8.705 
+PS                   0.000          0.000 
+
+DC Pin Currents:
+Ig                   0.000          0.000 
+Id                -369.521m      -369.521m
+Is                 369.521m       369.521m
+Ib                   0.001f         0.001f
+
+Condition:
+State                   HOT            HOT
+
+Device Variables:
+m                    1.000          1.000 
+l                    0.000          0.000 
+w                    0.000          0.000 
+ad                   0.000          0.000 
+as                   0.000          0.000 
+pd                   0.000          0.000 
+ps                   0.000          0.000 
+nrd                  0.000          0.000 
+nrs                  0.000          0.000 
+nrb                  0.000          0.000 
+nrg                  0.000          0.000 
+vds                  0.000          0.000 
+vgs                  0.000          0.000 
+vbs                  0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               K1.R             R1           K2.R             R2
+V                    23.557          0.000          0.000          0.000 
+Power DC Terms:
+PD                  554.912p         0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                   23.557p         0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R3             R4             R5             R6
+V                     0.000        -28.422f       -28.422f         0.000 
+Power DC Terms:
+PD                    0.000      8.078E-031     8.078E-031         0.000 
+
+DC Pin Currents:
+Ir                    0.000         -0.028f        -0.028f         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R7             R8             R9            R10
+V                     0.000         73.904m      -369.521m      -369.521m
+Power DC Terms:
+PD                    0.000         54.618m       136.546m       136.546m
+
+DC Pin Currents:
+Ir                    0.000        739.042m      -369.521m      -369.521m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                 L1             L2          K1.LP          K1.LS
+V                     0.000          0.000         -3.553f         0.000 
+Power DC Terms:
+PS                    0.000          0.000      4.185E-026         0.000 
+
+DC Pin Currents:
+Il                  369.521m       369.521m       -11.780p        23.557p
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:              K2.LP          K2.LS             L3             L4
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Il                    0.000          0.000         -0.029f        -0.029f
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C3             C4
+V                    -3.553f         4.200          4.200 
+Power DC Terms:
+PS                    0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             V2             V3             V4
+V                   24.000          0.000          4.200          4.200 
+Power DC Terms:
+PG                  17.737          0.000          0.120f         0.120f
+
+DC Pin Currents:
+ISource           -739.042m         0.000         -0.029f        -0.029f
+
+
