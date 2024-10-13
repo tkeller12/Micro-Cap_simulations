@@ -1,0 +1,188 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                Transient Analysis of active_ballast_test                 ***
+***                          10/13/2024 3:14:37 PM                           ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           1
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            24.000   2          -708.243m  3           -20.681m 
+4          -778.383m  5          -708.243m  6           -20.681m 
+7          -708.243m  8           -20.681m  9           -20.342m 
+10           -9.658n  11            0.000  
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:               Q1            Q2            Q3            Q4            Q5
+Using model:        2N3904        2N3904        2N3904        TIP41C        TIP29C
+
+Beta Terms:
+BETADC            474.775m      474.772m      474.771m     -501.588m     -648.915m
+BETAAC            113.872       113.872       113.872      -292.139m     -235.886 
+
+Capacitance Terms:
+CPI               247.941p      247.941p      247.941p      149.106p       51.733n
+CMU                80.971n       80.971n       80.971n       38.924p       65.510p
+CBX                 0.000         0.000         0.000         9.544p       16.059p
+CJS                 0.000         0.000         0.000         0.000         0.000 
+
+Conductance Terms:
+GM                284.706m      284.706m      284.706m     -264.227f     -722.332f
+
+Current Terms:
+IB                  6.781m        6.781m        6.781m      -20.004n       -3.548n
+IC                  3.219m        3.219m        3.219m       10.034n        2.302n
+
+Resistance Terms:
+RPI               399.963       399.963       399.963         1.106T      326.561T
+RX                  0.000         0.000         0.000         4.562        43.082 
+RO                 10.832        10.832        10.832       672.053G      514.694G
+
+Voltage Terms:
+VBE               757.702m      757.702m      757.702m     -687.562m     -687.562m
+VBC               687.562m      687.562m      687.562m      -24.708       -24.708 
+VCE                70.140m       70.140m       70.140m       24.021        24.021 
+
+Frequency Terms:
+FT                557.908K      557.907K      557.906K     -212.846u       -2.219u
+
+Power DC Terms:
+PD                  5.364m        5.364m        5.364m      254.773n       57.739n
+PS                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ib                  6.781m        6.781m        6.781m      -20.004n       -3.548n
+Ic                  3.219m        3.219m        3.219m       10.034n        2.302n
+Ie                -10.000m      -10.000m      -10.000m        9.970n        1.246n
+Is                  0.000         0.000         0.000         0.000         0.000 
+
+Condition:
+State                  SAT           SAT           SAT           OFF           OFF
+
+Device Variables:
+area                1.000         1.000         1.000         1.000         1.000 
+vbe                 0.000         0.000         0.000         0.000         0.000 
+vce                 0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:               Q6
+Using model:         TIP50
+
+Beta Terms:
+BETADC           -679.086m
+BETAAC           -866.179 
+
+Capacitance Terms:
+CPI                 2.068n
+CMU                51.525p
+CBX                12.881p
+CJS                 0.000 
+
+Conductance Terms:
+GM                 -2.642p
+
+Current Terms:
+IB               -127.116p
+IC                 86.323p
+
+Resistance Terms:
+RPI               327.816T
+RX                  1.507 
+RO                170.075G
+
+Voltage Terms:
+VBE              -687.562m
+VBC               -24.708 
+VCE                24.021 
+
+Frequency Terms:
+FT               -197.228u
+
+Power DC Terms:
+PD                  2.161n
+PS                  0.000 
+
+DC Pin Currents:
+Ib               -127.116p
+Ic                 86.323p
+Ie                 40.793p
+Is                  0.000 
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+vbe                 0.000 
+vce                 0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            R2            R3            R4            R5
+V                 -339.035u     -339.036u     -339.036u      -20.342m      708.243m
+Power DC Terms:
+PD                   2.299u        2.299u        2.299u      413.802u        2.280m
+
+DC Pin Currents:
+Ir                  -6.781m       -6.781m       -6.781m      -20.342m        3.219m
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:                R6            R7            R8
+V                  708.243m      708.243m       -9.658n
+Power DC Terms:
+PD                   2.280m        2.280m       93.274p
+
+DC Pin Currents:
+Ir                   3.219m        3.219m       -9.658m
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            I1            V2
+V                  24.000      -778.383m        0.000 
+Power DC Terms:
+PG                298.147n       23.351m        0.000 
+
+DC Pin Currents:
+ISource           -12.423n       30.000m       -9.658m
+
+
