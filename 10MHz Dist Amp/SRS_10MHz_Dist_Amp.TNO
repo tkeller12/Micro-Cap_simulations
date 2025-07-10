@@ -1,13 +1,13 @@
 ********************************************************************************
-***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
 ***                 Transient Analysis of SRS_10MHz_Dist_Amp                 ***
-***                           7/3/2024 10:01:01 AM                           ***
+***                          6/18/2025 12:03:55 PM                           ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           1u
+Maximum Run Time           .976u
 Output Start Time (tstart) 0
 Maximum Time Step          0
 Number of Points           51
