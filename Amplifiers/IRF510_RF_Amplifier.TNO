@@ -1,16 +1,16 @@
 ********************************************************************************
-***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
 ***                Transient Analysis of IRF510_RF_Amplifier                 ***
-***                           7/20/2024 6:20:03 PM                           ***
+***                           7/31/2025 4:08:42 PM                           ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           10u
+Maximum Run Time           1u
 Output Start Time (tstart) 0
 Maximum Time Step          0
-Number of Points           51
+Number of Points           201
 Temperature                Linear 27
 Retrace Runs               1
 Run Options                Normal
@@ -33,66 +33,67 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
-1             8.000   2            24.000   3            -3.261  
-4             8.000   5            24.000   6            -3.261  
-7            24.000   VOUT        -82.799f  9             0.000  
-10            8.000   11            8.000   VIN          11.563f 
-13            8.000   14            8.000   15            8.000  
-16            8.000  
+1             4.500   2            28.000   3           204.931m 
+4             4.500   5            28.000   6           204.931m 
+7            28.000   8            28.000   9            28.000  
+VOUT     -2.068E-025  11            0.000   12            0.000  
+13            0.000   VIN           0.000   15            4.500  
+16            4.500   17            4.500   18            4.500  
+19            4.500   20           28.000  
 
 DC Operating Point Inductor Current
 ===================================
 Inductor     Current  Inductor     Current  Inductor     Current 
-L1            6.808   L2            6.808   K1.LP        19.099p 
-K1.LS        24.002p  K2.LP         8.000p  K2.LS        -4.093p 
-L3          -77.624p  L4          -77.624p 
+L1          202.500u  L2          202.500u  K1.LP       -13.993p 
+K1.LS        28.000p  K2.LP         0.000   K2.LS         0.000  
+L3       -4.526E-050  L4            0.001f 
 
 
 Operating Point for Devices of Type Mosfet NMOS
 ===============================================
 Instance:                M1             M2
-Using model:         IRF510         IRF510
+Using model:        IRF530N        IRF530N
 
 Capacitance Terms:
-CBD                161.755p       161.755p
+CBD                  0.000          0.000 
 CBS                  0.000          0.000 
-CGSOVL             150.883p       150.883p
-CGDOVL              53.533p        53.533p
+CGSOVL               0.000          0.000 
+CGDOVL               0.000          0.000 
 CGBOVL               0.000          0.000 
 CGS                  0.000          0.000 
 CGD                  0.000          0.000 
 CGB                  0.000          0.000 
 
 Conductance Terms:
-GM                   3.023          3.023 
-GDS                 15.888m        15.888m
+GM                  90.000u        90.000u
+GDS                  0.000          0.000 
 GMBS                 0.000          0.000 
 
 Current Terms:
-ID                  -6.808         -6.808 
+ID                -202.500u      -202.500u
 
 Voltage Terms:
-VGS                -16.000        -16.000 
-VDS                -24.000        -24.000 
-VBS                -27.261        -27.261 
-VGB                 11.261         11.261 
-VGD                  8.000          8.000 
-VDB                  3.261          3.261 
-VTH                  3.131          3.131 
-VDSAT                4.504          4.504 
+VGS                -23.500        -23.500 
+VDS                -28.000        -28.000 
+VBS                -27.795        -27.795 
+VGB                  4.295          4.295 
+VGD                  4.500          4.500 
+VDB               -204.931m      -204.931m
+VTH                  0.000          0.000 
+VDSAT                4.500          4.500 
 
 Power DC Terms:
-PD                 163.393        163.393 
-PS                  -1.285n        -1.285n
+PD                   5.670m         5.670m
+PS                   0.000          0.000 
 
 DC Pin Currents:
-Ig                  73.663p        73.663p
-Id                  -6.808         -6.808 
-Is                   6.808          6.808 
-Ib                 -30.908p       -30.908p
+Ig                   0.000          0.000 
+Id                -202.500u      -202.500u
+Is                 202.500u       202.500u
+Ib                   0.001f         0.001f
 
 Condition:
-State                   HOT            HOT
+State                   SAT            SAT
 
 Device Variables:
 m                    1.000          1.000 
@@ -115,53 +116,66 @@ vbs                  0.000          0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:               K1.R             R1           K2.R             R2
-V                    24.000         82.799f        -8.000        -11.563f
+V                    28.000      2.068E-025         0.000          0.000 
 Power DC Terms:
-PD                  576.000p     1.371E-028        64.000p     2.674E-030
+PD                  783.986p     8.553E-052         0.000          0.000 
 
 DC Pin Currents:
-Ir                   24.000p         1.656f        -8.000p        -0.231f
+Ir                   28.000p     4.136E-027         0.000          0.000 
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
 tc2                   0.000          0.000          0.000          0.000 
 
 
-Instance:                 R3             R4             R5
-V                   -41.744f       -77.624n       -77.624n
+Instance:                 R3             R4             R5             R6
+V                     0.000          0.888f         0.888f         0.000 
 Power DC Terms:
-PD                1.743E-030         0.006f         0.006f
+PD                    0.000      7.889E-034     7.889E-034         0.000 
 
 DC Pin Currents:
-Ir                   -0.042f       -77.624p       -77.624p
+Ir                    0.000          0.001f         0.001f         0.000 
 
 Device Variables:
-tc1                   0.000          0.000          0.000 
-tc2                   0.000          0.000          0.000 
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R7             R8             R9            R10
+V                     0.000         40.500u      -202.500u      -202.500u
+Power DC Terms:
+PD                    0.000         16.403n        41.006n        41.006n
+
+DC Pin Currents:
+Ir                    0.000        405.000u      -202.500u      -202.500u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
 
 
 
 Operating Point for Devices of Type Inductor
 ============================================
 Instance:                 L1             L2          K1.LP          K1.LS
-V                   711.219n       711.220n      -312.639f       -82.799f
+V                     0.000          0.000          0.000     -2.068E-025
 Power DC Terms:
-PS                    4.842u         4.842u    -5.971E-024    -1.987E-024
+PS                    0.000          0.000          0.000     -5.790E-036
 
 DC Pin Currents:
-Il                    6.808          6.808         19.099p        24.002p
+Il                  202.500u       202.500u       -13.993p        28.000p
 
 Device Variables:
 ic                    0.000          0.000          0.000          0.000 
 
 
 Instance:              K2.LP          K2.LS             L3             L4
-V                    11.563f       -41.744f        54.782p        54.782p
+V                     0.000          0.000          0.000          0.000 
 Power DC Terms:
-PS                9.250E-026     1.708E-025    -4.252E-021    -4.252E-021
+PS                    0.000          0.000          0.000          0.000 
 
 DC Pin Currents:
-Il                    8.000p        -4.093p       -77.624p       -77.624p
+Il                    0.000          0.000     -4.526E-050         0.001f
 
 Device Variables:
 ic                    0.000          0.000          0.000          0.000 
@@ -171,12 +185,12 @@ ic                    0.000          0.000          0.000          0.000
 Operating Point for Devices of Type Capacitor
 =============================================
 Instance:                 C1             C2             C3             C4
-V                  -312.639f       -82.799f       804.501n       804.501n
+V                     0.000     -2.068E-025         4.500          4.500 
 Power DC Terms:
-PS                2.342E-033     1.796E-034         0.003f         0.003f
+PS                    0.000          0.000          0.000          0.000 
 
 DC Pin Currents:
-Ic               -7.492E-021    -2.169E-021         3.961p         3.961p
+Ic                    0.000          0.000          0.000          0.000 
 
 Device Variables:
 ic                    0.000          0.000          0.000          0.000 
@@ -185,12 +199,12 @@ ic                    0.000          0.000          0.000          0.000
 
 Operating Point for Devices of Type SPICE Source
 ================================================
-Instance:                V1             V2             V3             V4
-V                   24.000          0.000          8.000          8.000 
+Instance:                V1             V2             V4
+V                   28.000          0.000          4.500 
 Power DC Terms:
-PG                 326.787          0.000        620.991p       620.992p
+PG                  11.340m         0.000         -0.008f
 
 DC Pin Currents:
-ISource            -13.616          0.231f       -77.624p       -77.624p
+ISource           -405.000u         0.000          0.002f
 
 
