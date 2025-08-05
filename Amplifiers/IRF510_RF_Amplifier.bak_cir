@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.3
 Key ID=Demo
-NLCnt=75
+NLCnt=79
 TXCnt=2
 
 [shapedef]
@@ -25,6 +25,15 @@ Line=22,-8,22,8
 Line=26,-8,26,8
 Line=26,0,48,0
 Current=32,12,16,12
+
+[shapedef]
+Name=DNMOS
+Root="Mos2.root",0,0,0
+Line=14,0,24,0
+PolyClosed=3
+PolyLine=17,0
+PolyLine=20,-3
+PolyLine=20,3
 
 [shapedef]
 Name=Ground
@@ -64,31 +73,19 @@ Line=39,7,43,7
 Current=32,8,16,8
 
 [shapedef]
-Name=Mos1.root
-Line=0,0,10,0
+Name=Mos2.root
+Line=0,8,10,8
 Line=10,-8,10,8
-Rectangle=12,-12,14,12
+Line=14,-11,14,-5
+Line=14,-3,14,3
+Line=14,5,14,11
+Line=14,-8,24,-8
+Line=14,8,24,8
+Line=24,0,24,24
+Line=24,-8,24,-24
 Current=32,-24,32,-16
 Current=32,24,32,16
-Current=0,-8,8,-8
-PolyOpen=3
-PolyLine=24,-24
-PolyLine=24,-8
-PolyLine=13,-8
-PolyOpen=3
-PolyLine=24,24
-PolyLine=24,8
-PolyLine=13,8
-
-[shapedef]
-Name=NMOS
-Root="Mos1.root",0,0,0
-Line=14,0,24,0
-PolyClosed=3
-PolyLine=16,0
-PolyLine=20,4
-PolyLine=20,-4
-Current=32,-4,24,-4
+Current=0,0,8,0
 
 [shapedef]
 Name=Plus.root
@@ -177,19 +174,6 @@ Root="Plus.root",41,7,0
 Current=32,16,16,16
 
 [compdef]
-Name=NMOS
-Definition=NMOS
-Shape=NMOS
-Mask=5376
-memo=NMOS
-Label Offset=29,1,7,25
-PinCnt=4
-Pin="Drain",3,-3,8,9
-Pin="Gate",0,0,-20,-4
-Pin="Source",3,3,8,4
-Pin="Body",3,0,8,-1
-
-[compdef]
 Name=Ground
 Definition=Ground
 Shape=Ground
@@ -273,6 +257,21 @@ PinCnt=2
 Pin="Plus",6,0,-5,-6
 Pin="Minus",0,0,-20,-6
 
+[compdef]
+Name=IRF510
+Definition=NMOS
+Shape=DNMOS
+Mask=4224
+Used=2
+memo=N-Channel Power MOSFET Vdss=100V Id=5.6A Rds=0.54ohm
+Label Offset=29,-13,-5,26
+PinCnt=4
+Pin="Drain",3,-3,7,8
+Pin="Gate",0,1,-19,-2
+Pin="Source",3,3,6,12
+Pin="Body",3,3,6,0
+Power=43
+
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 182,182,1611,765
 Default Object=Color=#000080
@@ -303,49 +302,13 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Comp]
-Name=NMOS
-Px=744,360
-Rot=4
-
-[Attr]
-ON=29,-15,PART
-V=M1
-Style=8192
-
-[Attr]
-ON=29,-29,MODEL
-V=IRF510
-
-[Attr]
-ON=29,-57,PACKAGE
-V=TO-220AB
-
-[Comp]
-Name=NMOS
-Px=744,504
-Rot=4
-
-[Attr]
-ON=29,-15,PART
-V=M2
-Style=8192
-
-[Attr]
-ON=29,-29,MODEL
-V=IRF510
-
-[Attr]
-ON=29,-57,PACKAGE
-V=TO-220AB
-
-[Comp]
 Name=Ground
-Px=768,384
+Px=768,408
 Rot=7
 
 [Comp]
 Name=Ground
-Px=768,528
+Px=768,552
 Rot=7
 
 [Comp]
@@ -445,8 +408,8 @@ V=C1
 Style=8192
 
 [Attr]
-ON=-43,-40,CAPACITANCE
-V=100pF
+ON=-43,-41,CAPACITANCE
+V=1pF
 Style=8192
 
 [Attr]
@@ -464,7 +427,7 @@ Style=8192
 
 [Attr]
 ON=18,59,VALUE
-V=12uH,48uH,0.98
+V=3uH,12uH,0.98
 
 [Attr]
 ON=0,0,PACKAGE
@@ -517,7 +480,7 @@ Style=8192
 
 [Attr]
 ON=-43,-40,CAPACITANCE
-V=100pF
+V=1pF
 Style=8192
 
 [Attr]
@@ -571,7 +534,7 @@ Style=8192
 
 [Attr]
 ON=15,-41,VALUE
-V=DC 0 AC 10 0 Sin 0 10 7meg 0 0 0
+V=DC 0 AC 1 0 Sin 0 1 14meg 0 0 0
 
 [Attr]
 ON=0,0,PACKAGE
@@ -604,7 +567,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_Sin
-V=DC 0 AC 10 0 Sin 0 10 7meg 0 0 0
+V=DC 0 AC 1 0 Sin 0 1 14meg 0 0 0
 Style=256
 
 [Comp]
@@ -623,7 +586,7 @@ Style=8192
 
 [Attr]
 ON=18,59,VALUE
-V=6uH,6uH,0.98
+V=5uH,1uH,0.98
 
 [Attr]
 ON=0,0,PACKAGE
@@ -670,8 +633,8 @@ V=R3
 Style=8192
 
 [Attr]
-ON=8,-39,RESISTANCE
-V=1k
+ON=7,-39,RESISTANCE
+V=1000
 Style=8192
 
 [Attr]
@@ -692,8 +655,8 @@ V=C3
 Style=8192
 
 [Attr]
-ON=16,-40,CAPACITANCE
-V=1000nF
+ON=14,-40,CAPACITANCE
+V=100nF
 Style=8192
 
 [Attr]
@@ -721,7 +684,7 @@ Style=8192
 
 [Attr]
 ON=16,-40,CAPACITANCE
-V=1000nF
+V=100nF
 Style=8192
 
 [Attr]
@@ -772,8 +735,8 @@ V=V4
 Style=8192
 
 [Attr]
-ON=-32,-41,VALUE
-V=4V
+ON=-33,-41,VALUE
+V=4.5V
 Style=8192
 
 [Attr]
@@ -802,7 +765,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=1k
+V=1000
 Style=8192
 
 [Attr]
@@ -821,7 +784,7 @@ Style=8192
 
 [Attr]
 ON=8,-39,RESISTANCE
-V=1k
+V=1000
 Style=8192
 
 [Attr]
@@ -840,7 +803,7 @@ Style=8192
 
 [Attr]
 ON=-44,-40,INDUCTANCE
-V=100uH
+V=1000uH
 Style=8192
 
 [Attr]
@@ -859,7 +822,7 @@ Style=8192
 
 [Attr]
 ON=-44,-40,INDUCTANCE
-V=100uH
+V=1000uH
 Style=8192
 
 [Attr]
@@ -956,7 +919,7 @@ Style=8192
 
 [Attr]
 ON=8,25,RESISTANCE
-V=1
+V=.1
 Style=8192
 
 [Attr]
@@ -975,7 +938,7 @@ Style=8192
 
 [Attr]
 ON=8,25,RESISTANCE
-V=1
+V=.1
 Style=8192
 
 [Attr]
@@ -984,6 +947,60 @@ V
 
 [Wire]
 Pxs=600,672,672,672
+
+[Wire]
+Pxs=768,528,768,552
+
+[Wire]
+Pxs=768,384,768,408
+
+[Comp]
+Name=IRF510
+Px=744,504
+
+[Attr]
+ON=29,-13,PART
+V=M3
+Style=8192
+
+[Attr]
+ON=29,1,MODEL
+V=IRF510
+
+[Attr]
+ON=29,15,POWER
+V=43
+
+[Attr]
+ON=29,43,PACKAGE
+V=TO-220AB
+
+[Comp]
+Name=IRF510
+Px=744,360
+
+[Attr]
+ON=29,-13,PART
+V=M4
+Style=8192
+
+[Attr]
+ON=29,1,MODEL
+V=IRF510
+
+[Attr]
+ON=29,15,POWER
+V=43
+
+[Attr]
+ON=29,43,PACKAGE
+V=TO-220AB
+
+[Wire]
+Pxs=744,360,744,368
+
+[Wire]
+Pxs=744,504,744,512
 
 [Grid Text]
 Text="Vin"
@@ -1198,9 +1215,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=292,144
+SB 3=527,48
 Scale 3=1
-Px=858,654
+Px=1120,410
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1264,7 +1281,6 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=64,20
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -1823,10 +1839,10 @@ AliasID=1
 XExp=T
 YExp=v(Vin)
 XRng=1e-6
-YRng=18,-12
+YRng=6,-4
 Options=LINEARX,LINEARY
 Range Grid X=2e-7
-Range Grid Y=6
+Range Grid Y=2
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1849,10 +1865,10 @@ AliasID=2
 XExp=T
 YExp=v(Vout)
 XRng=1e-6
-YRng=18,-12
+YRng=6,-4
 Options=LINEARX,LINEARY
 Range Grid X=2e-7
-Range Grid Y=6
+Range Grid Y=2
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1912,10 +1928,10 @@ AliasID=1
 XExp=F
 YExp=dB(v(Vout))
 XRng=1e+8,10000
-YRng=60,-40
+YRng=50,-75
 Options=LINEARY
 Range Grid X=1.9998e+7
-Range Grid Y=20
+Range Grid Y=25
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1938,7 +1954,7 @@ AliasID=2
 XExp=F
 YExp=ph(v(Vout))
 XRng=1e+8,10000
-YRng=150,-600
+YRng=300,-450
 Options=LINEARY
 Range Grid X=1.9998e+7
 Range Grid Y=150
@@ -1964,10 +1980,10 @@ AliasID=3
 XExp=F
 YExp=dB(v(Vout))-dB(v(Vin))
 XRng=1e+8,10000
-YRng=40,-60
+YRng=36,-24
 Options=LINEARY
 Range Grid X=1.9998e+7
-Range Grid Y=20
+Range Grid Y=12
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
@@ -1990,10 +2006,10 @@ AliasID=4
 XExp=F
 YExp=v(Vout)
 XRng=1e+8,10000
-YRng=100
+YRng=6
 Options=LINEARY
 Range Grid X=1.9998e+7
-Range Grid Y=20
+Range Grid Y=1.2
 Enable=Enable
 Line Color=#FF00FF
 Text Color=#FF00FF
