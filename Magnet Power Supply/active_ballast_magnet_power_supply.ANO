@@ -1,0 +1,519 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***            AC Analysis of active_ballast_magnet_power_supply             ***
+***                          11/20/2025 11:39:18 AM                          ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 1E8,1Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            12.000   2          -722.642m  3           -37.462m 
+4          -794.604m  5          -722.642m  6           -37.462m 
+7          -722.642m  8           -37.462m  9            12.000  
+10          -37.152m  11          115.115m  12            0.000  
+13          126.539m  VE            0.000   VC           12.000  
+16           -4.588m  17           12.000   18         -262.193m 
+19           -5.506m  VE1           0.000   21          104.514m 
+VC1          12.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:             X1.D5          X1.D3          X1.D4          X1.D1
+
+Capacitance Terms:
+CAP                  0.000          0.000          0.000          0.000 
+
+Current Terms:
+ID                 -12.010p        -9.283p         6.161u        -8.592p
+
+Resistance Terms:
+REQ                  1.000T         1.000T         4.198K         1.000T
+
+Voltage Terms:
+VD                 -12.000         -9.273        523.461m        -8.582 
+
+Power DC Terms:
+PD                 144.120p        86.090p         3.225u        73.740p
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id                 -12.010p        -9.283p         6.161u        -8.592p
+
+Condition:
+State                   HOT            HOT            HOT            HOT
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:             X1.D2          X2.D5          X2.D3          X2.D4
+
+Capacitance Terms:
+CAP                  0.000          0.000          0.000          0.000 
+
+Current Terms:
+ID                 -31.428p       -12.010p        -9.305p        14.436u
+
+Resistance Terms:
+REQ                  1.000T         1.000T         1.000T         1.792K
+
+Voltage Terms:
+VD                 -31.418        -12.000         -9.295        545.486m
+
+Power DC Terms:
+PD                 987.392p       144.120p        86.499p         7.875u
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id                 -31.428p       -12.010p        -9.305p        14.436u
+
+Condition:
+State                   HOT            HOT            HOT            HOT
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:             X2.D1          X2.D2
+
+Capacitance Terms:
+CAP                  0.000          0.000 
+
+Current Terms:
+ID                 -20.024p       -19.996p
+
+Resistance Terms:
+REQ                  1.000T         1.000T
+
+Voltage Terms:
+VD                 -20.014        -19.986 
+
+Power DC Terms:
+PD                 400.778p       399.623p
+PS                   0.000          0.000 
+
+DC Pin Currents:
+Id                 -20.024p       -19.996p
+
+Condition:
+State                   HOT            HOT
+
+Device Variables:
+area                 1.000          1.000 
+ic                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1             Q2             Q3             Q4
+Using model:         2N3904         2N3904         2N3904         TIP41C
+
+Beta Terms:
+BETADC             614.989m       614.989m       614.989m      -500.757m
+BETAAC             116.543        116.543        116.543       -140.373m
+
+Capacitance Terms:
+CPI                244.001p       244.001p       244.001p       149.191p
+CMU                 73.851n        73.851n        73.851n        45.067p
+CBX                  0.000          0.000          0.000         11.050p
+CJS                  0.000          0.000          0.000          0.000 
+
+Conductance Terms:
+GM                 285.641m       285.641m       285.641m      -132.412f
+
+Current Terms:
+IB                   6.192m         6.192m         6.192m       -20.004n
+IC                   3.808m         3.808m         3.808m        10.017n
+
+Resistance Terms:
+RPI                408.004        408.004        408.004          1.060T
+RX                   0.000          0.000          0.000          4.562 
+RO                  11.815         11.815         11.815        801.098G
+
+Voltage Terms:
+VBE                757.142m       757.142m       757.142m      -685.181m
+VBC                685.181m       685.181m       685.181m       -12.723 
+VCE                 71.961m        71.961m        71.961m        12.037 
+
+Frequency Terms:
+FT                 613.555K       613.555K       613.555K      -102.646u
+
+Power DC Terms:
+PD                   4.962m         4.962m         4.962m       134.285n
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                   6.192m         6.192m         6.192m       -20.004n
+Ic                   3.808m         3.808m         3.808m        10.017n
+Ie                 -10.000m       -10.000m       -10.000m         9.987n
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   SAT            SAT            SAT            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:                Q5             Q6          X1.Q1          X1.Q2
+Using model:         TIP41C         TIP41C             NA             NA
+
+Beta Terms:
+BETADC            -500.757m      -500.757m       157.924        176.562 
+BETAAC            -140.373m      -140.373m       157.895        176.471 
+
+Capacitance Terms:
+CPI                149.191p       149.191p         0.000          0.000 
+CMU                 45.067p        45.067p         0.000          0.000 
+CBX                 11.050p        11.050p         0.000          0.000 
+CJS                  0.000          0.000          0.000          0.000 
+
+Conductance Terms:
+GM                -132.412f      -132.412f       400.312u       160.203u
+
+Current Terms:
+IB                 -20.004n       -20.004n        65.562n        23.468n
+IC                  10.017n        10.017n        10.354u         4.144u
+
+Resistance Terms:
+RPI                  1.060T         1.060T       394.429K       1.102MEG
+RX                   4.562          4.562          0.000          0.000 
+RO                 801.098G       801.098G         1.000T         1.000T
+
+Voltage Terms:
+VBE               -685.181m      -685.181m       655.999m       630.386m
+VBC                -12.723        -12.723        -11.945        -12.015 
+VCE                 12.037         12.037         12.601         12.646 
+
+Frequency Terms:
+FT                -102.646u      -102.646u      6371.171T      2549.709T
+
+Power DC Terms:
+PD                 134.285n       134.285n       130.512u        52.412u
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 -20.004n       -20.004n        65.562n        23.468n
+Ic                  10.017n        10.017n        10.354u         4.144u
+Ie                   9.987n         9.987n       -10.419u        -4.167u
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            OFF            HOT            HOT
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:             X2.Q1          X2.Q2
+
+Beta Terms:
+BETADC             157.916     -58895.210T
+BETAAC             157.895        176.468 
+
+Capacitance Terms:
+CPI                  0.000          0.000 
+CMU                  0.000          0.000 
+CBX                  0.000          0.000 
+CJS                  0.000          0.000 
+
+Conductance Terms:
+GM                 560.262u        83.648n
+
+Current Terms:
+IB                  91.763n    -3.716E-026
+IC                  14.491u         2.188n
+
+Resistance Terms:
+RPI                281.823K         2.110G
+RX                   0.000          0.000 
+RO                   1.000T         1.000T
+
+Voltage Terms:
+VBE                664.693m       434.915m
+VBC                -11.929        -12.262 
+VCE                 12.593         12.697 
+
+Frequency Terms:
+FT                8916.851T         1.331T
+
+Power DC Terms:
+PD                 182.548u        27.787n
+PS                   0.000          0.000 
+
+DC Pin Currents:
+Ib                  91.763n    -3.716E-026
+Ic                  14.491u         2.188n
+Ie                 -14.583u        -2.188n
+Is                   0.000          0.000 
+
+Condition:
+State                   HOT            HOT
+
+Device Variables:
+area                 1.000          1.000 
+vbe                  0.000          0.000 
+vce                  0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3             R4
+V                  -309.600u      -309.600u      -309.600u       -37.152m
+Power DC Terms:
+PD                    1.917u         1.917u         1.917u       690.138u
+
+DC Pin Currents:
+Ir                   -6.192m        -6.192m        -6.192m       -18.576m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R5             R6             R7             R8
+V                   837.757m       837.757m       837.757m       -11.424m
+Power DC Terms:
+PD                    3.190m         3.190m         3.190m       130.507u
+
+DC Pin Currents:
+Ir                    3.808m         3.808m         3.808m       -11.424m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:             X1.Rc1         X1.Rc2         X1.Re1         X1.Re2
+V                    54.929m        21.982m        19.230m         7.691m
+Power DC Terms:
+PD                  568.718n        91.084n       200.360n        32.046n
+
+DC Pin Currents:
+Ir                   10.354u         4.144u        10.419u         4.167u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              X1.Re          X1.Rp          X1.R2         X1.Ro2
+V                    -6.675         12.000        616.999m        -5.303 
+Power DC Terms:
+PD                    3.362u         3.928m         3.807u         1.125 
+
+DC Pin Currents:
+Ir                 -503.646n       327.297u         6.170u      -212.103m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:          X1.ROUTAC             R9            R11         X2.Rc1
+V                   570.890m         4.588m         1.503n        76.876m
+Power DC Terms:
+PD                    6.518m       421.019p         0.045f         1.114u
+
+DC Pin Currents:
+Ir                   11.418m        91.763n        30.051n        14.491u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:             X2.Rc2         X2.Re1         X2.Re2          X2.Re
+V                    11.610u        26.913m         4.039u        -6.697 
+Power DC Terms:
+PD                   25.408f       392.459n         8.839f         3.384u
+
+DC Pin Currents:
+Ir                    2.188n        14.583u         2.188n      -505.297n
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              X2.Rp          X2.R2         X2.Ro2      X2.ROUTAC
+V                    12.000          1.445         -5.896       -721.795u
+Power DC Terms:
+PD                    3.928m        20.872u         1.391         10.420n
+
+DC Pin Currents:
+Ir                  327.297u        14.447u      -235.848m       -14.436u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R12            R13
+V                   917.627u         0.000 
+Power DC Terms:
+PD                   84.204p         0.000 
+
+DC Pin Currents:
+Ir                   91.763n         0.000 
+
+Device Variables:
+tc1                   0.000          0.000 
+tc2                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              X1.C1          X1.Ce          X1.C3             C1
+V                    32.946m         6.675         80.430m        11.873 
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:              X2.C1          X2.Ce          X2.C3             C2
+V                    76.864m         6.697         -1.341       -110.020m
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Opamp
+=========================================
+Instance:                X1             X2
+Using model:          LM358          LM358
+Condition:
+State                   SAT            SAT
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:             X1.I3          X1.V2          X1.V1          X1.I1
+V                   -5.303          6.000         11.418       -616.999m
+Power DC Terms:
+PG                   1.064         68.510m       260.732p       -24.833n
+
+DC Pin Currents:
+ISource            200.685m       -11.418m       -22.836p       -40.249n
+
+
+Instance:             X1.I2          X2.I3          X2.V2          X2.V1
+V                  616.999m        -5.896          6.000        -14.436m
+Power DC Terms:
+PG                   3.832u         1.391        -83.584u         0.417f
+
+DC Pin Currents:
+ISource             -6.210u       235.863m        13.931u        28.872f
+
+
+Instance:             X2.I1          X2.I2
+V                   -1.445          1.445 
+Power DC Terms:
+PG                 -60.032n        20.932u
+
+DC Pin Currents:
+ISource            -41.553n       -14.489u
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             I1             V2         X1.IEE
+V                   12.000       -794.604m         0.000       -675.228m
+Power DC Terms:
+PG                 360.611n        23.838m         0.000         10.189u
+
+DC Pin Currents:
+ISource            -30.051n        30.000m       -65.562n        15.090u
+
+
+Instance:            X1.VS1          X1.VC          X1.VE         X1.VLP
+V                    0.000          2.600        650.000m        20.000 
+Power DC Terms:
+PG                   0.000        -24.137p         4.004u       171.844p
+
+DC Pin Currents:
+ISource              6.170u         9.283p        -6.161u        -8.592p
+
+
+Instance:            X1.VLN         X1.VS2             V3             V4
+V                   20.000          0.000         12.000          0.000 
+Power DC Terms:
+PG                 628.556p         0.000          4.102m         0.000 
+
+DC Pin Currents:
+ISource            -31.428p        11.418m      -341.795u       336.227u
+
+
+Instance:            X2.IEE         X2.VS1          X2.VC          X2.VE
+V                 -697.112m         0.000          2.600        650.000m
+Power DC Terms:
+PG                  10.519u         0.000        -24.194p         9.383u
+
+DC Pin Currents:
+ISource             15.090u        14.447u         9.305p       -14.436u
+
+
+Instance:            X2.VLP         X2.VLN         X2.VS2             V5
+V                   20.000         20.000          0.000         12.000 
+Power DC Terms:
+PG                 400.489p       399.911p         0.000          4.101m
+
+DC Pin Currents:
+ISource            -20.024p       -19.996p       -14.436u      -341.790u
+
+
+Instance:                V6
+V                    0.000 
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource            327.951u
+
+
