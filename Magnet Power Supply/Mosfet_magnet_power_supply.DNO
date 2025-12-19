@@ -3,13 +3,13 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                DC Analysis of Mosfet_magnet_power_supply                 ***
-***                          12/18/2025 1:57:24 PM                           ***
+***                          12/19/2025 1:54:13 PM                           ***
 ********************************************************************************
 Limits
 ======
 Variable 1 Method        Auto
 Variable 1 Name          V2
-Variable 1 Range         10,0,.5
+Variable 1 Range         5,0,.1
 Variable 2 Method        None
 Variable 2 Name          
 Variable 2 Range         
