@@ -7,15 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.3
 Key ID=Demo
-NLCnt=139
+NLCnt=69
 TXCnt=0
-
-[shapedef]
-Name=Animated Analog Led
-Animated Analog Led=0,-24,8,0
-Current=-4,8,12,8
-Line=-4,-6,-4,-2
-Line=-6,-4,-2,-4
 
 [shapedef]
 Name=Battery
@@ -129,8 +122,8 @@ Current=32,16,16,16
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7681
-Used=176
+Mask=6657
+Used=182
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -142,25 +135,11 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=271
+Used=274
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
-
-[compdef]
-Name=LM358
-Definition=Opamp
-Shape=Opamp5
-Mask=4224
-memo=Low Power Dual Opamp
-Label Offset=51,32,-15,46
-PinCnt=5
-Pin="Plus input",0,0,-30,-3
-Pin="Minus input",0,6,-36,17
-Pin="VEE",4,7,6,5
-Pin="Output",9,3,-13,-4
-Pin="VCC",4,-1,6,4
 
 [compdef]
 Name=Battery
@@ -179,7 +158,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=39
+Used=40
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -199,21 +178,6 @@ Pin="Plus",6,0,-3,-5
 Pin="Minus",0,0,-14,-5
 
 [compdef]
-Name=LM393_TI
-Definition=Subckt
-Shape=Opamp5
-Mask=4224
-Used=1
-memo=Dual Differential Comparator
-Label Offset=51,34,-8,44
-PinCnt=5
-Pin="1",a,0,0,-3,-4
-Pin="2",a,0,6,-3,18
-Pin="3",a,4,-1,6,15
-Pin="4",a,4,7,6,0
-Pin="5",a,9,3,-3,-3
-
-[compdef]
 Name=2N3904
 Definition=NPN
 Shape=NPN
@@ -228,30 +192,47 @@ Pin="Emitter",3,3,6,4
 Power=0.625
 
 [compdef]
-Name=Animated Analog LED
-Definition=ANIMATED ANALOG LED
-Shape=Animated Analog Led
-Mask=5888
-Used=3
-memo=Animated Analog LED
-Label Offset=12,-27,5,10
-PinCnt=2
-Pin="Anode",0,0,-24,5
-Pin="Cathode",1,0,5,5
-
-[compdef]
-Name=TIP122
-Definition=Subckt
+Name=MJ15003
+Definition=NPN
 Shape=NPN
 Mask=4224
-Used=4
-memo=NPN Medium Power Darlington Transistor Vceo=100V Ic=5A Pd=65W
-Label Offset=29,-14,-6,25
+Used=2
+memo=NPN Power Transistor Vceo=140V Ic=20A Pd=250W
+Label Offset=29,-11,-6,26
 PinCnt=3
-Pin="2",a,0,0,-2,-3
-Pin="3",a,3,3,6,7
-Pin="1",a,3,-3,5,6
-Power=65
+Pin="Collector",3,-3,5,3
+Pin="Base",0,0,-19,-3
+Pin="Emitter",3,3,6,4
+Power=250
+
+[compdef]
+Name=2N2222A
+Definition=NPN
+Shape=NPN
+Mask=4224
+Used=1
+memo=NPN General Purpose Transistor Vceo=40V Ic=.8A Pd=.5W
+Label Offset=29,-11,-6,26
+PinCnt=3
+Pin="Collector",3,-3,5,3
+Pin="Base",0,0,-19,-3
+Pin="Emitter",3,3,6,4
+Power=0.5
+
+[compdef]
+Name=OPA743
+Definition=Subckt
+Shape=Opamp5
+Mask=4224
+Used=1
+memo=CMOS, Rail-to-Rail, I/O Opamp Aol=120dB GBW=7MHz SR=10V/us
+Label Offset=51,34,-8,44
+PinCnt=5
+Pin="3",a,0,0,-2,-3
+Pin="2",a,0,6,-3,18
+Pin="7",a,4,-1,6,15
+Pin="4",a,4,7,6,0
+Pin="6",a,9,3,-3,-3
 
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 156,156,1611,724
@@ -271,7 +252,7 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
+Show Voltages=True
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -293,7 +274,7 @@ Style=8192
 
 [Attr]
 ON=-24,-39,RESISTANCE
-V=.1
+V=.05
 Style=8192
 
 [Attr]
@@ -307,34 +288,6 @@ Rot=7
 
 [Wire]
 Pxs=1104,552,1104,576
-
-[Wire]
-Pxs=1008,328,1008,336
-
-[Comp]
-Name=LM358
-Px=648,288
-
-[Attr]
-ON=51,32,PART
-V=X1
-Style=8192
-
-[Attr]
-ON=51,46,MODEL
-V=LM358
-
-[Attr]
-ON=51,74,PACKAGE
-V=TO-5C_8
-
-[Attr]
-ON=51,88,GATE
-V=A
-
-[Attr]
-ON=51,102,COMPNAME
-V=UX1
 
 [Comp]
 Name=Ground
@@ -353,7 +306,7 @@ Style=8192
 
 [Attr]
 ON=-35,-41,VALUE
-V=24
+V=12
 Style=8192
 
 [Attr]
@@ -369,16 +322,13 @@ Rot=7
 Pxs=384,96,384,144
 
 [Wire]
-Pxs=1008,96,1152,96
-
-[Wire]
-Pxs=1008,96,1008,280
+Pxs=1104,96,1104,288
 
 [Wire]
 Pxs=720,312,744,312
 
 [Wire]
-Pxs=680,96,1008,96
+Pxs=680,96,768,96
 
 [Wire]
 Pxs=680,96,680,280
@@ -387,7 +337,7 @@ Pxs=680,96,680,280
 Pxs=624,336,624,384
 
 [Wire]
-Pxs=1104,488,1104,504
+Pxs=1104,480,1104,504
 
 [Wire]
 Pxs=624,336,648,336
@@ -530,7 +480,7 @@ Pxs=744,312,744,384
 Pxs=744,312,816,312
 
 [Wire]
-Pxs=912,488,1104,488
+Pxs=912,480,1104,480
 
 [Comp]
 Name=Resistor
@@ -544,7 +494,7 @@ Style=8192
 
 [Attr]
 ON=-33,-34,RESISTANCE
-V=220
+V=1k
 Style=8192
 
 [Attr]
@@ -564,15 +514,12 @@ Style=8192
 
 [Attr]
 ON=-27,-40,RESISTANCE
-V=3
+V=1
 Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
-
-[Wire]
-Pxs=1104,456,1104,488
 
 [Comp]
 Name=Resistor
@@ -603,7 +550,7 @@ Pxs=576,288,576,336
 
 [Comp]
 Name=Resistor
-Px=984,304
+Px=1080,312
 Rot=2
 
 [Attr]
@@ -620,144 +567,23 @@ Style=8192
 ON=0,0,PACKAGE
 V
 
-[Comp]
-Name=Resistor
-Px=1128,304
-Rot=2
-
-[Attr]
-ON=-33,-20,PART
-V=R8
-Style=8192
-
-[Attr]
-ON=-33,-34,RESISTANCE
-V=5
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
 [Wire]
 Pxs=864,312,888,312
 
 [Wire]
-Pxs=912,240,912,312
-
-[Wire]
-Pxs=912,240,1056,240
-
-[Wire]
-Pxs=912,312,936,312
-
-[Wire]
-Pxs=1056,240,1056,304
-
-[Wire]
-Pxs=1056,304,1080,304
-
-[Wire]
-Pxs=1008,408,1104,408
-
-[Wire]
-Pxs=1152,328,1152,336
-
-[Wire]
-Pxs=1104,408,1152,408
-
-[Wire]
-Pxs=912,416,912,488
+Pxs=912,416,912,480
 
 [Wire]
 Pxs=864,416,912,416
 
 [Wire]
-Pxs=384,96,480,96
-
-[Wire]
-Pxs=1152,96,1152,280
+Pxs=384,96,680,96
 
 [Comp]
 Name=Resistor
-Px=1272,304
-Rot=2
-
-[Attr]
-ON=-33,-20,PART
-V=R9
-Style=8192
-
-[Attr]
-ON=-33,-34,RESISTANCE
-V=5
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Resistor
-Px=1416,304
-Rot=2
-COff=7,1383,270,-8,-11
-
-[Attr]
-ON=-33,-20,PART
-V=R10
-Style=8192
-
-[Attr]
-ON=-33,-34,RESISTANCE
-V=5
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=1152,96,1296,96
-
-[Wire]
-Pxs=1296,96,1296,280
-
-[Wire]
-Pxs=1296,96,1440,96
-
-[Wire]
-Pxs=1440,96,1440,280
-
-[Wire]
-Pxs=1056,240,1224,240
-
-[Wire]
-Pxs=1224,240,1224,304
-
-[Wire]
-Pxs=1224,240,1368,240
-
-[Wire]
-Pxs=1368,240,1368,304
-
-[Wire]
-Pxs=1296,328,1296,336
-
-[Wire]
-Pxs=1152,408,1296,408
-
-[Wire]
-Pxs=1440,328,1440,336
-
-[Wire]
-Pxs=1296,408,1440,408
-
-[Comp]
-Name=Resistor
-Px=1008,384
+Px=1104,384
 Rot=3
-COff=7,981,344,-12,30
+COff=7,1077,344,-12,30
 
 [Attr]
 ON=-30,-23,PART
@@ -774,453 +600,15 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1008,384,1008,408
-
-[Comp]
-Name=Resistor
-Px=1152,384
-Rot=3
-COff=7,1125,341,-7,31
-
-[Attr]
-ON=-31,-25,PART
-V=R12
-Style=8192
-
-[Attr]
-ON=-27,-43,RESISTANCE
-V=.2
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=1152,384,1152,408
-
-[Comp]
-Name=Resistor
-Px=1296,384
-Rot=3
-COff=7,1269,344,-14,27
-
-[Attr]
-ON=-29,-24,PART
-V=R13
-Style=8192
-
-[Attr]
-ON=-27,-40,RESISTANCE
-V=.2
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=1296,384,1296,408
-
-[Comp]
-Name=Resistor
-Px=1440,384
-Rot=3
-COff=7,1413,344,-9,28
-
-[Attr]
-ON=-31,-25,PART
-V=R14
-Style=8192
-
-[Attr]
-ON=-27,-40,RESISTANCE
-V=.2
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=1440,384,1440,408
-
-[Comp]
-Name=LM393_TI
-Px=448,528
-
-[Attr]
-ON=51,34,PART
-V=X2
-Style=8192
-
-[Attr]
-ON=51,48,NAME
-V=LM393_TI
-
-[Attr]
-ON=51,76,PACKAGE
-V=DIP8
-
-[Attr]
-ON=51,90,GATE
-V=A
-
-[Attr]
-ON=51,104,COMPNAME
-V=UX2
-
-[Comp]
-Name=Battery
-Px=240,768
-Rot=3
-
-[Attr]
-ON=-26,-27,PART
-V=V3
-Style=8192
-
-[Attr]
-ON=-35,-41,VALUE
-V=+5V
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Ground
-Px=240,768
-Rot=7
-
-[Wire]
-Pxs=240,624,240,720
-
-[Comp]
-Name=Ground
-Px=480,624
-Rot=7
-
-[Wire]
-Pxs=480,584,480,624
-
-[Wire]
-Pxs=480,96,480,432
-
-[Wire]
-Pxs=480,96,680,96
-
-[Wire]
-Pxs=520,552,528,552
-
-[Comp]
-Name=Ground
-Px=672,888
-Rot=7
-
-[Wire]
-Pxs=528,864,576,864
-
-[Comp]
-Name=Battery
-Px=704,720
-Rot=3
-
-[Attr]
-ON=-26,-27,PART
-V=V4
-Style=8192
-
-[Attr]
-ON=-43,-41,VALUE
-V=+12V
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Ground
-Px=704,720
-Rot=7
-
-[Wire]
-Pxs=672,672,704,672
-
-[Comp]
-Name=Resistor
-Px=288,672
-Rot=5
-
-[Attr]
-ON=8,-25,PART
-V=R16
-Style=8192
-
-[Attr]
-ON=8,-39,RESISTANCE
-V=100k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=288,672,384,672
-
-[Comp]
-Name=Resistor
-Px=168,528
-Rot=4
-
-[Attr]
-ON=18,-20,PART
-V=R18
-Style=8192
-
-[Attr]
-ON=18,-34,RESISTANCE
-V=0
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=384,576,448,576
-
-[Comp]
-Name=2N3904
-Px=648,864
-
-[Attr]
-ON=29,-11,PART
-V=Q3
-Style=8192
-
-[Attr]
-ON=29,3,MODEL
-V=2N3904
-
-[Attr]
-ON=29,17,POWER
-V=0.625
-
-[Attr]
-ON=29,45,PACKAGE
-V=TO-92
-
-[Wire]
-Pxs=672,672,672,744
-
-[Comp]
-Name=Resistor
-Px=672,792
-Rot=3
-
-[Attr]
-ON=-32,-25,PART
-V=R19
-Style=8192
-
-[Attr]
-ON=-31,-39,RESISTANCE
-V=220
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=672,792,672,800
-
-[Wire]
-Pxs=672,808,672,840
-
-[Comp]
-Name=Resistor
-Px=336,456
-Rot=4
-
-[Attr]
-ON=18,-20,PART
-V=R20
-Style=8192
-
-[Attr]
-ON=18,-34,RESISTANCE
-V=500k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Voltage Source
-Px=144,624
-Rot=3
-
-[Attr]
-ON=-31,-27,PART
-V=V5
-Style=8192
-
-[Attr]
-ON=-48,-41,VALUE
-V=DC 1 AC 0 0 
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Attr]
-ON=0,11,Saved_None
-V=DC 1 AC 0 0 
-Style=256
-
-[Comp]
-Name=Ground
-Px=144,624
-Rot=7
-
-[Wire]
-Pxs=144,528,144,576
-
-[Wire]
 Pxs=888,312,888,528
 
 [Wire]
-Pxs=888,312,912,312
-
-[Comp]
-Name=Resistor
-Px=624,864
-Rot=2
-
-[Attr]
-ON=-34,-20,PART
-V=R23
-Style=8192
-
-[Attr]
-ON=-33,-34,RESISTANCE
-V=1k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=624,864,648,864
-
-[Wire]
-Pxs=144,528,168,528
-
-[Comp]
-Name=Resistor
-Px=576,504
-Rot=3
-
-[Attr]
-ON=-32,-25,PART
-V=R24
-Style=8192
-
-[Attr]
-ON=-32,-39,RESISTANCE
-V=100
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Resistor
-Px=576,624
-Rot=3
-
-[Attr]
-ON=-32,-25,PART
-V=R25
-Style=8192
-
-[Attr]
-ON=-31,-39,RESISTANCE
-V=100
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=576,504,576,552
-
-[Wire]
-Pxs=576,552,576,576
-
-[Wire]
 Pxs=816,552,864,552
-
-[Wire]
-Pxs=576,432,576,456
-
-[Wire]
-Pxs=480,432,576,432
-
-[Wire]
-Pxs=528,552,576,552
-
-[Wire]
-Pxs=240,624,288,624
-
-[Comp]
-Name=Resistor
-Px=288,720
-Rot=5
-
-[Attr]
-ON=8,-25,PART
-V=R26
-Style=8192
-
-[Attr]
-ON=8,-39,RESISTANCE
-V=100k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Ground
-Px=288,720
-Rot=7
-
-[Wire]
-Pxs=480,432,480,520
-
-[Comp]
-Name=Ground
-Px=576,624
-Rot=7
 
 [Comp]
 Name=Ground
 Px=888,576
 Rot=7
-
-[Wire]
-Pxs=528,552,528,864
 
 [Comp]
 Name=Resistor
@@ -1241,34 +629,9 @@ Style=8192
 ON=0,0,PACKAGE
 V
 
-[Wire]
-Pxs=576,552,768,552
-
-[Comp]
-Name=Animated Analog LED
-Px=672,800
-Rot=7
-
-[Attr]
-ON=-36,10,PART
-V=Led2
-Style=8192
-
-[Attr]
-ON=-185,24,COLOR
-V=Red,1.7V,0.015A,.5ohm,20pF
-
-[Attr]
-ON=0,0,COLOR_REF
-V=#FF0000
-Style=256
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
 [Comp]
 Name=2N3904
+Enable=FALSE
 Px=864,552
 
 [Attr]
@@ -1288,28 +651,118 @@ V=0.625
 ON=29,45,PACKAGE
 V=TO-92
 
-[Wire]
-Pxs=384,576,384,672
+[Comp]
+Name=MJ15003
+Px=1080,312
+
+[Attr]
+ON=29,-11,PART
+V=Q7
+Style=8192
+
+[Attr]
+ON=29,3,MODEL
+V=MJ15003
+
+[Attr]
+ON=29,17,POWER
+V=250
+
+[Attr]
+ON=29,45,PACKAGE
+V=TO-204AA
 
 [Wire]
-Pxs=384,456,528,456
+Pxs=1104,456,1104,480
 
 [Wire]
-Pxs=288,456,336,456
+Pxs=1104,384,1104,392
+
+[Comp]
+Name=2N2222A
+Px=960,168
+
+[Attr]
+ON=29,-11,PART
+V=Q8
+Style=8192
+
+[Attr]
+ON=29,3,MODEL
+V=2N2222A
+
+[Attr]
+ON=29,17,POWER
+V=0.5
+
+[Attr]
+ON=29,45,PACKAGE
+V=TO-18
+
+[Wire]
+Pxs=888,168,960,168
+
+[Wire]
+Pxs=888,168,888,312
+
+[Wire]
+Pxs=984,192,984,240
+
+[Wire]
+Pxs=984,312,1032,312
+
+[Comp]
+Name=OPA743
+Px=648,288
+
+[Attr]
+ON=51,34,PART
+V=X3
+Style=8192
+
+[Attr]
+ON=51,48,NAME
+V=OPA743
+
+[Attr]
+ON=51,76,PACKAGE
+V=SO-8
+
+[Comp]
+Name=MJ15003
+Px=1200,312
+
+[Attr]
+ON=29,-11,PART
+V=Q9
+Style=8192
+
+[Attr]
+ON=29,3,MODEL
+V=MJ15003
+
+[Attr]
+ON=29,17,POWER
+V=250
+
+[Attr]
+ON=29,45,PACKAGE
+V=TO-204AA
 
 [Comp]
 Name=Resistor
-Px=288,528
-Rot=6
+Px=1224,384
+Rot=3
+COff=7,1197,344,-12,30
 
 [Attr]
-ON=-42,6,PART
+ON=-30,-23,PART
 V=R28
 Style=8192
 
 [Attr]
-ON=-49,20,RESISTANCE
-V=10k
+ON=-27,-40,RESISTANCE
+V=.2
 Style=8192
 
 [Attr]
@@ -1317,103 +770,59 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=288,528,448,528
+Pxs=1104,392,1224,392
 
 [Wire]
-Pxs=216,528,240,528
+Pxs=1224,384,1224,392
 
 [Wire]
-Pxs=288,456,288,528
+Pxs=1224,96,1224,288
 
 [Wire]
-Pxs=528,456,528,552
+Pxs=1104,96,1224,96
 
 [Comp]
-Name=TIP122
-Px=984,304
+Name=Resistor
+Px=1200,312
+Rot=2
 
 [Attr]
-ON=29,-14,PART
-V=X3
+ON=-33,-20,PART
+V=R29
 Style=8192
 
 [Attr]
-ON=29,0,NAME
-V=TIP122
-
-[Attr]
-ON=29,14,POWER
-V=65
-
-[Attr]
-ON=29,42,PACKAGE
-V=TO-220AB
-
-[Comp]
-Name=TIP122
-Px=1128,304
-
-[Attr]
-ON=29,-14,PART
-V=X4
+ON=-33,-34,RESISTANCE
+V=5
 Style=8192
 
 [Attr]
-ON=29,0,NAME
-V=TIP122
-
-[Attr]
-ON=29,14,POWER
-V=65
-
-[Attr]
-ON=29,42,PACKAGE
-V=TO-220AB
-
-[Comp]
-Name=TIP122
-Px=1272,304
-
-[Attr]
-ON=29,-14,PART
-V=X5
-Style=8192
-
-[Attr]
-ON=29,0,NAME
-V=TIP122
-
-[Attr]
-ON=29,14,POWER
-V=65
-
-[Attr]
-ON=29,42,PACKAGE
-V=TO-220AB
-
-[Comp]
-Name=TIP122
-Px=1416,304
-
-[Attr]
-ON=29,-14,PART
-V=X6
-Style=8192
-
-[Attr]
-ON=29,0,NAME
-V=TIP122
-
-[Attr]
-ON=29,14,POWER
-V=65
-
-[Attr]
-ON=29,42,PACKAGE
-V=TO-220AB
+ON=0,0,PACKAGE
+V
 
 [Wire]
-Pxs=936,304,936,312
+Pxs=984,96,984,144
+
+[Wire]
+Pxs=984,96,1104,96
+
+[Wire]
+Pxs=984,240,1152,240
+
+[Wire]
+Pxs=1152,240,1152,312
+
+[Wire]
+Pxs=984,240,984,312
+
+[Wire]
+Pxs=1104,392,1104,408
+
+[Wire]
+Pxs=768,96,768,552
+
+[Wire]
+Pxs=768,96,984,96
 
 [Schematic]
 CurrentSection 0=0
@@ -1590,7 +999,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="BJT_magnet_power_supply"
+Name="single_BJT_magnet_power_supply_buffer_driver"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -1612,9 +1021,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=630,48
+SB 3=102,0
 Scale 3=1
-Px=359,158
+Px=969,542
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1985,10 +1394,10 @@ AliasID=1
 XExp=DCINPUT1
 YExp=v(3)
 XRng=5
-YRng=0.6
+YRng=7.5
 Options=LINEARX,LINEARY
 Range Grid X=1
-Range Grid Y=0.12
+Range Grid Y=1.5
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -2011,10 +1420,10 @@ AliasID=2
 XExp=DCINPUT1
 YExp=I(R1)
 XRng=5
-YRng=6
+YRng=10
 Options=LINEARX,LINEARY
 Range Grid X=1
-Range Grid Y=1.2
+Range Grid Y=2
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -2035,12 +1444,12 @@ Analysis=DC
 Plt=3
 AliasID=4
 XExp=DCINPUT1
-YExp=PD(R1)
+YExp=PD(R5)
 XRng=5
-YRng=3
+YRng=80
 Options=LINEARX,LINEARY
 Range Grid X=1
-Range Grid Y=0.6
+Range Grid Y=16
 Enable=Enable
 Line Color=#FF00FF
 Text Color=#FF00FF
@@ -2063,10 +1472,10 @@ AliasID=6
 XExp=DCINPUT1
 YExp=v(1)
 XRng=5
-YRng=0.6
+YRng=0.5
 Options=LINEARX,LINEARY
 Range Grid X=1
-Range Grid Y=0.12
+Range Grid Y=0.1
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -2111,17 +1520,17 @@ NOFmtY=3E
 [WaveForm]
 Analysis=DC
 Plt=6
-AliasID=7
+AliasID=3
 XExp=DCINPUT1
-YExp=PD(X6.Q1) + PD(X6.Q2)+PD(X6.D1)+PD(X6.R2)+PD(X6.R1)
+YExp=PD(Q7)
 XRng=5
-YRng=15
+YRng=20
 Options=LINEARX,LINEARY
 Range Grid X=1
-Range Grid Y=3
+Range Grid Y=4
 Enable=Enable
-Line Color=#FF0000
-Text Color=#FF0000
+Line Color=#0000FF
+Text Color=#0000FF
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -2137,14 +1546,14 @@ NOFmtY=3E
 [WaveForm]
 Analysis=DC
 Plt=6
-AliasID=3
+AliasID=7
 XExp=DCINPUT1
-YExp=PD(X5.Q1) + PD(X5.Q2)+PD(X5.D1)+PD(X5.R2)+PD(X5.R1)
+YExp=PD(Q9)
 XRng=5
-YRng=15
+YRng=20
 Options=LINEARX,LINEARY
 Range Grid X=1
-Range Grid Y=3
+Range Grid Y=4
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000

@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.3
 Key ID=Demo
-NLCnt=139
+NLCnt=160
 TXCnt=0
 
 [shapedef]
@@ -130,7 +130,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=7681
-Used=176
+Used=178
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -142,7 +142,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=271
+Used=274
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -179,7 +179,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=39
+Used=40
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -203,7 +203,7 @@ Name=LM393_TI
 Definition=Subckt
 Shape=Opamp5
 Mask=4224
-Used=1
+Used=2
 memo=Dual Differential Comparator
 Label Offset=51,34,-8,44
 PinCnt=5
@@ -530,7 +530,7 @@ Pxs=744,312,744,384
 Pxs=744,312,816,312
 
 [Wire]
-Pxs=912,488,1104,488
+Pxs=912,488,1056,488
 
 [Comp]
 Name=Resistor
@@ -872,7 +872,7 @@ V=UX2
 
 [Comp]
 Name=Battery
-Px=240,768
+Px=240,888
 Rot=3
 
 [Attr]
@@ -891,11 +891,11 @@ V
 
 [Comp]
 Name=Ground
-Px=240,768
+Px=240,888
 Rot=7
 
 [Wire]
-Pxs=240,624,240,720
+Pxs=240,624,240,768
 
 [Comp]
 Name=Ground
@@ -916,15 +916,15 @@ Pxs=520,552,528,552
 
 [Comp]
 Name=Ground
-Px=672,888
+Px=1488,840
 Rot=7
 
 [Wire]
-Pxs=528,864,576,864
+Pxs=648,816,720,816
 
 [Comp]
 Name=Battery
-Px=704,720
+Px=1520,672
 Rot=3
 
 [Attr]
@@ -943,11 +943,11 @@ V
 
 [Comp]
 Name=Ground
-Px=704,720
+Px=1520,672
 Rot=7
 
 [Wire]
-Pxs=672,672,704,672
+Pxs=1488,624,1520,624
 
 [Comp]
 Name=Resistor
@@ -995,7 +995,7 @@ Pxs=384,576,448,576
 
 [Comp]
 Name=2N3904
-Px=648,864
+Px=1464,816
 
 [Attr]
 ON=29,-11,PART
@@ -1015,11 +1015,11 @@ ON=29,45,PACKAGE
 V=TO-92
 
 [Wire]
-Pxs=672,672,672,744
+Pxs=1488,624,1488,696
 
 [Comp]
 Name=Resistor
-Px=672,792
+Px=1488,744
 Rot=3
 
 [Attr]
@@ -1037,10 +1037,10 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=672,792,672,800
+Pxs=1488,744,1488,752
 
 [Wire]
-Pxs=672,808,672,840
+Pxs=1488,760,1488,792
 
 [Comp]
 Name=Resistor
@@ -1073,7 +1073,7 @@ Style=8192
 
 [Attr]
 ON=-48,-41,VALUE
-V=DC 1 AC 0 0 
+V=DC 1 AC 0 0
 
 [Attr]
 ON=0,0,PACKAGE
@@ -1081,7 +1081,7 @@ V
 
 [Attr]
 ON=0,11,Saved_None
-V=DC 1 AC 0 0 
+V=DC 1 AC 0 0
 Style=256
 
 [Comp]
@@ -1100,7 +1100,7 @@ Pxs=888,312,912,312
 
 [Comp]
 Name=Resistor
-Px=624,864
+Px=1440,816
 Rot=2
 
 [Attr]
@@ -1118,7 +1118,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=624,864,648,864
+Pxs=1440,816,1464,816
 
 [Wire]
 Pxs=144,528,168,528
@@ -1207,7 +1207,7 @@ Px=288,720
 Rot=7
 
 [Wire]
-Pxs=480,432,480,520
+Pxs=480,432,480,472
 
 [Comp]
 Name=Ground
@@ -1218,9 +1218,6 @@ Rot=7
 Name=Ground
 Px=888,576
 Rot=7
-
-[Wire]
-Pxs=528,552,528,864
 
 [Comp]
 Name=Resistor
@@ -1242,11 +1239,11 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=576,552,768,552
+Pxs=576,552,720,552
 
 [Comp]
 Name=Animated Analog LED
-Px=672,800
+Px=1488,752
 Rot=7
 
 [Attr]
@@ -1414,6 +1411,130 @@ V=TO-220AB
 
 [Wire]
 Pxs=936,304,936,312
+
+[Comp]
+Name=LM393_TI
+Px=576,792
+
+[Attr]
+ON=51,34,PART
+V=X7
+Style=8192
+
+[Attr]
+ON=51,48,NAME
+V=LM393_TI
+
+[Attr]
+ON=51,76,PACKAGE
+V=DIP8
+
+[Attr]
+ON=51,90,GATE
+V=A
+
+[Attr]
+ON=51,104,COMPNAME
+V=UX2
+
+[Comp]
+Name=Ground
+Px=608,848
+Rot=7
+
+[Wire]
+Pxs=480,472,504,472
+
+[Wire]
+Pxs=480,472,480,520
+
+[Comp]
+Name=Resistor
+Px=328,840
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R29
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=100k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=328,888
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R30
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=100k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=328,888
+Rot=7
+
+[Wire]
+Pxs=552,792,576,792
+
+[Wire]
+Pxs=552,720,1056,720
+
+[Wire]
+Pxs=1056,488,1056,720
+
+[Wire]
+Pxs=1056,488,1104,488
+
+[Wire]
+Pxs=328,768,328,792
+
+[Wire]
+Pxs=240,768,328,768
+
+[Wire]
+Pxs=240,768,240,840
+
+[Wire]
+Pxs=720,552,720,816
+
+[Wire]
+Pxs=720,552,768,552
+
+[Wire]
+Pxs=720,816,1392,816
+
+[Wire]
+Pxs=552,720,552,792
+
+[Wire]
+Pxs=328,840,576,840
+
+[Wire]
+Pxs=504,472,504,768
+
+[Wire]
+Pxs=504,768,608,768
+
+[Wire]
+Pxs=608,768,608,784
 
 [Schematic]
 CurrentSection 0=0
@@ -1612,9 +1733,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=630,48
+SB 3=63,288
 Scale 3=1
-Px=359,158
+Px=1241,684
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
