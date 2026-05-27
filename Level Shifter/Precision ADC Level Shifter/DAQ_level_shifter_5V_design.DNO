@@ -2,14 +2,14 @@
 ***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***                   DC Analysis of DC_coupled_ADA4841-2                    ***
-***                           2/13/2026 3:21:16 PM                           ***
+***                DC Analysis of DAQ_level_shifter_5V_design                ***
+***                           3/1/2026 2:17:56 PM                            ***
 ********************************************************************************
 Limits
 ======
 Variable 1 Method        Auto
-Variable 1 Name          V3
-Variable 1 Range         0.1,-0.1,.01
+Variable 1 Name          V1
+Variable 1 Range         5,-5,.1
 Variable 2 Method        None
 Variable 2 Name          
 Variable 2 Range         

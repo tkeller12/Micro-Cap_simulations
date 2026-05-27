@@ -130,8 +130,8 @@ Pin="Emitter",3,3,5,1
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7681
-Used=214
+Mask=7169
+Used=221
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -167,14 +167,14 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=305
+Used=308
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 78,78,1533,646
+Window Placement=2,3, -1,-1, -8,-31, 52,52,1507,620
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -195,7 +195,7 @@ Title_Block=False
 Show Nodes=False
 Show Voltages=False
 Show Current=False
-Show Power=True
+Show Power=False
 Show Condition=False
 Show Pin Connections=False
 Show Connection Warnings=False
@@ -226,6 +226,7 @@ V
 Name=NPN
 Px=456,312
 Rot=6
+COff=23,456,323,-6,-3
 
 [Attr]
 ON=-55,-17,PART
@@ -397,7 +398,7 @@ Style=8192
 
 [Attr]
 ON=-111,33,VALUE
-V=DC .03 AC 0 0
+V=DC .02 AC 0 0
 Style=8192
 
 [Attr]
@@ -994,7 +995,7 @@ Scale 1=1
 Scale 2=1
 SB 3=117,0
 Scale 3=1
-Px=571,525
+Px=273,352
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2027,10 +2028,10 @@ AliasID=1
 XExp=DCINPUT1
 YExp=I(R4)
 XRng=12
-YRng=3,-0.75
+YRng=4,-1
 Options=LINEARX,LINEARY
 Range Grid X=2.4
-Range Grid Y=0.75
+Range Grid Y=1
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -2053,10 +2054,10 @@ AliasID=2
 XExp=DCINPUT1
 YExp=PD(Q4)
 XRng=12
-YRng=10
+YRng=12.5
 Options=LINEARX,LINEARY
 Range Grid X=2.4
-Range Grid Y=2
+Range Grid Y=2.5
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
@@ -2079,10 +2080,10 @@ AliasID=3
 XExp=DCINPUT1
 YExp=PD(R4)
 XRng=12
-YRng=6
+YRng=10
 Options=LINEARX,LINEARY
 Range Grid X=2.4
-Range Grid Y=1.2
+Range Grid Y=2
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
