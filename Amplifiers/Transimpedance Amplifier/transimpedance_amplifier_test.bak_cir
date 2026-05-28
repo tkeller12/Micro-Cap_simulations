@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.3
 Key ID=Demo
-NLCnt=47
+NLCnt=45
 TXCnt=3
 
 [shapedef]
@@ -115,8 +115,8 @@ Root="Isource.Root",0,0,0
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7169
-Used=194
+Mask=6913
+Used=227
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -128,6 +128,7 @@ Name=OPA380
 Definition=Subckt
 Shape=Opamp5
 Mask=4224
+Used=1
 memo=Precision, High Speed Transimpedance Amplifier Aol=130dB GBW=90MHz SR=80V/us
 Label Offset=48,35,-9,45
 PinCnt=5
@@ -142,7 +143,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=6913
-Used=58
+Used=68
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -154,7 +155,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=297
+Used=317
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -164,7 +165,8 @@ Pin="PinA",0,0,-3,-7
 Name=1N4007
 Definition=Diode
 Shape=Diode
-Mask=4736
+Mask=4992
+Used=1
 memo=General Purpose Rectifier Vr=1000V Io=1A
 Label Offset=18,10,12,12
 PinCnt=2
@@ -175,8 +177,8 @@ Pin="Cathode",0,0,-27,-8
 Name=Current Source
 Definition=ISpice
 Shape=SPICE_I
-Mask=6401
-Used=4
+Mask=6657
+Used=3
 memo=Current Source
 Label Offset=15,12,-29,12
 PinCnt=2
@@ -187,7 +189,7 @@ Pin="Minus",0,6,8,3
 Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
-Mask=7937
+Mask=7681
 Used=36
 memo=Capacitor
 Label Offset=16,12,12,12
@@ -208,14 +210,14 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=0,1, -1,-1, -8,-31, 953,0,1906,828
+Window Placement in Transient Analysis=0,1, -1,-1, -8,-31, 953,0,1906,830
 Window Placement in AC Analysis=0,1, -1,-1, -8,-31, 953,0,1906,830
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
 Show Voltages=True
-Show Current=True
+Show Current=False
 Show Power=False
 Show Condition=False
 Show Pin Connections=False
@@ -236,8 +238,8 @@ V=R1
 Style=8192
 
 [Attr]
-ON=-41,-36,RESISTANCE
-V=1Meg
+ON=-41,-34,RESISTANCE
+V=1000k
 Style=8192
 
 [Attr]
@@ -282,9 +284,10 @@ V
 
 [Comp]
 Name=Battery
-Px=240,360
+Enable=FALSE
+Px=384,240
 Rot=3
-COff=8,214,333,-45,4
+COff=8,358,213,-45,4
 
 [Attr]
 ON=-26,-27,PART
@@ -293,7 +296,7 @@ Style=8192
 
 [Attr]
 ON=-42,-41,VALUE
-V=.4
+V=+0.4V
 Style=8192
 
 [Attr]
@@ -302,36 +305,39 @@ V
 
 [Comp]
 Name=Ground
-Px=240,360
+Px=384,240
 Rot=7
 
 [Comp]
 Name=1N4007
-Px=384,288
-Rot=2
-COff=23,384,288,-25,-18
+Px=480,288
+Rot=3
+COff=8,451,262,-25,-18
 
 [Attr]
-ON=-35,-24,PART
+ON=-29,-26,PART
 V=D1
 Style=8192
 
 [Attr]
-ON=-67,-38,MODEL
+ON=-61,-40,MODEL
 V=1N4007
 
 [Attr]
-ON=-58,-66,PACKAGE
+ON=-52,-68,PACKAGE
 V=DO-41
 
 [Wire]
-Pxs=240,288,240,312
+Pxs=384,168,384,192
 
 [Wire]
-Pxs=240,288,288,288
+Pxs=384,168,480,168
 
 [Wire]
-Pxs=384,288,432,288
+Pxs=480,168,480,240
+
+[Wire]
+Pxs=480,288,504,288
 
 [Comp]
 Name=Battery
@@ -391,10 +397,9 @@ Pxs=528,96,656,96
 
 [Comp]
 Name=Current Source
-Px=336,240
-Rot=3
-COff=8,308,214,-21,-2
-COff=7,123,200,-41,8
+Px=504,432
+Rot=2
+COff=8,476,406,-41,8
 
 [Attr]
 ON=-28,-26,PART
@@ -403,7 +408,7 @@ Style=8192
 
 [Attr]
 ON=-213,-40,VALUE
-V=DC 0 AC 0 0 Sin 0 1e-9 5k 0 0 0
+V=DC 0 AC 0 0 Sin 0 1e-8 5k 0 0 0
 Style=8192
 
 [Attr]
@@ -437,8 +442,33 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_Sin
-V=DC 0 AC 0 0 Sin 0 1e-9 5k 0 0 0
+V=DC 0 AC 0 0 Sin 0 1e-8 5k 0 0 0
 Style=256
+
+[Comp]
+Name=Resistor
+Px=504,384
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R2
+Style=8192
+
+[Attr]
+ON=-36,-43,RESISTANCE
+V=1000
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=504,288,504,336
+
+[Wire]
+Pxs=504,288,528,288
 
 [Comp]
 Name=Capacitor
@@ -495,9 +525,11 @@ Rot=7
 [Wire]
 Pxs=848,264,912,264
 
+[Wire]
+Pxs=480,240,528,240
+
 [Comp]
 Name=Capacitor
-Enable=FALSE
 Px=624,336
 Rot=6
 COff=8,591,348,23,1
@@ -528,78 +560,19 @@ Pxs=624,336,720,336
 [Wire]
 Pxs=720,336,720,432
 
-[Wire]
-Pxs=288,240,336,240
-
-[Wire]
-Pxs=288,288,336,288
-
-[Comp]
-Name=Ground
-Px=576,240
-Rot=7
-
-[Comp]
-Name=Resistor
-Px=288,288
-Rot=3
-
-[Attr]
-ON=-40,-25,PART
-V=R346
-Style=8192
-
-[Attr]
-ON=-31,-39,RESISTANCE
-V=10k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Resistor
-Px=432,288
-Rot=3
-
-[Attr]
-ON=-40,-25,PART
-V=R347
-Style=8192
-
-[Attr]
-ON=-31,-39,RESISTANCE
-V=10k
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=432,288,480,288
-
-[Wire]
-Pxs=384,240,432,240
-
-[Wire]
-Pxs=576,240,624,240
-
 [Comp]
 Name=Current Source
-Px=384,384
-Rot=1
-COff=8,349,404,35,-1
+Px=528,288
+Rot=2
 
 [Attr]
-ON=-35,20,PART
+ON=-36,-26,PART
 V=I56
 Style=8192
 
 [Attr]
-ON=-82,40,VALUE
-V=DC 32.15u AC 0 0 
+ON=-224,-40,VALUE
+V=DC 0 AC 0 0 Sin 100uA 0 0 0 0 0
 Style=8192
 
 [Attr]
@@ -608,27 +581,28 @@ V
 
 [Attr]
 ON=0,0,Saved_Sin
-V=DC 0 AC 0 0 Sin 0 1e-9 5k 0 0 0
+V=DC 0 AC 0 0 Sin 100uA 0 0 0 0 0
 Style=256
 
 [Attr]
-ON=0,0,Saved_None
-V=DC 300n AC 0 0 
+ON=0,11,Saved_None
+V=DC 0 AC 1 0 
 Style=256
 
-[Comp]
-Name=Ground
-Px=336,384
-Rot=7
+[Wire]
+Pxs=528,288,552,288
 
 [Wire]
-Pxs=384,384,480,384
+Pxs=528,240,624,240
 
 [Wire]
-Pxs=480,288,480,384
+Pxs=432,240,480,240
 
 [Wire]
-Pxs=480,288,552,288
+Pxs=432,432,504,432
+
+[Wire]
+Pxs=432,240,432,432
 
 [Grid Text]
 Text="Vout"
@@ -829,7 +803,7 @@ ALIGNBOTTOM=Yes
 
 [Section]
 Index=0
-Name="transimpedance_amplifier_test"
+Name="circuit1"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -851,9 +825,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=67,0
+SB 3=217,0
 Scale 3=1
-Px=413,473
+Px=418,475
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -982,7 +956,7 @@ SimulationLog=True
 
 [Transient]
 WinID=1
-Window Placement=0,1, -1,-1, -8,-31, 0,0,953,824
+Window Placement=0,1, -1,-1, -8,-31, 0,0,953,830
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -1465,10 +1439,10 @@ AliasID=1
 XExp=T
 YExp=v(Vin)
 XRng=0.0005
-YRng=0,-6e-7
+YRng=0.799921,0.799918
 Options=LINEARX,LINEARY
 Range Grid X=0.0001
-Range Grid Y=1.2e-7
+Range Grid Y=6e-7
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1491,10 +1465,10 @@ AliasID=2
 XExp=T
 YExp=v(Vout)
 XRng=0.0005
-YRng=-0.0174,-0.0204
+YRng=0.799956,0.799926
 Options=LINEARX,LINEARY
 Range Grid X=0.0001
-Range Grid Y=0.0006
+Range Grid Y=6e-6
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1517,10 +1491,10 @@ AliasID=3
 XExp=T
 YExp=v(Vac)
 XRng=0.0005
-YRng=0.0015,-0.001
+YRng=1.8e-5,-1.2e-5
 Options=LINEARX,LINEARY
 Range Grid X=0.0001
-Range Grid Y=0.0005
+Range Grid Y=6e-6
 Enable=Enable
 Line Color=#008000
 Text Color=#008000
