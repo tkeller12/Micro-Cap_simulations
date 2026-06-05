@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.3
 Key ID=Demo
-NLCnt=47
+NLCnt=74
 TXCnt=3
 
 [shapedef]
@@ -17,6 +17,22 @@ Line=22,-3,22,3
 Line=26,-7,26,7
 Line=26,0,48,0
 Current=32,8,16,8
+
+[shapedef]
+Name=Bjt.root
+Line=0,0,13,0
+Rectangle=13,-12,15,12
+Current=32,-24,32,-16
+Current=32,24,32,16
+Current=0,-8,8,-8
+PolyOpen=3
+PolyLine=24,-24
+PolyLine=24,-12
+PolyLine=14,-2
+PolyOpen=3
+PolyLine=24,24
+PolyLine=24,12
+PolyLine=14,2
 
 [shapedef]
 Name=Capacitor
@@ -63,6 +79,14 @@ Current=16,16,16,32
 [shapedef]
 Name=Minus.root
 Line=-2,0,2,0
+
+[shapedef]
+Name=NPN
+Root="Bjt.root",0,0,0
+PolyClosed=3
+PolyLine=20,12
+PolyLine=24,12
+PolyLine=24,8
 
 [shapedef]
 Name=Opamp5
@@ -115,8 +139,8 @@ Root="Isource.Root",0,0,0
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7169
-Used=194
+Mask=7937
+Used=197
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -142,7 +166,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=6913
-Used=58
+Used=60
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -154,7 +178,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=297
+Used=303
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -188,12 +212,41 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7937
-Used=36
+Used=38
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
 Pin="Plus",6,0,-3,-5
 Pin="Minus",0,0,-14,-5
+
+[compdef]
+Name=2N3904
+Definition=NPN
+Shape=NPN
+Mask=4224
+Used=6
+memo=NPN General Purpose Transistor Vceo=40V Ic=.2A Pd=625mW
+Label Offset=29,-11,-6,26
+PinCnt=3
+Pin="Collector",3,-3,5,3
+Pin="Base",0,0,-19,-3
+Pin="Emitter",3,3,6,4
+Power=0.625
+
+[compdef]
+Name=LMV358_NS
+Definition=Subckt
+Shape=Opamp5
+Mask=4224
+Used=1
+memo=Dual General Purpose, Low Voltage Rail-to-Rail Output Opamp
+Label Offset=51,34,-8,44
+PinCnt=5
+Pin="3",a,0,0,-3,-4
+Pin="2",a,0,6,-3,18
+Pin="4",a,4,-1,6,15
+Pin="5",a,4,7,6,0
+Pin="6",a,9,3,-3,-3
 
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 156,156,1611,730
@@ -215,7 +268,7 @@ Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
 Show Voltages=True
-Show Current=True
+Show Current=False
 Show Power=False
 Show Condition=False
 Show Pin Connections=False
@@ -309,7 +362,7 @@ Rot=7
 Name=1N4007
 Px=384,288
 Rot=2
-COff=23,384,288,-25,-18
+COff=23,384,299,-25,-18
 
 [Attr]
 ON=-35,-24,PART
@@ -403,7 +456,7 @@ Style=8192
 
 [Attr]
 ON=-213,-40,VALUE
-V=DC 0 AC 0 0 Sin 0 1e-9 5k 0 0 0
+V=DC 0 AC 0 0 Sin 0 1e-9 1k 0 0 0
 Style=8192
 
 [Attr]
@@ -437,7 +490,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_Sin
-V=DC 0 AC 0 0 Sin 0 1e-9 5k 0 0 0
+V=DC 0 AC 0 0 Sin 0 1e-9 1k 0 0 0
 Style=256
 
 [Comp]
@@ -588,9 +641,10 @@ Pxs=576,240,624,240
 
 [Comp]
 Name=Current Source
-Px=384,384
+Enable=FALSE
+Px=104,384
 Rot=1
-COff=8,349,404,35,-1
+COff=8,69,404,35,-1
 
 [Attr]
 ON=-35,20,PART
@@ -599,7 +653,7 @@ Style=8192
 
 [Attr]
 ON=-82,40,VALUE
-V=DC 32.15u AC 0 0 
+V=DC 32.15u AC 0 0
 Style=8192
 
 [Attr]
@@ -613,22 +667,261 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_None
-V=DC 300n AC 0 0 
+V=DC 300n AC 0 0
 Style=256
 
 [Comp]
 Name=Ground
-Px=336,384
+Px=56,384
 Rot=7
 
 [Wire]
-Pxs=384,384,480,384
-
-[Wire]
-Pxs=480,288,480,384
+Pxs=480,288,480,408
 
 [Wire]
 Pxs=480,288,552,288
+
+[Comp]
+Name=2N3904
+Px=456,576
+
+[Attr]
+ON=29,-11,PART
+V=Q1
+Style=8192
+
+[Attr]
+ON=29,3,MODEL
+V=2N3904
+
+[Attr]
+ON=29,17,POWER
+V=0.625
+
+[Attr]
+ON=29,45,PACKAGE
+V=TO-92
+
+[Comp]
+Name=LMV358_NS
+Px=248,552
+
+[Attr]
+ON=51,34,PART
+V=X2
+Style=8192
+
+[Attr]
+ON=51,48,NAME
+V=LMV358_NS
+
+[Attr]
+ON=51,76,PACKAGE
+V=SO-8
+
+[Attr]
+ON=51,90,GATE
+V=A
+
+[Attr]
+ON=51,104,COMPNAME
+V=UX2
+
+[Comp]
+Name=Resistor
+Px=480,672
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R348
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=100
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=480,600,480,624
+
+[Wire]
+Pxs=240,552,248,552
+
+[Comp]
+Name=Battery
+Px=312,528
+Rot=3
+
+[Attr]
+ON=-26,-27,PART
+V=V4
+Style=8192
+
+[Attr]
+ON=-38,-41,VALUE
+V=2.5V
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=312,528
+Rot=7
+
+[Wire]
+Pxs=280,480,312,480
+
+[Wire]
+Pxs=280,480,280,544
+
+[Comp]
+Name=Battery
+Px=280,752
+Rot=3
+
+[Attr]
+ON=-26,-27,PART
+V=V5
+Style=8192
+
+[Attr]
+ON=-38,-41,VALUE
+V=-2.5V
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=280,752
+Rot=7
+
+[Comp]
+Name=Resistor
+Px=432,576
+Rot=6
+
+[Attr]
+ON=-50,6,PART
+V=R349
+Style=8192
+
+[Attr]
+ON=-43,-24,RESISTANCE
+V=100
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=240,552
+Rot=7
+
+[Attr]
+ON=-29,12,PART
+V=C3
+Style=8192
+
+[Attr]
+ON=-43,25,CAPACITANCE
+V=1nF
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=240,600
+Rot=7
+
+[Wire]
+Pxs=240,408,480,408
+
+[Wire]
+Pxs=280,608,280,704
+
+[Wire]
+Pxs=480,672,480,704
+
+[Wire]
+Pxs=280,704,432,704
+
+[Wire]
+Pxs=240,600,248,600
+
+[Wire]
+Pxs=240,504,240,552
+
+[Wire]
+Pxs=480,408,480,552
+
+[Wire]
+Pxs=320,576,384,576
+
+[Wire]
+Pxs=432,576,456,576
+
+[Comp]
+Name=Resistor
+Px=240,456
+Rot=7
+
+[Attr]
+ON=-40,11,PART
+V=R350
+Style=8192
+
+[Attr]
+ON=-47,26,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=240,408,240,456
+
+[Comp]
+Name=Capacitor
+Px=432,576
+Rot=7
+
+[Attr]
+ON=-31,25,PART
+V=C75
+Style=8192
+
+[Attr]
+ON=-34,38,CAPACITANCE
+V=10000nF
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=432,624,432,704
+
+[Wire]
+Pxs=432,704,480,704
 
 [Grid Text]
 Text="Vout"
@@ -851,9 +1144,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=67,0
+SB 3=0,144
 Scale 3=1
-Px=413,473
+Px=366,661
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1446,10 +1739,10 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TMax=500u
+TMax=50000u
 TStart=0
 TStep=0
-NPts=201
+NPts=2001
 Temp=27
 RetraceRuns=1
 StateVar=Zero
@@ -1464,11 +1757,11 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(Vin)
-XRng=0.0005
-YRng=0,-6e-7
+XRng=0.05
+YRng=0.06,-0.09
 Options=LINEARX,LINEARY
-Range Grid X=0.0001
-Range Grid Y=1.2e-7
+Range Grid X=0.01
+Range Grid Y=0.03
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1490,11 +1783,11 @@ Plt=2
 AliasID=2
 XExp=T
 YExp=v(Vout)
-XRng=0.0005
-YRng=-0.0174,-0.0204
+XRng=0.05
+YRng=2.08787,2.08786
 Options=LINEARX,LINEARY
-Range Grid X=0.0001
-Range Grid Y=0.0006
+Range Grid X=0.01
+Range Grid Y=2.5e-7
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1516,11 +1809,11 @@ Plt=3
 AliasID=3
 XExp=T
 YExp=v(Vac)
-XRng=0.0005
-YRng=0.0015,-0.001
+XRng=0.05
+YRng=4e-7,-6e-7
 Options=LINEARX,LINEARY
-Range Grid X=0.0001
-Range Grid Y=0.0005
+Range Grid X=0.01
+Range Grid Y=2e-7
 Enable=Enable
 Line Color=#008000
 Text Color=#008000

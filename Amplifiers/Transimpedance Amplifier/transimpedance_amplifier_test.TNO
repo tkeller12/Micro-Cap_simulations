@@ -10,7 +10,7 @@ Limits
 Maximum Run Time           5000u
 Output Start Time (tstart) 0
 Maximum Time Step          0
-Number of Points           201
+Number of Points           2001
 Temperature                Linear 27
 Retrace Runs               1
 Run Options                Normal
@@ -159,7 +159,7 @@ DC Pin Currents:
 Id                 100.000u       672.717n        -5.476p        -2.935n
 
 Condition:
-State                    ON            OFF            OFF            OFF
+State                    ON            OFF            OFF             ON
 
 Device Variables:
 area                 1.000          1.000          1.000          1.000 
@@ -823,7 +823,7 @@ Is                  37.499u        37.499u         1.575m         2.000m
 Ib                 856.565f       777.081f         4.581p       961.312f
 
 Condition:
-State                   SAT            SAT            SAT            SAT
+State                   SAT            SAT            LIN            SAT
 
 Device Variables:
 m                    1.000          1.000          1.000          1.000 
